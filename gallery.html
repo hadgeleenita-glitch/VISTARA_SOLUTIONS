@@ -1,0 +1,2940 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery | Vistara Solutions</title>
+
+    <meta name="description"
+        content="Explore the Vistara Solutions gallery featuring premium residential properties, commercial spaces, interiors and lifestyle experiences across Pune.">
+
+    <link rel="icon" href="assets/logo/favicon.png">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- AOS -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+
+<style>
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+:root {
+
+    --gold: #c79a3b;
+    --gold-light: #e4c56d;
+    --gold-dark: #9b7424;
+
+    --ivory: #f8f6f0;
+    --white: #ffffff;
+
+    --charcoal: #252421;
+    --dark: #20201e;
+
+    --text: #30302e;
+    --muted: #77736b;
+
+    --border: #e8e1d4;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: "Poppins", sans-serif;
+
+    background: var(--ivory);
+
+    color: var(--text);
+
+    overflow-x: hidden;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.gallery-header {
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    padding: 22px 5%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.gallery-logo img {
+    width: 72px;
+}
+
+
+.menu-button {
+
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,.40);
+
+    background: rgba(255,255,255,.08);
+
+    backdrop-filter: blur(12px);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #fff;
+
+    font-size: 19px;
+
+    cursor: pointer;
+
+    transition: .35s ease;
+}
+
+
+.menu-button:hover {
+
+    background: var(--gold);
+
+    border-color: var(--gold);
+
+    transform: rotate(90deg);
+}
+
+/* =====================================================
+           SIDE MENU
+           Same hamburger-menu pattern
+        ====================================================== */
+
+        .side-menu {
+
+            position: fixed;
+
+            top: 0;
+            right: -420px;
+
+            width: min(390px, 90%);
+
+            height: 100vh;
+
+            z-index: 2000;
+
+            padding: 90px 45px 40px;
+
+            overflow-y: auto;
+
+            background: #20201e;
+
+            border-left: 1px solid rgba(199,154,59,.25);
+
+            box-shadow: -20px 0 60px rgba(0,0,0,.25);
+
+            transition: right .45s cubic-bezier(.77,0,.18,1);
+
+        }
+
+
+        .side-menu.active {
+
+            right: 0;
+
+        }
+
+
+        .side-menu::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 3px;
+
+            height: 100%;
+
+            background:
+
+                linear-gradient(
+                    to bottom,
+                    transparent,
+                    var(--gold),
+                    var(--gold-light),
+                    transparent
+                );
+
+        }
+
+
+        .close-btn {
+
+            position: absolute;
+
+            top: 25px;
+            right: 25px;
+
+            width: 45px;
+            height: 45px;
+
+            border: 1px solid rgba(255,255,255,.18);
+
+            border-radius: 50%;
+
+            background: rgba(255,255,255,.05);
+
+            color: #fff;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            cursor: pointer;
+
+            font-size: 18px;
+
+            transition: .3s ease;
+
+        }
+
+
+        .close-btn:hover {
+
+            background: var(--gold);
+
+            border-color: var(--gold);
+
+            transform: rotate(90deg);
+
+        }
+
+
+        .menu-label {
+
+            margin-bottom: 35px;
+
+            color: var(--gold-light);
+
+            font-size: 11px;
+
+            font-weight: 600;
+
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .side-menu ul {
+
+            padding: 0;
+
+            margin: 0;
+
+            list-style: none;
+
+        }
+
+
+        .side-menu ul li {
+
+            margin-bottom: 4px;
+
+        }
+
+
+        .side-menu ul li a {
+
+            position: relative;
+
+            display: block;
+
+            padding: 10px 0;
+
+            color: rgba(255,255,255,.72);
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 22px;
+
+            transition: .3s ease;
+
+        }
+
+
+        .side-menu ul li a::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: -45px;
+
+            top: 50%;
+
+            width: 0;
+
+            height: 1px;
+
+            background: var(--gold-light);
+
+            transition: .3s ease;
+
+        }
+
+
+        .side-menu ul li a:hover {
+
+            color: var(--gold-light);
+
+            padding-left: 12px;
+
+        }
+
+
+        .side-menu ul li a:hover::before {
+
+            width: 32px;
+
+        }
+
+
+        .menu-divider {
+
+            height: 1px;
+
+            margin: 20px 0;
+
+            background: rgba(255,255,255,.10);
+
+        }
+
+
+        .menu-contact {
+
+            margin-top: 35px;
+
+            padding-top: 25px;
+
+            border-top: 1px solid rgba(255,255,255,.10);
+
+        }
+
+
+        .menu-contact h4 {
+
+            margin-bottom: 18px;
+
+            color: #fff;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 20px;
+
+            font-weight: 500;
+
+        }
+
+
+        .menu-contact p {
+
+            margin-bottom: 11px;
+
+            color: rgba(255,255,255,.55);
+
+            font-size: 12px;
+
+            line-height: 1.6;
+
+        }
+
+
+        .menu-contact p i {
+
+            width: 24px;
+
+            color: var(--gold-light);
+
+        }
+
+
+        .menu-social {
+
+            display: flex;
+
+            gap: 10px;
+
+            margin-top: 20px;
+
+        }
+
+
+        .menu-social a {
+
+            width: 38px;
+            height: 38px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border: 1px solid rgba(255,255,255,.15);
+
+            color: var(--gold-light);
+
+            transition: .3s ease;
+
+        }
+
+
+        .menu-social a:hover {
+
+            background: var(--gold);
+
+            border-color: var(--gold);
+
+            color: #fff;
+
+            transform: translateY(-3px);
+
+        }
+
+
+        /* =====================================================
+           MENU OVERLAY
+        ====================================================== */
+
+        .menu-overlay {
+
+            position: fixed;
+
+            inset: 0;
+
+            z-index: 1500;
+
+            background: rgba(0,0,0,.45);
+
+            backdrop-filter: blur(3px);
+
+            -webkit-backdrop-filter: blur(3px);
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            transition: .35s ease;
+
+        }
+
+
+        .menu-overlay.active {
+
+            opacity: 1;
+
+            visibility: visible;
+
+        }
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.gallery-hero {
+
+    position: relative;
+
+    min-height: 68vh;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(30,29,27,.94),
+            rgba(30,29,27,.70),
+            rgba(30,29,27,.35)
+        ),
+
+        url("assets/gallery/gallery-01.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+
+.gallery-hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    right: 8%;
+    bottom: -120px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(212,175,55,.40);
+
+    box-shadow:
+
+        0 0 0 30px rgba(212,175,55,.05),
+
+        0 0 0 60px rgba(212,175,55,.025);
+}
+
+
+.gallery-hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 850px;
+
+    padding: 150px 6% 90px;
+}
+
+
+.gallery-label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    margin-bottom: 22px;
+
+    color: var(--gold-light);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+}
+
+
+.gallery-label::before {
+
+    content: "";
+
+    width: 45px;
+    height: 1px;
+
+    background: var(--gold-light);
+}
+
+
+.gallery-hero h1 {
+
+    margin-bottom: 24px;
+
+    color: #fff;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(48px, 6.5vw, 78px);
+
+    font-weight: 500;
+
+    line-height: 1.05;
+}
+
+
+.gallery-hero h1 span {
+
+    color: var(--gold-light);
+}
+
+
+.gallery-hero p {
+
+    max-width: 620px;
+
+    color: rgba(255,255,255,.76);
+
+    font-size: 15px;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   GALLERY INTRO
+========================================================= */
+
+.gallery-intro {
+
+    padding: 105px 6% 65px;
+
+    background: #fff;
+
+    text-align: center;
+}
+
+
+.gallery-intro-container {
+
+    max-width: 800px;
+
+    margin: auto;
+}
+
+
+.gallery-intro-label {
+
+    color: var(--gold-dark);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+.gallery-intro h2 {
+
+    margin: 15px 0 20px;
+
+    color: var(--charcoal);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(38px, 4.5vw, 58px);
+
+    font-weight: 500;
+
+    line-height: 1.15;
+}
+
+
+.gallery-intro p {
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   FILTERS
+========================================================= */
+
+.gallery-section {
+
+    padding: 40px 6% 110px;
+
+    background: #fff;
+}
+
+
+.gallery-filters {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 50px;
+}
+
+
+.filter-btn {
+
+    padding: 11px 23px;
+
+    border: 1px solid var(--border);
+
+    background: #fff;
+
+    color: var(--muted);
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: .8px;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: .3s ease;
+}
+
+
+.filter-btn:hover,
+.filter-btn.active {
+
+    background: var(--gold);
+
+    border-color: var(--gold);
+
+    color: #fff;
+}
+
+
+/* =========================================================
+   GALLERY GRID
+========================================================= */
+
+.gallery-grid {
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(12, 1fr);
+
+    gap: 18px;
+}
+
+
+.gallery-item {
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #eee;
+
+    cursor: pointer;
+}
+
+
+.gallery-item:nth-child(1) {
+    grid-column: span 7;
+    height: 420px;
+}
+
+
+.gallery-item:nth-child(2) {
+    grid-column: span 5;
+    height: 420px;
+}
+
+
+.gallery-item:nth-child(3) {
+    grid-column: span 5;
+    height: 330px;
+}
+
+
+.gallery-item:nth-child(4) {
+    grid-column: span 7;
+    height: 330px;
+}
+
+
+.gallery-item:nth-child(5) {
+    grid-column: span 4;
+    height: 350px;
+}
+
+
+.gallery-item:nth-child(6) {
+    grid-column: span 4;
+    height: 350px;
+}
+
+
+.gallery-item:nth-child(7) {
+    grid-column: span 4;
+    height: 350px;
+}
+
+
+.gallery-item:nth-child(8) {
+
+    grid-column: span 12;
+
+    height: 390px;
+}
+
+
+.gallery-item img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform .7s ease;
+}
+
+
+.gallery-item:hover img {
+
+    transform: scale(1.07);
+}
+
+
+.gallery-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    padding: 28px;
+
+    background:
+
+        linear-gradient(
+            transparent 35%,
+            rgba(20,19,17,.82)
+        );
+
+    opacity: 0;
+
+    transition: .4s ease;
+}
+
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+
+.gallery-category {
+
+    margin-bottom: 7px;
+
+    color: var(--gold-light);
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+.gallery-overlay h3 {
+
+    color: #fff;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 25px;
+
+    font-weight: 500;
+}
+
+
+.gallery-view {
+
+    position: absolute;
+
+    top: 22px;
+    right: 22px;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid rgba(255,255,255,.5);
+
+    border-radius: 50%;
+
+    color: #fff;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   EXPERIENCE SECTION
+========================================================= */
+
+.experience-section {
+
+    position: relative;
+
+    padding: 115px 6%;
+
+    overflow: hidden;
+
+    background: var(--ivory);
+}
+
+
+.experience-container {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: .9fr 1.1fr;
+
+    gap: 90px;
+
+    align-items: center;
+}
+
+
+.experience-image {
+
+    position: relative;
+
+    height: 530px;
+
+    overflow: hidden;
+}
+
+
+.experience-image img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.experience-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 18px;
+
+    border: 1px solid rgba(255,255,255,.55);
+
+    pointer-events: none;
+}
+
+
+.experience-content-label {
+
+    color: var(--gold-dark);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+.experience-content h2 {
+
+    margin: 15px 0 22px;
+
+    color: var(--charcoal);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(40px, 4.5vw, 60px);
+
+    font-weight: 500;
+
+    line-height: 1.12;
+}
+
+
+.experience-content h2 span {
+
+    color: var(--gold-dark);
+}
+
+
+.experience-content p {
+
+    margin-bottom: 18px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.9;
+}
+
+
+.experience-points {
+
+    margin-top: 30px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+
+.experience-point {
+
+    padding: 18px;
+
+    border-left: 2px solid var(--gold);
+
+    background: #fff;
+}
+
+
+.experience-point strong {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--charcoal);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 18px;
+}
+
+
+.experience-point span {
+
+    color: var(--muted);
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.gallery-cta {
+
+    position: relative;
+
+    padding: 105px 6%;
+
+    overflow: hidden;
+
+    background:
+
+        linear-gradient(
+            rgba(36,35,32,.90),
+            rgba(36,35,32,.90)
+        ),
+
+        url("assets/background/contact-bg.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    text-align: center;
+}
+
+
+.gallery-cta::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%,-50%);
+
+    border-radius: 50%;
+
+    background: rgba(212,175,55,.08);
+
+    filter: blur(70px);
+}
+
+
+.gallery-cta-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 750px;
+
+    margin: auto;
+}
+
+
+.gallery-cta-label {
+
+    color: var(--gold-light);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+.gallery-cta h2 {
+
+    margin: 18px 0;
+
+    color: #fff;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(40px,5vw,62px);
+
+    font-weight: 500;
+
+    line-height: 1.12;
+}
+
+
+.gallery-cta p {
+
+    max-width: 600px;
+
+    margin: 0 auto 30px;
+
+    color: rgba(255,255,255,.72);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+.gold-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 15px 28px;
+
+    background: linear-gradient(
+        135deg,
+        #d9b65a,
+        #a97c24
+    );
+
+    color: #fff;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    transition: .35s ease;
+}
+
+
+.gold-button:hover {
+
+    color: #fff;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(169,124,36,.25);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.gallery-footer {
+
+    padding: 70px 6% 25px;
+
+    background: #20201e;
+
+    color: #fff;
+
+     border-top: 5px solid
+     var(--gold);
+}
+
+
+.footer-container {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+
+    gap: 50px;
+
+    padding-bottom: 50px;
+
+    border-bottom: 1px solid rgba(255,255,255,.10);
+}
+
+
+.footer-logo img {
+
+    width: 78px;
+
+    margin-bottom: 20px;
+}
+
+
+.footer-about p {
+
+    max-width: 320px;
+
+    color: rgba(255,255,255,.58);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+.footer-column h4 {
+
+    margin-bottom: 22px;
+
+    color: #fff;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 20px;
+
+    font-weight: 500;
+}
+
+
+.footer-links {
+
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+}
+
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+
+.footer-links a {
+
+    color: rgba(255,255,255,.58);
+
+    font-size: 13px;
+
+    transition: .3s ease;
+}
+
+
+.footer-links a:hover {
+
+    color: var(--gold-light);
+
+    padding-left: 5px;
+}
+
+
+.footer-contact p {
+
+    margin-bottom: 12px;
+
+    color: rgba(255,255,255,.58);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+.footer-contact i {
+
+    width: 22px;
+
+    color: var(--gold-light);
+}
+
+
+.footer-bottom {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding-top: 22px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    color: rgba(255,255,255,.40);
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+.back-to-top {
+
+    position: fixed;
+
+    right: 24px;
+    bottom: 24px;
+
+    z-index: 999;
+
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--gold);
+
+    border-radius: 50%;
+
+    background: #fff;
+
+    color: var(--gold-dark);
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(15px);
+
+    transition: .35s ease;
+}
+
+
+.back-to-top.show {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+
+.back-to-top:hover {
+
+    background: var(--gold);
+
+    color: #fff;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   LIGHTBOX
+========================================================= */
+
+.gallery-lightbox {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 10000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+
+    background: rgba(15,15,14,.94);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: .35s ease;
+}
+
+
+.gallery-lightbox.active {
+
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+.lightbox-image {
+
+    max-width: 92vw;
+    max-height: 86vh;
+
+    object-fit: contain;
+
+    box-shadow: 0 20px 70px rgba(0,0,0,.4);
+}
+
+
+.lightbox-close {
+
+    position: absolute;
+
+    top: 25px;
+    right: 30px;
+
+    width: 48px;
+    height: 48px;
+
+    border: 1px solid rgba(255,255,255,.25);
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: #fff;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition: .3s ease;
+}
+
+
+.lightbox-close:hover {
+
+    background: var(--gold);
+
+    border-color: var(--gold);
+
+    transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .gallery-item:nth-child(n) {
+
+        grid-column: span 1;
+
+        height: 330px;
+    }
+
+
+    .gallery-item:nth-child(1),
+    .gallery-item:nth-child(4),
+    .gallery-item:nth-child(8) {
+
+        grid-column: span 2;
+    }
+
+
+    .experience-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+    }
+
+
+    .experience-image {
+
+        height: 450px;
+    }
+
+
+    .footer-container {
+
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .gallery-header {
+
+        padding: 18px 5%;
+    }
+
+
+    .gallery-logo img {
+        width: 60px;
+    }
+
+
+    .menu-button {
+
+        width: 45px;
+        height: 45px;
+    }
+
+
+    .side-menu {
+
+        width: 330px;
+
+        padding: 80px 30px 30px;
+    }
+
+
+    .gallery-hero {
+
+        min-height: 70vh;
+    }
+
+
+    .gallery-hero-content {
+
+        padding: 130px 7% 80px;
+    }
+
+
+    .gallery-hero h1 {
+
+        font-size: 48px;
+    }
+
+
+    .gallery-hero p {
+
+        font-size: 13px;
+    }
+
+
+    .gallery-intro {
+
+        padding: 80px 7% 45px;
+    }
+
+
+    .gallery-section {
+
+        padding: 30px 7% 80px;
+    }
+
+
+    .gallery-filters {
+
+        gap: 7px;
+
+        margin-bottom: 35px;
+    }
+
+
+    .filter-btn {
+
+        padding: 9px 14px;
+
+        font-size: 9px;
+    }
+
+
+    .gallery-grid {
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+    }
+
+
+    .gallery-item:nth-child(n) {
+
+        grid-column: span 1;
+
+        height: 280px;
+    }
+
+
+    .gallery-item:nth-child(1),
+    .gallery-item:nth-child(4),
+    .gallery-item:nth-child(8) {
+
+        grid-column: span 1;
+
+        height: 300px;
+    }
+
+
+    .gallery-overlay {
+
+        opacity: 1;
+
+        padding: 20px;
+    }
+
+
+    .gallery-overlay h3 {
+        font-size: 21px;
+    }
+
+
+    .experience-section {
+
+        padding: 80px 7%;
+    }
+
+
+    .experience-image {
+
+        height: 380px;
+    }
+
+
+    .experience-points {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .gallery-cta {
+
+        padding: 80px 7%;
+    }
+
+
+    .gallery-footer {
+
+        padding: 60px 7% 25px;
+    }
+
+
+    .footer-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+
+    .footer-bottom {
+
+        flex-direction: column;
+    }
+
+
+    .gallery-lightbox {
+
+        padding: 15px;
+    }
+
+
+    .lightbox-close {
+
+        top: 15px;
+        right: 15px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="gallery-header">
+
+    <a href="index.html"
+       class="gallery-logo">
+
+        <img src="assets/logo/logo-icon.png"
+             alt="Vistara Solutions">
+
+    </a>
+
+
+    <button class="menu-button"
+            id="menuBtn"
+            aria-label="Open menu">
+
+        <i class="fa-solid fa-bars"></i>
+
+    </button>
+
+</header>
+
+
+<!-- =========================================================
+     SIDE MENU
+========================================================= -->
+
+<nav class="side-menu"
+     id="sideMenu">
+
+    <button class="close-btn"
+            id="closeBtn"
+            aria-label="Close menu">
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+
+    <div class="menu-label">
+        Vistara Solutions
+    </div>
+
+
+    <ul>
+
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+
+        <li>
+            <a href="about.html">About</a>
+        </li>
+
+        <li>
+            <a href="founder.html">Founder</a>
+        </li>
+
+        <li>
+            <a href="services.html">Services</a>
+        </li>
+
+        <li>
+            <a href="projects.html">Projects</a>
+        </li>
+
+        <li>
+            <a href="gallery.html">Gallery</a>
+        </li>
+
+        <li>
+            <a href="testimonials.html">Testimonials</a>
+        </li>
+
+        <li>
+            <a href="contact.html">Contact</a>
+        </li>
+
+        <li class="menu-divider"></li>
+
+        <li>
+            <a href="privacy-policy.html">
+                Privacy Policy
+            </a>
+        </li>
+
+        <li>
+            <a href="terms.html">
+                Terms &amp; Conditions
+            </a>
+        </li>
+
+    </ul>
+
+
+    <div class="menu-contact">
+
+        <h4>Get In Touch</h4>
+
+        <p>
+            <i class="fa-solid fa-phone"></i>
+            +91 87671 73882
+        </p>
+
+        <p>
+            <i class="fa-solid fa-phone"></i>
+            +91 87882 46145
+        </p>
+
+        <p>
+            <i class="fa-solid fa-envelope"></i>
+            vistarasolutions99@gmail.com
+        </p>
+
+
+        <div class="menu-social">
+
+            <a href="#">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="gallery-hero">
+
+
+
+    <!-- Background Video -->
+
+    <video autoplay muted loop playsinline class="hero-video">
+
+        <source src="assets/gallery/gallery-hero.mp4"
+            type="video/mp4">
+
+    </video>
+ 
+
+    <div class="gallery-hero-content"
+         data-aos="fade-up">
+
+        <div class="gallery-label">
+            Our Gallery
+        </div>
+
+
+        <h1>
+
+            A Glimpse Into
+            <span>Exceptional Spaces.</span>
+
+        </h1>
+
+
+        <p>
+
+            Explore a collection of premium residences,
+            commercial spaces, interiors and lifestyle
+            experiences curated through the Vistara vision.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     INTRO
+========================================================= -->
+
+<section class="gallery-intro">
+
+    <div class="gallery-intro-container"
+         data-aos="fade-up">
+
+        <span class="gallery-intro-label">
+            Explore Vistara
+        </span>
+
+
+        <h2>
+            Spaces That Inspire.
+            <br>
+            Experiences That Stay.
+        </h2>
+
+
+        <p>
+
+            Every property has a story. From thoughtfully
+            designed homes to sophisticated commercial
+            environments, our gallery reflects the quality,
+            character and lifestyle behind every opportunity
+            we present.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     GALLERY
+========================================================= -->
+
+<section class="gallery-section">
+
+
+    <!-- FILTERS -->
+
+    <div class="gallery-filters"
+         data-aos="fade-up">
+
+        <button class="filter-btn active"
+                data-filter="all">
+
+            All
+
+        </button>
+
+
+        <button class="filter-btn"
+                data-filter="residential">
+
+            Residential
+
+        </button>
+
+
+        <button class="filter-btn"
+                data-filter="commercial">
+
+            Commercial
+
+        </button>
+
+
+        <button class="filter-btn"
+                data-filter="interiors">
+
+            Interiors
+
+        </button>
+
+
+        <button class="filter-btn"
+                data-filter="lifestyle">
+
+            Lifestyle
+
+        </button>
+
+    </div>
+
+
+
+    <!-- GALLERY GRID -->
+
+    <div class="gallery-grid">
+
+
+        <div class="gallery-item"
+             data-category="residential"
+             data-image="assets/gallery/gallery-01.jpg"
+             data-title="Premium Residences"
+             data-aos="fade-up">
+
+            <img src="assets/gallery/gallery-01.png"
+                 alt="Premium residential property"
+                 loading="lazy">
+
+
+            <div class="gallery-overlay">
+
+                <span class="gallery-category">
+                    Residential
+                </span>
+
+                <h3>
+                    Premium Residences
+                </h3>
+
+            </div>
+
+
+            <div class="gallery-view">
+
+                <i class="fa-solid fa-expand"></i>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="gallery-item"
+             data-category="commercial"
+             data-image="assets/gallery/gallery-02.jpg"
+             data-title="Modern Commercial Spaces"
+             data-aos="fade-up"
+             data-aos-delay="100">
+
+            <img src="assets/gallery/gallery-02.png"
+                 alt="Modern commercial property"
+                 loading="lazy">
+
+
+            <div class="gallery-overlay">
+
+                <span class="gallery-category">
+                    Commercial
+                </span>
+
+                <h3>
+                    Modern Commercial Spaces
+                </h3>
+
+            </div>
+
+
+            <div class="gallery-view">
+
+                <i class="fa-solid fa-expand"></i>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="gallery-item"
+             data-category="interiors"
+             data-image="assets/gallery/gallery-03.jpg"
+             data-title="Elegant Interiors"
+             data-aos="fade-up">
+
+            <img src="assets/gallery/gallery-03.png"
+                 alt="Elegant interior"
+                 loading="lazy">
+
+
+            <div class="gallery-overlay">
+
+                <span class="gallery-category">
+                    Interiors
+                </span>
+
+                <h3>
+                    Elegant Interiors
+                </h3>
+
+            </div>
+
+
+            <div class="gallery-view">
+
+                <i class="fa-solid fa-expand"></i>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="gallery-item"
+             data-category="residential"
+             data-image="assets/gallery/gallery-04.png"
+             data-title="Contemporary Living"
+             data-aos="fade-up"
+             data-aos-delay="100">
+
+            <img src="assets/gallery/gallery-04.png"
+                 alt="Contemporary residential space"
+                 loading="lazy">
+
+
+            <div class="gallery-overlay">
+
+                <span class="gallery-category">
+                    Residential
+                </span>
+
+                <h3>
+                    Contemporary Living
+                </h3>
+
+            </div>
+
+
+            <div class="gallery-view">
+
+                <i class="fa-solid fa-expand"></i>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="gallery-item"
+             data-category="commercial"
+             data-image="assets/gallery/gallery-05.jpg"
+             data-title="Business Environments"
+             data-aos="fade-up">
+
+            <img src="assets/gallery/gallery-05.png"
+                 alt="Commercial business environment"
+                 loading="lazy">
+
+
+            <div class="gallery-overlay">
+
+                <span class="gallery-category">
+                    Commercial
+                </span>
+
+                <h3>
+                    Business Environments
+                </h3>
+
+            </div>
+
+
+            <div class="gallery-view">
+
+                <i class="fa-solid fa-expand"></i>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="gallery-item"
+             data-category="lifestyle"
+             data-image="assets/gallery/gallery-06.jpg"
+             data-title="The Vistara Lifestyle"
+             data-aos="fade-up"
+             data-aos-delay="100">
+
+            <img src="assets/gallery/gallery-06.png"
+                 alt="Premium lifestyle space"
+                 loading="lazy">
+
+
+            <div class="gallery-overlay">
+
+                <span class="gallery-category">
+                    Lifestyle
+                </span>
+
+                <h3>
+                    The Vistara Lifestyle
+                </h3>
+
+            </div>
+
+
+            <div class="gallery-view">
+
+                <i class="fa-solid fa-expand"></i>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="gallery-item"
+             data-category="interiors"
+             data-image="assets/gallery/gallery-07.jpg"
+             data-title="Designed With Detail"
+             data-aos="fade-up">
+
+            <img src="assets/gallery/gallery-07.png"
+                 alt="Premium interior design"
+                 loading="lazy">
+
+
+            <div class="gallery-overlay">
+
+                <span class="gallery-category">
+                    Interiors
+                </span>
+
+                <h3>
+                    Designed With Detail
+                </h3>
+
+            </div>
+
+
+            <div class="gallery-view">
+
+                <i class="fa-solid fa-expand"></i>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="gallery-item"
+             data-category="lifestyle"
+             data-image="assets/gallery/gallery-08.jpg"
+             data-title="More Than Four Walls"
+             data-aos="fade-up">
+
+            <img src="assets/gallery/gallery-08.png"
+                 alt="Premium lifestyle property"
+                 loading="lazy">
+
+
+            <div class="gallery-overlay">
+
+                <span class="gallery-category">
+                    Lifestyle
+                </span>
+
+                <h3>
+                    More Than Four Walls
+                </h3>
+
+            </div>
+
+
+            <div class="gallery-view">
+
+                <i class="fa-solid fa-expand"></i>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     VISTARA EXPERIENCE
+========================================================= -->
+
+<section class="experience-section">
+
+    <div class="experience-container">
+
+
+        <div class="experience-image"
+             data-aos="fade-right">
+
+            <img src="assets/gallery/gallery-08.png"
+                 alt="The Vistara Experience"
+                 loading="lazy">
+
+        </div>
+
+
+        <div class="experience-content"
+             data-aos="fade-left">
+
+            <span class="experience-content-label">
+                The Vistara Experience
+            </span>
+
+
+            <h2>
+
+                More Than
+                <br>
+                <span>Four Walls.</span>
+
+            </h2>
+
+
+            <p>
+
+                At Vistara Solutions, we believe that real
+                estate is more than a transaction. It is about
+                discovering spaces that complement the way
+                you live, work and grow.
+
+            </p>
+
+
+            <p>
+
+                Our approach combines market knowledge,
+                carefully selected opportunities and
+                personalized guidance to make every property
+                journey clear, confident and rewarding.
+
+            </p>
+
+
+            <div class="experience-points">
+
+
+                <div class="experience-point">
+
+                    <strong>
+                        Curated
+                    </strong>
+
+                    <span>
+                        Carefully selected property opportunities.
+                    </span>
+
+                </div>
+
+
+                <div class="experience-point">
+
+                    <strong>
+                        Trusted
+                    </strong>
+
+                    <span>
+                        Transparent guidance at every stage.
+                    </span>
+
+                </div>
+
+
+                <div class="experience-point">
+
+                    <strong>
+                        Personal
+                    </strong>
+
+                    <span>
+                        Solutions built around your requirements.
+                    </span>
+
+                </div>
+
+
+                <div class="experience-point">
+
+                    <strong>
+                        Premium
+                    </strong>
+
+                    <span>
+                        A refined approach to property discovery.
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="gallery-cta">
+
+    <div class="gallery-cta-content"
+         data-aos="fade-up">
+
+        <span class="gallery-cta-label">
+            Find Your Space
+        </span>
+
+
+        <h2>
+
+            Ready To Find
+            <br>
+            Your Next Property?
+
+        </h2>
+
+
+        <p>
+
+            Explore our property opportunities and let
+            Vistara Solutions help you take the next step
+            with confidence.
+
+        </p>
+
+
+        <a href="contact.html"
+           class="gold-button">
+
+            Start A Conversation
+
+            <i class="fa-solid fa-arrow-right ms-2"></i>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="gallery-footer">
+
+    <div class="footer-container">
+
+
+        <!-- ABOUT -->
+
+        <div class="footer-about">
+
+            <a href="index.html"
+               class="footer-logo">
+
+                <img src="assets/logo/logo-gold.png"
+                     alt="Vistara Solutions">
+
+            </a>
+
+
+            <p>
+
+                Premium residential and commercial real estate
+                consultancy helping clients discover exceptional
+                property opportunities across Pune.
+
+            </p>
+
+        </div>
+
+
+        <!-- COMPANY -->
+
+        <div class="footer-column">
+
+            <h4>
+                Company
+            </h4>
+
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About Us
+                    </a>
+                </li>
+
+                <li>
+                    <a href="projects.html">
+                        Projects
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- SERVICES -->
+
+        <div class="footer-column">
+
+            <h4>
+                Services
+            </h4>
+
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="projects.html">
+                        Residential Properties
+                    </a>
+                </li>
+
+                <li>
+                    <a href="projects.html">
+                        Commercial Spaces
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Investment Consulting
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Property Consultation
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- CONTACT -->
+
+        <div class="footer-column footer-contact">
+
+            <h4>
+                Contact
+            </h4>
+
+
+            <p>
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                Kharadi, Pune, Maharashtra
+
+            </p>
+
+
+            <p>
+
+                <i class="fa-solid fa-phone"></i>
+
+                +91 8767173882
+
+            </p>
+
+
+            <p>
+
+                <i class="fa-solid fa-envelope"></i>
+
+                vistarasolutions99@gmail.com
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 Vistara Solutions. All Rights Reserved.
+        </span>
+
+
+        <span>
+            Premium Real Estate Consultancy · Pune
+        </span>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     LIGHTBOX
+========================================================= -->
+
+<div class="gallery-lightbox"
+     id="galleryLightbox">
+
+    <button class="lightbox-close"
+            id="lightboxClose"
+            aria-label="Close image">
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+
+    <img class="lightbox-image"
+         id="lightboxImage"
+         src=""
+         alt="Gallery preview">
+
+</div>
+
+
+<!-- =========================================================
+     BACK TO TOP
+========================================================= -->
+
+<button class="back-to-top"
+        id="backToTop"
+        aria-label="Back to top">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+
+<!-- AOS -->
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+
+<script>
+
+/* =========================================================
+   AOS
+========================================================= */
+
+AOS.init({
+
+    duration: 850,
+
+    easing: "ease-out-cubic",
+
+    once: true,
+
+    offset: 70
+
+});
+
+
+/* =========================================================
+   SIDE MENU
+========================================================= */
+
+const menuBtn =
+    document.getElementById("menuBtn");
+
+const sideMenu =
+    document.getElementById("sideMenu");
+
+const closeBtn =
+    document.getElementById("closeBtn");
+
+
+menuBtn.addEventListener("click", function () {
+
+    sideMenu.classList.add("active");
+
+});
+
+
+closeBtn.addEventListener("click", function () {
+
+    sideMenu.classList.remove("active");
+
+});
+
+
+sideMenu.querySelectorAll("a").forEach(function (link) {
+
+    link.addEventListener("click", function () {
+
+        sideMenu.classList.remove("active");
+
+    });
+
+});
+
+
+/* =========================================================
+   GALLERY FILTER
+========================================================= */
+
+const filterButtons =
+    document.querySelectorAll(".filter-btn");
+
+const galleryItems =
+    document.querySelectorAll(".gallery-item");
+
+
+filterButtons.forEach(function (button) {
+
+    button.addEventListener("click", function () {
+
+        filterButtons.forEach(function (btn) {
+
+            btn.classList.remove("active");
+
+        });
+
+
+        this.classList.add("active");
+
+
+        const filter =
+            this.getAttribute("data-filter");
+
+
+        galleryItems.forEach(function (item) {
+
+            const category =
+                item.getAttribute("data-category");
+
+
+            if (filter === "all" || category === filter) {
+
+                item.style.display = "";
+
+            } else {
+
+                item.style.display = "none";
+
+            }
+
+        });
+
+    });
+
+});
+
+
+/* =========================================================
+   LIGHTBOX
+========================================================= */
+
+const lightbox =
+    document.getElementById("galleryLightbox");
+
+const lightboxImage =
+    document.getElementById("lightboxImage");
+
+const lightboxClose =
+    document.getElementById("lightboxClose");
+
+
+galleryItems.forEach(function (item) {
+
+    item.addEventListener("click", function () {
+
+        const image =
+            this.getAttribute("data-image");
+
+        const title =
+            this.getAttribute("data-title");
+
+
+        lightboxImage.src = image;
+
+        lightboxImage.alt = title;
+
+
+        lightbox.classList.add("active");
+
+        document.body.style.overflow = "hidden";
+
+    });
+
+});
+
+
+function closeLightbox() {
+
+    lightbox.classList.remove("active");
+
+    document.body.style.overflow = "";
+
+}
+
+
+lightboxClose.addEventListener(
+    "click",
+    closeLightbox
+);
+
+
+lightbox.addEventListener("click", function (event) {
+
+    if (event.target === lightbox) {
+
+        closeLightbox();
+
+    }
+
+});
+
+
+document.addEventListener("keydown", function (event) {
+
+    if (event.key === "Escape") {
+
+        closeLightbox();
+
+    }
+
+});
+
+
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+const backToTop =
+    document.getElementById("backToTop");
+
+
+window.addEventListener("scroll", function () {
+
+    if (window.scrollY > 500) {
+
+        backToTop.classList.add("show");
+
+    } else {
+
+        backToTop.classList.remove("show");
+
+    }
+
+});
+
+
+backToTop.addEventListener("click", function () {
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
+
+});
+
+</script>
+
+
+</body>
+
+</html>

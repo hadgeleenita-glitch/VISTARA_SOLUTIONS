@@ -1,0 +1,2800 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+
+    <title>
+        Terms & Conditions | Vistara Solutions
+    </title>
+
+
+    <meta name="description"
+          content="Read the Terms & Conditions governing the use of the Vistara Solutions website and its real estate services in Pune.">
+
+
+    <!-- =====================================================
+         FAVICON
+    ====================================================== -->
+
+    <link rel="icon"
+          type="image/png"
+          href="assets/logo/favicon.png">
+
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+
+    <!-- =====================================================
+         BOOTSTRAP
+    ====================================================== -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+          rel="stylesheet">
+
+
+
+    <!-- =====================================================
+         MAIN CSS
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+  <style>
+
+/* =========================================================
+   ROOT VARIABLES
+========================================================= */
+
+:root {
+
+    --gold: #c79a3b;
+    --gold-light: #e4c56d;
+    --gold-dark: #9b7424;
+
+    --ivory: #f8f6f0;
+    --white: #ffffff;
+
+    --charcoal: #252421;
+    --dark: #20201e;
+
+    --text: #30302e;
+    --muted: #77736b;
+
+    --border: #e8e1d4;
+
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+
+    background: var(--ivory);
+
+    color: var(--text);
+
+    overflow-x: hidden;
+
+}
+
+
+/* =========================================================
+   FLOATING HEADER
+========================================================= */
+
+.floating-header {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    padding: 20px 0;
+
+    pointer-events: none;
+
+}
+
+
+.header-wrapper {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.logo {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    pointer-events: auto;
+
+    text-decoration: none;
+
+}
+
+
+.logo img {
+
+    width: 58px;
+
+    height: auto;
+
+    display: block;
+
+}
+
+
+/* =========================================================
+   HAMBURGER BUTTON
+========================================================= */
+
+.menu-btn {
+
+    width: 54px;
+
+    height: 54px;
+
+    border: 1px solid rgba(199, 154, 59, 0.45);
+
+    border-radius: 50%;
+
+    background: rgba(32, 32, 30, 0.92);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    cursor: pointer;
+
+    pointer-events: auto;
+
+    transition:
+        background 0.35s ease,
+        border-color 0.35s ease,
+        transform 0.35s ease;
+
+}
+
+
+.menu-btn span {
+
+    display: block;
+
+    width: 21px;
+
+    height: 1.5px;
+
+    background: var(--gold-light);
+
+    transition: all 0.35s ease;
+
+}
+
+
+.menu-btn:hover {
+
+    background: var(--gold);
+
+    border-color: var(--gold);
+
+    transform: rotate(5deg);
+
+}
+
+
+.menu-btn:hover span {
+
+    background: var(--white);
+
+}
+
+
+/* =========================================================
+   HAMBURGER SIDE MENU
+   FIXED / CLEAN VERSION
+========================================================= */
+
+.side-menu {
+
+    position: fixed !important;
+
+    top: 0 !important;
+
+    right: -420px !important;
+
+    width: 400px !important;
+
+    max-width: 90% !important;
+
+    height: 100vh !important;
+
+    background: #20201e !important;
+
+    color: #ffffff !important;
+
+    z-index: 99999 !important;
+
+    padding: 90px 45px 40px !important;
+
+    overflow-y: auto !important;
+
+    box-sizing: border-box !important;
+
+    box-shadow: -20px 0 60px rgba(0, 0, 0, 0.35) !important;
+
+    transition:
+        right 0.55s cubic-bezier(0.77, 0, 0.175, 1) !important;
+
+}
+
+
+/* OPEN */
+
+.side-menu.active {
+
+    right: 0 !important;
+
+}
+
+
+/* MENU BACKGROUND */
+
+.side-menu::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(199, 154, 59, 0.12),
+            transparent 35%
+        );
+
+    pointer-events: none;
+
+}
+
+
+/* KEEP MENU CONTENT ABOVE BACKGROUND */
+
+.side-menu > * {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+/* CLOSE BUTTON */
+
+.side-menu .close-btn {
+
+    position: absolute !important;
+
+    top: 25px !important;
+
+    right: 25px !important;
+
+    width: 46px !important;
+
+    height: 46px !important;
+
+    border: 1px solid rgba(199, 154, 59, 0.45) !important;
+
+    border-radius: 50% !important;
+
+    background: transparent !important;
+
+    color: #e4c56d !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    cursor: pointer !important;
+
+    z-index: 10 !important;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease !important;
+
+}
+
+
+.side-menu .close-btn:hover {
+
+    background: #c79a3b !important;
+
+    color: #ffffff !important;
+
+    transform: rotate(90deg) !important;
+
+}
+
+
+/* MENU LABEL */
+
+.side-menu .menu-label {
+
+    color: #e4c56d !important;
+
+    font-family: 'Playfair Display', serif !important;
+
+    font-size: 14px !important;
+
+    letter-spacing: 3px !important;
+
+    text-transform: uppercase !important;
+
+    margin-bottom: 30px !important;
+
+}
+
+
+/* MENU LIST */
+
+.side-menu ul {
+
+    list-style: none !important;
+
+    padding: 0 !important;
+
+    margin: 0 !important;
+
+}
+
+
+.side-menu ul li {
+
+    margin: 0 !important;
+
+}
+
+
+.side-menu ul li a {
+
+    display: inline-block !important;
+
+    position: relative !important;
+
+    color: #ffffff !important;
+
+    font-family: 'Playfair Display', serif !important;
+
+    font-size: 22px !important;
+
+    line-height: 1.5 !important;
+
+    text-decoration: none !important;
+
+    padding: 8px 0 !important;
+
+    background: transparent !important;
+
+    transition:
+        color 0.3s ease,
+        padding-left 0.3s ease !important;
+
+}
+
+
+.side-menu ul li a:hover {
+
+    color: #e4c56d !important;
+
+    padding-left: 8px !important;
+
+}
+
+
+/* DIVIDER */
+
+.side-menu .menu-divider {
+
+    height: 1px !important;
+
+    width: 100% !important;
+
+    background: rgba(255, 255, 255, 0.12) !important;
+
+    margin: 22px 0 !important;
+
+}
+
+
+/* CONTACT AREA */
+
+.side-menu .menu-contact {
+
+    margin-top: 35px !important;
+
+    padding-top: 25px !important;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+
+}
+
+
+.side-menu .menu-contact h4 {
+
+    color: #e4c56d !important;
+
+    font-family: 'Playfair Display', serif !important;
+
+    font-size: 20px !important;
+
+    margin-bottom: 18px !important;
+
+}
+
+
+.side-menu .menu-contact p {
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    gap: 12px !important;
+
+    color: rgba(255, 255, 255, 0.72) !important;
+
+    font-family: 'Poppins', sans-serif !important;
+
+    font-size: 13px !important;
+
+    margin-bottom: 12px !important;
+
+}
+
+
+.side-menu .menu-contact p i {
+
+    width: 18px !important;
+
+    color: #c79a3b !important;
+
+}
+
+
+/* SOCIAL ICONS */
+
+.side-menu .menu-social {
+
+    display: flex !important;
+
+    gap: 10px !important;
+
+    margin-top: 22px !important;
+
+}
+
+
+.side-menu .menu-social a {
+
+    width: 38px !important;
+
+    height: 38px !important;
+
+    padding: 0 !important;
+
+    border: 1px solid rgba(199, 154, 59, 0.35) !important;
+
+    border-radius: 50% !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    color: #e4c56d !important;
+
+    font-family: 'Poppins', sans-serif !important;
+
+    font-size: 14px !important;
+
+}
+
+
+.side-menu .menu-social a:hover {
+
+    background: #c79a3b !important;
+
+    color: #ffffff !important;
+
+    padding-left: 0 !important;
+
+}
+
+
+/* =========================================================
+   PRIVACY HERO
+========================================================= */
+
+.legal-hero {
+
+    position: relative;
+
+    min-height: 520px;
+
+    display: flex;
+
+    align-items: center;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(32, 32, 30, 0.98),
+            rgba(37, 36, 33, 0.96)
+        );
+
+    overflow: hidden;
+
+}
+
+
+.legal-hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    right: -180px;
+
+    top: -180px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(199, 154, 59, 0.18),
+        transparent 70%
+    );
+
+}
+
+
+.legal-hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+
+    height: 400px;
+
+    left: -200px;
+
+    bottom: -200px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(199, 154, 59, 0.10),
+        transparent 70%
+    );
+
+}
+
+
+.legal-hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 800px;
+
+    padding: 150px 0 80px;
+
+}
+
+
+.section-eyebrow {
+
+    display: inline-block;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    font-weight: 500;
+
+    color: var(--gold-light);
+
+    margin-bottom: 18px;
+
+}
+
+
+.legal-hero h1 {
+
+    font-family: 'Playfair Display', serif;
+
+    color: var(--white);
+
+    font-size: clamp(48px, 7vw, 82px);
+
+    font-weight: 500;
+
+    line-height: 1.05;
+
+    margin: 0;
+
+}
+
+
+.legal-hero h1 span {
+
+    color: var(--gold-light);
+
+}
+
+
+.legal-hero p {
+
+    max-width: 680px;
+
+    margin: 25px 0 0;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+}
+
+
+.legal-divider {
+
+    width: 70px;
+
+    height: 1px;
+
+    background: var(--gold);
+
+    margin: 30px 0 18px;
+
+}
+
+
+.legal-updated {
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =========================================================
+   PRIVACY CONTENT SECTION
+========================================================= */
+
+.legal-content-section {
+
+    padding: 100px 0;
+
+    background: var(--ivory);
+
+}
+
+
+.legal-layout {
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) 320px;
+
+    gap: 80px;
+
+    align-items: start;
+
+}
+
+
+.legal-content {
+
+    min-width: 0;
+
+}
+
+
+.legal-section {
+
+    position: relative;
+
+    padding: 0 0 55px;
+
+    margin-bottom: 55px;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+
+.legal-section:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.legal-number {
+
+    display: block;
+
+    font-family: 'Playfair Display', serif;
+
+    color: var(--gold);
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.legal-section h2 {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(27px, 3vw, 38px);
+
+    font-weight: 600;
+
+    color: var(--charcoal);
+
+    margin-bottom: 20px;
+
+}
+
+
+.legal-section p {
+
+    color: var(--muted);
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    margin-bottom: 18px;
+
+}
+
+
+.legal-section p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+/* =========================================================
+   LEGAL LIST
+========================================================= */
+
+.legal-section ul {
+
+    padding-left: 22px;
+
+    margin: 18px 0 0;
+
+}
+
+
+.legal-section ul li {
+
+    color: var(--muted);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    margin-bottom: 10px;
+
+    padding-left: 5px;
+
+}
+
+
+.legal-section ul li::marker {
+
+    color: var(--gold);
+
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.legal-sidebar {
+
+    position: sticky;
+
+    top: 120px;
+
+}
+
+
+.legal-sidebar-card {
+
+    position: relative;
+
+    padding: 38px 30px;
+
+    background: var(--dark);
+
+    overflow: hidden;
+
+}
+
+
+.legal-sidebar-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+
+    height: 180px;
+
+    right: -80px;
+
+    bottom: -80px;
+
+    border-radius: 50%;
+
+    background: rgba(199, 154, 59, 0.12);
+
+}
+
+
+.legal-sidebar-card > span {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: block;
+
+    color: var(--gold-light);
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.legal-sidebar-card > i {
+
+    position: relative;
+
+    z-index: 2;
+
+    color: var(--gold);
+
+    font-size: 30px;
+
+    margin-bottom: 22px;
+
+}
+
+
+.legal-sidebar-card h3 {
+
+    position: relative;
+
+    z-index: 2;
+
+    font-family: 'Playfair Display', serif;
+
+    color: var(--white);
+
+    font-size: 28px;
+
+    line-height: 1.25;
+
+    margin-bottom: 18px;
+
+}
+
+
+.legal-sidebar-card h3 strong {
+
+    display: block;
+
+    color: var(--gold-light);
+
+    font-weight: 500;
+
+}
+
+
+.legal-sidebar-card p {
+
+    position: relative;
+
+    z-index: 2;
+
+    color: rgba(255, 255, 255, 0.62);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    margin: 0;
+
+}
+
+
+
+/* GOLD VERTICAL LINE - SIDE MENU */
+.side-menu ul {
+    position: relative !important;
+    margin: 0 !important;
+    padding: 0 0 0 55px !important;
+    list-style: none !important;
+}
+
+.side-menu ul::before {
+    content: "" !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 3px !important;
+    height: 100% !important;
+    background: var(--gold) !important;
+    display: block !important;
+}
+
+
+
+
+/* =========================================================
+   LEGAL CONTACT CARD
+========================================================= */
+
+.legal-contact-card {
+
+    margin-top: 20px;
+
+    padding: 30px;
+
+    border: 1px solid var(--border);
+
+    background: var(--white);
+
+}
+
+
+.legal-contact-card span {
+
+    display: block;
+
+    color: var(--gold-dark);
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.legal-contact-card h4 {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 25px;
+
+    color: var(--charcoal);
+
+    margin-bottom: 18px;
+
+}
+
+
+.legal-contact-card a {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    color: var(--text);
+
+    font-size: 12px;
+
+    text-decoration: none;
+
+    word-break: break-word;
+
+    transition: color 0.3s ease;
+
+}
+
+
+.legal-contact-card a i {
+
+    flex-shrink: 0;
+
+    color: var(--gold);
+
+    transition: transform 0.3s ease;
+
+}
+
+
+.legal-contact-card a:hover {
+
+    color: var(--gold-dark);
+
+}
+
+
+.legal-contact-card a:hover i {
+
+    transform: translateX(5px);
+
+}
+
+
+/* =========================================================
+   CONTACT DETAILS
+========================================================= */
+
+.legal-contact-section {
+
+    padding-bottom: 0;
+
+}
+
+
+.legal-contact-details {
+
+    display: grid;
+
+    gap: 16px;
+
+    margin-top: 28px;
+
+}
+
+
+.legal-contact-details > div {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    padding: 16px 18px;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    border: 1px solid var(--border);
+
+}
+
+
+.legal-contact-details i {
+
+    width: 20px;
+
+    color: var(--gold);
+
+    margin-top: 4px;
+
+}
+
+
+.legal-contact-details span,
+.legal-contact-details a {
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    text-decoration: none;
+
+}
+
+
+.legal-contact-details a:hover {
+
+    color: var(--gold-dark);
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+
+    background: #20201e !important;
+
+    color: var(--white);
+
+    padding: 80px 0 0;
+
+     border-top: 5px solid
+     var(--gold);
+}
+
+
+.footer-logo {
+
+    display: inline-block;
+
+    margin-bottom: 22px;
+
+}
+
+
+.footer-logo img {
+
+    max-width: 170px;
+
+    height: auto;
+
+    display: block;
+
+}
+
+
+.footer-description {
+
+    max-width: 360px;
+
+    color: rgba(255, 255, 255, 0.58);
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    margin-bottom: 25px;
+
+}
+
+
+.footer-title {
+
+    font-family: 'Playfair Display', serif;
+
+    color: var(--white);
+
+    font-size: 20px;
+
+    margin-bottom: 24px;
+
+}
+
+
+.footer-links {
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+
+}
+
+
+.footer-links li {
+
+    margin-bottom: 12px;
+
+}
+
+
+.footer-links a {
+
+    color: rgba(255, 255, 255, 0.58);
+
+    font-size: 13px;
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+
+}
+
+
+.footer-links a:hover {
+
+    color: var(--gold-light);
+
+}
+
+
+.footer-contact {
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+
+}
+
+
+.footer-contact li {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 14px;
+
+    margin-bottom: 18px;
+
+    color: rgba(255, 255, 255, 0.58);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+}
+
+
+.footer-contact i {
+
+    width: 18px;
+
+    color: var(--gold);
+
+    margin-top: 3px;
+
+    flex-shrink: 0;
+
+}
+
+
+.footer-contact a {
+
+    color: rgba(255, 255, 255, 0.58);
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+
+}
+
+
+.footer-contact a:hover {
+
+    color: var(--gold-light);
+
+}
+
+
+/* =========================================================
+   FOOTER SOCIALS
+========================================================= */
+
+.footer-socials {
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+
+.footer-socials a {
+
+    width: 40px;
+
+    height: 40px;
+
+    border: 1px solid rgba(199, 154, 59, 0.35);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--gold-light);
+
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+
+.footer-socials a:hover {
+
+    background: var(--gold);
+
+    color: var(--white);
+
+    transform: translateY(-3px);
+
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+========================================================= */
+
+.footer-bottom {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-top: 60px;
+
+    padding: 22px 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+
+}
+
+
+.footer-bottom p {
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.42);
+
+    font-size: 11px;
+
+    letter-spacing: 0.5px;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .legal-layout {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+    }
+
+
+    .legal-sidebar {
+
+        position: static;
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 20px;
+
+    }
+
+
+    .legal-contact-card {
+
+        margin-top: 0;
+
+    }
+
+
+    .legal-hero {
+
+        min-height: 470px;
+
+    }
+
+
+    .legal-hero-content {
+
+        padding-top: 140px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .floating-header {
+
+        padding: 15px 0;
+
+    }
+
+
+    .logo img {
+
+        width: 50px;
+
+    }
+
+
+    .menu-btn {
+
+        width: 48px;
+
+        height: 48px;
+
+    }
+
+
+    .side-menu {
+
+        width: 350px !important;
+
+        max-width: 88% !important;
+
+        padding: 85px 30px 35px !important;
+
+    }
+
+
+    .side-menu ul li a {
+
+        font-size: 20px !important;
+
+    }
+
+
+    .menu-contact {
+
+        margin-top: 28px;
+
+    }
+
+
+    .legal-hero {
+
+        min-height: 430px;
+
+    }
+
+
+    .legal-hero-content {
+
+        padding: 125px 15px 65px;
+
+    }
+
+
+    .legal-hero h1 {
+
+        font-size: 48px;
+
+    }
+
+
+    .legal-hero p {
+
+        font-size: 14px;
+
+        line-height: 1.8;
+
+    }
+
+
+    .legal-content-section {
+
+        padding: 65px 0;
+
+    }
+
+
+    .legal-layout {
+
+        gap: 45px;
+
+    }
+
+
+    .legal-section {
+
+        padding-bottom: 40px;
+
+        margin-bottom: 40px;
+
+    }
+
+
+    .legal-section h2 {
+
+        font-size: 28px;
+
+    }
+
+
+    .legal-section p,
+    .legal-section ul li {
+
+        font-size: 14px;
+
+        line-height: 1.85;
+
+    }
+
+
+    .legal-sidebar {
+
+        display: block;
+
+    }
+
+
+    .legal-contact-card {
+
+        margin-top: 20px;
+
+    }
+
+
+    .site-footer {
+
+        padding-top: 60px;
+
+    }
+
+
+    .footer-bottom {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        margin-top: 40px;
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .side-menu {
+
+        width: 320px !important;
+
+        max-width: 92% !important;
+
+        padding-left: 25px !important;
+
+        padding-right: 25px !important;
+
+    }
+
+
+    .legal-hero-content {
+
+        padding-left: 10px;
+
+        padding-right: 10px;
+
+    }
+
+
+    .legal-hero h1 {
+
+        font-size: 42px;
+
+    }
+
+
+    .legal-content-section {
+
+        padding-top: 50px;
+
+        padding-bottom: 50px;
+
+    }
+
+
+    .legal-section h2 {
+
+        font-size: 25px;
+
+    }
+
+
+    .legal-sidebar-card,
+    .legal-contact-card {
+
+        padding: 28px 22px;
+
+    }
+
+
+    .legal-contact-details > div {
+
+        padding: 14px;
+
+    }
+
+
+    .footer-description {
+
+        font-size: 12px;
+
+    }
+
+}
+
+/* =========================
+   BACK TO TOP BUTTON
+========================= */
+
+.back-to-top {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    background: var(--charcoal);
+    color: var(--gold-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    cursor: pointer;
+    z-index: 9999;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+
+    transition: all 0.35s ease;
+}
+
+.back-to-top:hover {
+    background: var(--gold);
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(199, 154, 59, 0.3);
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .back-to-top {
+        width: 42px;
+        height: 42px;
+        right: 18px;
+        bottom: 18px;
+        font-size: 15px;
+    }
+}
+
+
+
+</style>        
+</head>
+
+<body>
+
+
+
+<!-- =========================================================
+     PREMIUM HEADER
+========================================================= -->
+
+<header class="site-header">
+
+    <div class="container-fluid px-4 px-lg-5">
+
+        <div class="header-inner">
+
+
+            <!-- Logo -->
+
+            <a href="index.html"
+               class="site-logo">
+
+                <img src="assets/logo/logo-icon.png"
+                     alt="Vistara Solutions">
+
+            </a>
+
+
+
+            <!-- Menu Button -->
+
+            <button class="menu-btn"
+                    id="menuBtn"
+                    aria-label="Open Navigation Menu">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     SIDE MENU
+========================================================= -->
+
+<!-- =========================================================
+     SIDE MENU
+========================================================= -->
+
+<nav class="side-menu" id="sideMenu">
+
+    <button class="close-btn" id="closeBtn" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <div class="menu-label">
+        Vistara Solutions
+    </div>
+    
+    <ul>
+
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+
+        <li>
+            <a href="about.html">About</a>
+        </li>
+
+        <li>
+            <a href="founder.html">Founder</a>
+        </li>
+
+        <li>
+            <a href="services.html">Services</a>
+        </li>
+
+        <li>
+            <a href="projects.html">Projects</a>
+        </li>
+
+        <li>
+            <a href="gallery.html">Gallery</a>
+        </li>
+
+        <li>
+            <a href="testimonials.html">Testimonials</a>
+        </li>
+
+        <li>
+            <a href="contact.html">Contact</a>
+        </li>
+
+        <li class="menu-divider"></li>
+
+        <li>
+            <a href="privacy-policy.html">
+                Privacy Policy
+            </a>
+        </li>
+
+        <li>
+            <a href="terms.html">
+                Terms &amp; Conditions
+            </a>
+        </li>
+
+    </ul>
+
+    <div class="menu-contact">
+
+        <h4>Get In Touch</h4>
+
+        <p>
+            <i class="fa-solid fa-phone"></i>
+            +91 87671 73882
+        </p>
+
+        <p>
+            <i class="fa-solid fa-phone"></i>
+            +91 87882 46145
+        </p>
+
+        <p>
+            <i class="fa-solid fa-envelope"></i>
+            vistarasolutions99@gmail.com
+        </p>
+
+        <div class="menu-social">
+
+            <a href="#">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+
+
+<!-- =========================================================
+     TERMS HERO
+========================================================= -->
+
+<section class="legal-hero terms-hero">
+
+    <div class="container">
+
+        <div class="legal-hero-content"
+             data-aos="fade-up">
+
+
+            <span class="section-eyebrow">
+
+                VISTARA SOLUTIONS
+
+            </span>
+
+
+            <h1>
+
+                Terms &
+                <span>Conditions</span>
+
+            </h1>
+
+
+            <p>
+
+                Please read these terms carefully before using the
+                Vistara Solutions website or engaging with our
+                services.
+
+            </p>
+
+
+            <div class="legal-divider"></div>
+
+
+            <span class="legal-updated">
+
+                Last Updated: August 2026
+
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     TERMS CONTENT
+========================================================= -->
+
+<section class="legal-content-section">
+
+    <div class="container">
+
+        <div class="legal-layout">
+
+
+            <!-- =================================================
+                 MAIN CONTENT
+            ================================================== -->
+
+            <main class="legal-content">
+
+
+                <!-- =============================================
+                     01 — ACCEPTANCE
+                ============================================== -->
+
+                <div class="legal-section"
+                     data-aos="fade-up">
+
+                    <span class="legal-number">
+                        01
+                    </span>
+
+
+                    <h2>
+                        Acceptance of Terms
+                    </h2>
+
+
+                    <p>
+
+                        By accessing or using the Vistara Solutions
+                        website, you acknowledge that you have read,
+                        understood and agree to be bound by these
+                        Terms & Conditions.
+
+                    </p>
+
+
+                    <p>
+
+                        If you do not agree with any part of these
+                        terms, please discontinue use of the website.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- =============================================
+                     02 — WEBSITE USE
+                ============================================== -->
+
+                <div class="legal-section"
+                     data-aos="fade-up">
+
+                    <span class="legal-number">
+                        02
+                    </span>
+
+
+                    <h2>
+                        Use of the Website
+                    </h2>
+
+
+                    <p>
+
+                        The website is provided to offer information
+                        about Vistara Solutions, its real estate
+                        services, projects and property opportunities.
+
+                    </p>
+
+
+                    <p>
+
+                        You agree to use this website only for lawful
+                        purposes and in a manner that does not
+                        interfere with its operation or security.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- =============================================
+                     03 — PROPERTY INFORMATION
+                ============================================== -->
+
+                <div class="legal-section"
+                     data-aos="fade-up">
+
+                    <span class="legal-number">
+                        03
+                    </span>
+
+
+                    <h2>
+                        Property Information
+                    </h2>
+
+
+                    <p>
+
+                        Property information, images, descriptions,
+                        pricing, availability and other details
+                        displayed on this website are provided for
+                        general informational purposes.
+
+                    </p>
+
+
+                    <p>
+
+                        Property details may change without prior
+                        notice. Availability, pricing and specifications
+                        should be independently confirmed with Vistara
+                        Solutions before making any property decision.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- =============================================
+                     04 — NO GUARANTEE
+                ============================================== -->
+
+                <div class="legal-section"
+                     data-aos="fade-up">
+
+                    <span class="legal-number">
+                        04
+                    </span>
+
+
+                    <h2>
+                        No Guarantee of Availability
+                    </h2>
+
+
+                    <p>
+
+                        Displaying a property or project on the website
+                        does not guarantee that the property will remain
+                        available, that the quoted price will remain
+                        unchanged, or that a transaction will be
+                        completed.
+
+                    </p>
+
+                </div>
+                <!-- =============================================
+                           05 — INTELLECTUAL PROPERTY
+                 ============================================== -->
+
+<div class="legal-section"
+     data-aos="fade-up">
+
+    <span class="legal-number">
+        05
+    </span>
+
+    <h2>
+        Intellectual Property
+    </h2>
+
+    <p>
+        The content of this website, including text, graphics,
+        logos, images, design elements and other materials, is
+        owned by or used with permission by Vistara Solutions
+        unless otherwise stated.
+    </p>
+
+    <p>
+        Content from this website may not be copied, reproduced,
+        modified, distributed or used for commercial purposes
+        without prior written permission.
+    </p>
+
+</div>
+
+
+
+<!-- =============================================
+     06 — THIRD-PARTY LINKS
+============================================== -->
+
+<div class="legal-section"
+     data-aos="fade-up">
+
+    <span class="legal-number">
+        06
+    </span>
+
+    <h2>
+        Third-Party Links & Services
+    </h2>
+
+    <p>
+        This website may contain links, maps, embedded content or
+        references to third-party websites and services.
+    </p>
+
+    <p>
+        Vistara Solutions does not control and is not responsible
+        for the availability, content, privacy practices or
+        policies of third-party websites.
+    </p>
+
+</div>
+
+
+
+<!-- =============================================
+     07 — USER ENQUIRIES
+============================================== -->
+
+<div class="legal-section"
+     data-aos="fade-up">
+
+    <span class="legal-number">
+        07
+    </span>
+
+    <h2>
+        Enquiries & Communication
+    </h2>
+
+    <p>
+        When you submit an enquiry through our website, you agree
+        to provide information that is accurate and relevant to
+        your request.
+    </p>
+
+    <p>
+        Vistara Solutions may use the information provided to
+        respond to your enquiry, discuss suitable property
+        opportunities and provide information about our services.
+    </p>
+
+</div>
+
+
+
+<!-- =============================================
+     08 — LIMITATION OF LIABILITY
+============================================== -->
+
+<div class="legal-section"
+     data-aos="fade-up">
+
+    <span class="legal-number">
+        08
+    </span>
+
+    <h2>
+        Limitation of Liability
+    </h2>
+
+    <p>
+        Vistara Solutions makes reasonable efforts to keep the
+        information on this website accurate and current.
+        However, we do not guarantee that all information will
+        always be complete, accurate or free from errors.
+    </p>
+
+    <p>
+        Vistara Solutions shall not be responsible for losses or
+        damages arising solely from reliance on general information
+        published on this website.
+    </p>
+
+</div>
+
+
+
+<!-- =============================================
+     09 — WEBSITE AVAILABILITY
+============================================== -->
+
+<div class="legal-section"
+     data-aos="fade-up">
+
+    <span class="legal-number">
+        09
+    </span>
+
+    <h2>
+        Website Availability
+    </h2>
+
+    <p>
+        We aim to keep the website accessible and functioning
+        properly. However, temporary interruptions may occur due
+        to maintenance, technical issues, updates or circumstances
+        beyond our reasonable control.
+    </p>
+
+</div>
+
+
+
+<!-- =============================================
+     10 — CHANGES TO TERMS
+============================================== -->
+
+<div class="legal-section"
+     data-aos="fade-up">
+
+    <span class="legal-number">
+        10
+    </span>
+
+    <h2>
+        Changes to These Terms
+    </h2>
+
+    <p>
+        Vistara Solutions may update these Terms & Conditions from
+        time to time. Changes will become effective when the
+        updated terms are published on this page.
+    </p>
+
+    <p>
+        We recommend reviewing this page periodically for any
+        updates.
+    </p>
+
+</div>
+
+
+
+<!-- =============================================
+     11 — GOVERNING LAW
+============================================== -->
+
+<div class="legal-section"
+     data-aos="fade-up">
+
+    <span class="legal-number">
+        11
+    </span>
+
+    <h2>
+        Governing Law
+    </h2>
+
+    <p>
+        These Terms & Conditions shall be interpreted in accordance
+        with the applicable laws of India. Any disputes arising in
+        connection with the use of this website or our services
+        shall be subject to the appropriate jurisdiction.
+    </p>
+
+</div>
+
+
+
+<!-- =============================================
+     12 — CONTACT
+============================================== -->
+
+<div class="legal-section legal-contact-section"
+     data-aos="fade-up">
+
+    <span class="legal-number">
+        12
+    </span>
+
+    <h2>
+        Contact Us
+    </h2>
+
+    <p>
+        If you have any questions regarding these Terms &
+        Conditions, please contact Vistara Solutions using the
+        details below.
+    </p>
+
+
+    <div class="legal-contact-details">
+
+
+        <div>
+
+            <i class="fa-solid fa-location-dot"></i>
+
+            <span>
+                Kharadi, Pune,<br>
+                Maharashtra, India
+            </span>
+
+        </div>
+
+
+        <div>
+
+            <i class="fa-solid fa-phone"></i>
+
+            <a href="tel:+918767173882">
+                +91 8767173882
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <i class="fa-solid fa-envelope"></i>
+
+            <a href="mailto:vistarasolutions99@gmail.com">
+                vistarasolutions99@gmail.com
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</main>
+
+
+            <!-- =================================================
+                 SIDE INFORMATION
+            ================================================== -->
+
+            <aside class="legal-sidebar">
+
+
+                <!-- Terms Card -->
+
+                <div class="legal-sidebar-card"
+                     data-aos="fade-left">
+
+                    <span>
+                        VISTARA SOLUTIONS
+                    </span>
+
+                    <i class="fa-solid fa-file-contract"></i>
+
+                    <h3>
+                        Clear Terms.
+                        <strong>Transparent Service.</strong>
+                    </h3>
+
+                    <p>
+                        Our aim is to maintain a clear and professional
+                        relationship with every client and website visitor.
+                    </p>
+
+                </div>
+
+
+
+                <!-- Contact Card -->
+
+                <div class="legal-contact-card"
+                     data-aos="fade-left"
+                     data-aos-delay="100">
+
+                    <span>
+                        NEED ASSISTANCE?
+                    </span>
+
+                    <h4>
+                        Speak With Us
+                    </h4>
+
+                    <a href="contact.html">
+
+                        Contact Vistara Solutions
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="site-footer">
+
+    <div class="container">
+
+        <div class="row g-5">
+
+
+            <!-- Brand -->
+
+            <div class="col-lg-4">
+
+                <a href="index.html"
+                   class="footer-logo">
+
+                    <img src="assets/logo/logo-gold.png"
+                         alt="Vistara Solutions">
+
+                </a>
+
+                <p class="footer-description">
+
+                    Premium residential and commercial real estate
+                    consultancy in Pune, helping clients make informed
+                    property decisions with confidence.
+
+                </p>
+
+
+                <div class="footer-socials">
+
+                    <a href="#"
+                       aria-label="Instagram">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </a>
+
+
+                    <a href="#"
+                       aria-label="Facebook">
+
+                        <i class="fa-brands fa-facebook-f"></i>
+
+                    </a>
+
+
+                    <a href="#"
+                       aria-label="LinkedIn">
+
+                        <i class="fa-brands fa-linkedin-in"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Explore -->
+
+            <div class="col-6 col-lg-2">
+
+                <h4 class="footer-title">
+                    Explore
+                </h4>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="founder.html">
+                            Founder
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="services.html">
+                            Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="projects.html">
+                            Projects
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- Discover -->
+
+            <div class="col-6 col-lg-2">
+
+                <h4 class="footer-title">
+                    Discover
+                </h4>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="gallery.html">
+                            Gallery
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="testimonials.html">
+                            Testimonials
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="privacy-policy.html">
+                            Privacy Policy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="terms.html">
+                            Terms & Conditions
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- Contact -->
+
+            <div class="col-lg-4">
+
+                <h4 class="footer-title">
+                    Get In Touch
+                </h4>
+
+                <ul class="footer-contact">
+
+                    <li>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <span>
+                            Kharadi, Pune,<br>
+                            Maharashtra, India
+                        </span>
+
+                    </li>
+
+
+                    <li>
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        <a href="tel:+918767173882">
+                            +91 8767173882
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <a href="mailto:vistarasolutions99@gmail.com">
+                            vistarasolutions99@gmail.com
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Footer Bottom -->
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Vistara Solutions. All Rights Reserved.
+            </p>
+
+            <p>
+                Luxury Real Estate Consultants
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     SCRIPTS
+========================================================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+
+    /* ================================================
+       AOS INITIALIZATION
+    ================================================ */
+
+    if (typeof AOS !== "undefined") {
+
+        AOS.init({
+            duration: 900,
+            easing: "ease-out-cubic",
+            once: true,
+            offset: 80
+        });
+
+    }
+
+
+
+    /* ================================================
+       SIDE MENU
+    ================================================ */
+
+    const menuBtn = document.getElementById("menuBtn");
+const sideMenu = document.getElementById("sideMenu");
+const closeBtn = document.getElementById("closeBtn");
+
+menuBtn.addEventListener("click", function () {
+    sideMenu.classList.add("active");
+});
+
+closeBtn.addEventListener("click", function () {
+    sideMenu.classList.remove("active");
+});
+
+sideMenu.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", function () {
+        sideMenu.classList.remove("active");
+    });
+});
+
+
+    const backToTop = document.getElementById("backToTop");
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 400) {
+            backToTop.classList.add("show");
+        } else {
+            backToTop.classList.remove("show");
+        }
+    });
+
+    backToTop.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+
+
+
+
+</script>
+
+</body>
+
+</html>

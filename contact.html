@@ -1,0 +1,2912 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- =========================================================
+         META
+    ========================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | Vistara Solutions</title>
+
+    <meta name="description"
+          content="Contact Vistara Solutions for premium residential and commercial real estate opportunities in Pune.">
+
+    <link rel="icon" href="assets/logo/favicon.png">
+
+
+    <!-- =========================================================
+         GOOGLE FONTS
+    ========================================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =========================================================
+         BOOTSTRAP
+    ========================================================== -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- =========================================================
+         AOS
+    ========================================================== -->
+
+    <link rel="stylesheet"
+          href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+
+    <!-- =========================================================
+         CONTACT PAGE CSS
+    ========================================================== -->
+
+    <style>
+
+        /* =====================================================
+           ROOT
+        ====================================================== */
+
+        :root {
+
+            --gold: #c79a3b;
+            --gold-light: #e4c56d;
+            --gold-dark: #9b7424;
+
+            --ivory: #f8f6f0;
+            --white: #ffffff;
+
+            --charcoal: #252421;
+            --dark: #20201e;
+
+            --text: #30302e;
+            --muted: #77736b;
+
+            --border: #e8e1d4;
+
+        }
+
+
+        /* =====================================================
+           GLOBAL
+        ====================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            font-family: "Poppins", sans-serif;
+
+            background: var(--ivory);
+
+            color: var(--text);
+
+            overflow-x: hidden;
+
+        }
+
+
+        body.menu-open {
+            overflow: hidden;
+        }
+
+
+        a {
+            text-decoration: none;
+        }
+
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        button,
+        input,
+        textarea {
+            font-family: "Poppins", sans-serif;
+        }
+
+
+        /* =====================================================
+           HEADER
+           Same pattern as main Vistara pages
+        ====================================================== */
+
+        .contact-header {
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            z-index: 1000;
+
+            padding: 22px 5%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+        }
+
+
+        .contact-logo {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            z-index: 1002;
+
+        }
+
+
+        .contact-logo img {
+
+            width: 72px;
+
+            height: auto;
+
+        }
+
+
+        .contact-menu {
+
+            width: 52px;
+            height: 52px;
+
+            padding: 0;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(255,255,255,.40);
+
+            background: rgba(255,255,255,.08);
+
+            backdrop-filter: blur(12px);
+
+            -webkit-backdrop-filter: blur(12px);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: #fff;
+
+            font-size: 19px;
+
+            cursor: pointer;
+
+            transition: .35s ease;
+
+            z-index: 1002;
+
+        }
+
+
+        .contact-menu:hover {
+
+            background: var(--gold);
+
+            border-color: var(--gold);
+
+        }
+
+
+        .contact-menu i {
+
+            transition: .35s ease;
+
+        }
+
+
+        .contact-menu:hover i {
+
+            transform: rotate(90deg);
+
+        }
+
+
+        /* =====================================================
+           SIDE MENU
+           Same hamburger-menu pattern
+        ====================================================== */
+
+        .side-menu {
+
+            position: fixed;
+
+            top: 0;
+            right: -420px;
+
+            width: min(390px, 90%);
+
+            height: 100vh;
+
+            z-index: 2000;
+
+            padding: 90px 45px 40px;
+
+            overflow-y: auto;
+
+            background: #20201e;
+
+            border-left: 1px solid rgba(199,154,59,.25);
+
+            box-shadow: -20px 0 60px rgba(0,0,0,.25);
+
+            transition: right .45s cubic-bezier(.77,0,.18,1);
+
+        }
+
+
+        .side-menu.active {
+
+            right: 0;
+
+        }
+
+
+        .side-menu::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 3px;
+
+            height: 100%;
+
+            background:
+
+                linear-gradient(
+                    to bottom,
+                    transparent,
+                    var(--gold),
+                    var(--gold-light),
+                    transparent
+                );
+
+        }
+
+
+        .close-btn {
+
+            position: absolute;
+
+            top: 25px;
+            right: 25px;
+
+            width: 45px;
+            height: 45px;
+
+            border: 1px solid rgba(255,255,255,.18);
+
+            border-radius: 50%;
+
+            background: rgba(255,255,255,.05);
+
+            color: #fff;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            cursor: pointer;
+
+            font-size: 18px;
+
+            transition: .3s ease;
+
+        }
+
+
+        .close-btn:hover {
+
+            background: var(--gold);
+
+            border-color: var(--gold);
+
+            transform: rotate(90deg);
+
+        }
+
+
+        .menu-label {
+
+            margin-bottom: 35px;
+
+            color: var(--gold-light);
+
+            font-size: 11px;
+
+            font-weight: 600;
+
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .side-menu ul {
+
+            padding: 0;
+
+            margin: 0;
+
+            list-style: none;
+
+        }
+
+
+        .side-menu ul li {
+
+            margin-bottom: 4px;
+
+        }
+
+
+        .side-menu ul li a {
+
+            position: relative;
+
+            display: block;
+
+            padding: 10px 0;
+
+            color: rgba(255,255,255,.72);
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 22px;
+
+            transition: .3s ease;
+
+        }
+
+
+        .side-menu ul li a::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: -45px;
+
+            top: 50%;
+
+            width: 0;
+
+            height: 1px;
+
+            background: var(--gold-light);
+
+            transition: .3s ease;
+
+        }
+
+
+        .side-menu ul li a:hover {
+
+            color: var(--gold-light);
+
+            padding-left: 12px;
+
+        }
+
+
+        .side-menu ul li a:hover::before {
+
+            width: 32px;
+
+        }
+
+
+        .menu-divider {
+
+            height: 1px;
+
+            margin: 20px 0;
+
+            background: rgba(255,255,255,.10);
+
+        }
+
+
+        .menu-contact {
+
+            margin-top: 35px;
+
+            padding-top: 25px;
+
+            border-top: 1px solid rgba(255,255,255,.10);
+
+        }
+
+
+        .menu-contact h4 {
+
+            margin-bottom: 18px;
+
+            color: #fff;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 20px;
+
+            font-weight: 500;
+
+        }
+
+
+        .menu-contact p {
+
+            margin-bottom: 11px;
+
+            color: rgba(255,255,255,.55);
+
+            font-size: 12px;
+
+            line-height: 1.6;
+
+        }
+
+
+        .menu-contact p i {
+
+            width: 24px;
+
+            color: var(--gold-light);
+
+        }
+
+
+        .menu-social {
+
+            display: flex;
+
+            gap: 10px;
+
+            margin-top: 20px;
+
+        }
+
+
+        .menu-social a {
+
+            width: 38px;
+            height: 38px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border: 1px solid rgba(255,255,255,.15);
+
+            color: var(--gold-light);
+
+            transition: .3s ease;
+
+        }
+
+
+        .menu-social a:hover {
+
+            background: var(--gold);
+
+            border-color: var(--gold);
+
+            color: #fff;
+
+            transform: translateY(-3px);
+
+        }
+
+
+        /* =====================================================
+           MENU OVERLAY
+        ====================================================== */
+
+        .menu-overlay {
+
+            position: fixed;
+
+            inset: 0;
+
+            z-index: 1500;
+
+            background: rgba(0,0,0,.45);
+
+            backdrop-filter: blur(3px);
+
+            -webkit-backdrop-filter: blur(3px);
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            transition: .35s ease;
+
+        }
+
+
+        .menu-overlay.active {
+
+            opacity: 1;
+
+            visibility: visible;
+
+        }
+
+
+        /* =====================================================
+           HERO
+        ====================================================== */
+
+        .contact-hero {
+
+            position: relative;
+
+            min-height: 68vh;
+
+            display: flex;
+
+            align-items: center;
+
+            overflow: hidden;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    rgba(30,29,27,.93),
+                    rgba(30,29,27,.72),
+                    rgba(30,29,27,.35)
+                ),
+
+                url("assets/about/contact-hero.png");
+
+            background-size: cover;
+
+            background-position: center;
+
+        }
+
+
+        .contact-hero::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 260px;
+            height: 260px;
+
+            right: 8%;
+            bottom: -120px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(212,175,55,.40);
+
+            box-shadow:
+
+                0 0 0 30px rgba(212,175,55,.05),
+
+                0 0 0 60px rgba(212,175,55,.025);
+
+        }
+
+
+        .contact-hero-content {
+
+            position: relative;
+
+            z-index: 2;
+
+            max-width: 800px;
+
+            padding: 150px 6% 90px;
+
+        }
+
+
+        .contact-label {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 13px;
+
+            margin-bottom: 22px;
+
+            color: var(--gold-light);
+
+            font-size: 11px;
+
+            font-weight: 600;
+
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .contact-label::before {
+
+            content: "";
+
+            width: 45px;
+            height: 1px;
+
+            background: var(--gold-light);
+
+        }
+
+
+        .contact-hero h1 {
+
+            margin-bottom: 24px;
+
+            color: #fff;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(48px, 6.5vw, 78px);
+
+            font-weight: 500;
+
+            line-height: 1.05;
+
+        }
+
+
+        .contact-hero h1 span {
+
+            color: var(--gold-light);
+
+        }
+
+
+        .contact-hero p {
+
+            max-width: 620px;
+
+            color: rgba(255,255,255,.76);
+
+            font-size: 15px;
+
+            line-height: 1.9;
+
+        }
+
+
+        /* =====================================================
+           CONTACT MAIN
+        ====================================================== */
+
+        .contact-main {
+
+            padding: 110px 6%;
+
+            background: #fff;
+
+        }
+
+
+        .contact-container {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: .85fr 1.15fr;
+
+            gap: 80px;
+
+            align-items: start;
+
+        }
+
+
+        /* =====================================================
+           CONTACT INFORMATION
+        ====================================================== */
+
+        .contact-info-label {
+
+            color: var(--gold-dark);
+
+            font-size: 11px;
+
+            font-weight: 600;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .contact-info h2 {
+
+            margin-top: 15px;
+
+            color: var(--charcoal);
+
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(38px, 4vw, 55px);
+
+            line-height: 1.15;
+
+            font-weight: 500;
+
+        }
+
+
+        .contact-info-intro {
+
+            margin: 22px 0 38px;
+
+            color: var(--muted);
+
+            font-size: 14px;
+
+            line-height: 1.9;
+
+        }
+
+
+        .contact-detail {
+
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 18px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .contact-icon {
+
+            flex-shrink: 0;
+
+            width: 52px;
+            height: 52px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: #faf4df;
+
+            border: 1px solid rgba(199,154,59,.30);
+
+            color: var(--gold-dark);
+
+            font-size: 17px;
+
+        }
+
+
+        .contact-detail h4 {
+
+            margin-bottom: 5px;
+
+            color: var(--charcoal);
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 19px;
+
+        }
+
+
+        .contact-detail p,
+        .contact-detail a {
+
+            margin: 0;
+
+            color: var(--muted);
+
+            font-size: 13px;
+
+            line-height: 1.7;
+
+        }
+
+
+        .contact-detail a:hover {
+
+            color: var(--gold-dark);
+
+        }
+
+
+        /* =====================================================
+           SOCIAL
+        ====================================================== */
+
+        .contact-social {
+
+            display: flex;
+
+            gap: 10px;
+
+            margin-top: 35px;
+
+        }
+
+
+        .contact-social a {
+
+            width: 42px;
+            height: 42px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border: 1px solid var(--border);
+
+            color: var(--gold-dark);
+
+            transition: .3s ease;
+
+        }
+
+
+        .contact-social a:hover {
+
+            background: var(--gold);
+
+            border-color: var(--gold);
+
+            color: #fff;
+
+            transform: translateY(-3px);
+
+        }
+
+
+        /* =====================================================
+           FORM CARD
+        ====================================================== */
+
+        .contact-form-card {
+
+            position: relative;
+
+            padding: 48px;
+
+            background: #fff;
+
+            border: 1px solid var(--border);
+
+            box-shadow:
+
+                0 20px 60px rgba(40,35,25,.08);
+
+        }
+
+
+        .contact-form-card::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            height: 4px;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    var(--gold-dark),
+                    var(--gold-light),
+                    var(--gold-dark)
+                );
+
+        }
+
+
+        .form-title {
+
+            margin-bottom: 8px;
+
+            color: var(--charcoal);
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 31px;
+
+            font-weight: 500;
+
+        }
+
+
+        .form-subtitle {
+
+            margin-bottom: 30px;
+
+            color: var(--muted);
+
+            font-size: 13px;
+
+            line-height: 1.7;
+
+        }
+
+
+        .form-group {
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .form-group label {
+
+            display: block;
+
+            margin-bottom: 8px;
+
+            color: #555;
+
+            font-size: 11px;
+
+            font-weight: 600;
+
+            letter-spacing: .7px;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .form-control {
+
+            width: 100%;
+
+            min-height: 52px;
+
+            padding: 13px 16px;
+
+            border: 1px solid #ddd8cc;
+
+            border-radius: 0;
+
+            background: #fcfbf8;
+
+            color: #333;
+
+            font-family: "Poppins", sans-serif;
+
+            font-size: 13px;
+
+            outline: none;
+
+            transition: .3s ease;
+
+        }
+
+
+        .form-control:focus {
+
+            border-color: var(--gold);
+
+            box-shadow: 0 0 0 3px rgba(199,154,59,.10);
+
+            background: #fff;
+
+        }
+
+
+        textarea.form-control {
+
+            min-height: 130px;
+
+            resize: vertical;
+
+        }
+
+
+        .form-control::placeholder {
+
+            color: #aaa;
+
+        }
+
+
+        .submit-button {
+
+            width: 100%;
+
+            min-height: 54px;
+
+            border: none;
+
+            border-radius: 0;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #d9b65a,
+                    #a97c24
+                );
+
+            color: #fff;
+
+            font-family: "Poppins", sans-serif;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+            cursor: pointer;
+
+            transition: .35s ease;
+
+        }
+
+
+        .submit-button:hover {
+
+            transform: translateY(-3px);
+
+            box-shadow:
+
+                0 12px 30px rgba(169,124,36,.25);
+
+        }
+
+
+        /* =====================================================
+           MAP
+        ====================================================== */
+
+        .map-section {
+
+            padding: 0 6% 110px;
+
+            background: #fff;
+
+        }
+
+
+        .map-container {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            position: relative;
+
+            border: 1px solid var(--border);
+
+            overflow: hidden;
+
+        }
+
+
+        .map-heading {
+
+            position: absolute;
+
+            z-index: 5;
+
+            top: 25px;
+
+            left: 25px;
+
+            padding: 17px 22px;
+
+            background: rgba(255,255,255,.94);
+
+            box-shadow: 0 8px 25px rgba(0,0,0,.08);
+
+        }
+
+
+        .map-heading span {
+
+            display: block;
+
+            margin-bottom: 4px;
+
+            color: var(--gold-dark);
+
+            font-size: 9px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .map-heading strong {
+
+            color: var(--charcoal);
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 20px;
+
+            font-weight: 500;
+
+        }
+
+
+        .map-container iframe {
+
+            width: 100%;
+
+            height: 430px;
+
+            display: block;
+
+            border: 0;
+
+            filter: grayscale(20%);
+
+        }
+
+
+        /* =====================================================
+           CTA
+        ====================================================== */
+
+        .contact-cta {
+
+            position: relative;
+
+            padding: 105px 6%;
+
+            overflow: hidden;
+
+            background:
+
+                linear-gradient(
+                    rgba(36,35,32,.88),
+                    rgba(36,35,32,.88)
+                ),
+
+                url("assets/background/contact-bg.png");
+
+            background-size: cover;
+
+            background-position: center;
+
+            text-align: center;
+
+        }
+
+
+        .contact-cta::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 500px;
+            height: 500px;
+
+            left: 50%;
+            top: 50%;
+
+            transform: translate(-50%, -50%);
+
+            border-radius: 50%;
+
+            background: rgba(212,175,55,.08);
+
+            filter: blur(70px);
+
+        }
+
+
+        .cta-content {
+
+            position: relative;
+
+            z-index: 2;
+
+            max-width: 750px;
+
+            margin: auto;
+
+        }
+
+
+        .cta-label {
+
+            color: var(--gold-light);
+
+            font-size: 11px;
+
+            font-weight: 600;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .cta-content h2 {
+
+            margin: 18px 0;
+
+            color: #fff;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(40px, 5vw, 62px);
+
+            font-weight: 500;
+
+            line-height: 1.12;
+
+        }
+
+
+        .cta-content p {
+
+            max-width: 600px;
+
+            margin: 0 auto 30px;
+
+            color: rgba(255,255,255,.72);
+
+            font-size: 14px;
+
+            line-height: 1.8;
+
+        }
+
+
+        .gold-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 52px;
+
+            padding: 0 28px;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #d9b65a,
+                    #a97c24
+                );
+
+            color: #fff;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+            transition: .35s ease;
+
+        }
+
+
+        .gold-button:hover {
+
+            color: #fff;
+
+            transform: translateY(-3px);
+
+            box-shadow:
+
+                0 12px 30px rgba(169,124,36,.25);
+
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ====================================================== */
+
+        .contact-footer {
+
+            padding: 70px 6% 25px;
+
+            background: #20201e;
+
+            color: #fff;
+
+             border-top: 5px solid
+     var(--gold);
+        }
+
+
+        .footer-container {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+
+            gap: 50px;
+
+            padding-bottom: 50px;
+
+            border-bottom: 1px solid rgba(255,255,255,.10);
+
+        }
+
+
+        .footer-logo img {
+
+            width: 78px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .footer-about p {
+
+            max-width: 320px;
+
+            color: rgba(255,255,255,.58);
+
+            font-size: 13px;
+
+            line-height: 1.8;
+
+        }
+
+
+        .footer-column h4 {
+
+            margin-bottom: 22px;
+
+            color: #fff;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 20px;
+
+            font-weight: 500;
+
+        }
+
+
+        .footer-links {
+
+            padding: 0;
+
+            margin: 0;
+
+            list-style: none;
+
+        }
+
+
+        .footer-links li {
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .footer-links a {
+
+            color: rgba(255,255,255,.58);
+
+            font-size: 13px;
+
+            transition: .3s ease;
+
+        }
+
+
+        .footer-links a:hover {
+
+            color: var(--gold-light);
+
+            padding-left: 5px;
+
+        }
+
+
+        .footer-contact p {
+
+            margin-bottom: 12px;
+
+            color: rgba(255,255,255,.58);
+
+            font-size: 13px;
+
+            line-height: 1.7;
+
+        }
+
+
+        .footer-contact i {
+
+            width: 22px;
+
+            color: var(--gold-light);
+
+        }
+
+
+        .footer-bottom {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            padding-top: 22px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            color: rgba(255,255,255,.40);
+
+            font-size: 11px;
+
+        }
+
+
+        /* =====================================================
+           BACK TO TOP
+        ====================================================== */
+
+        .back-to-top {
+
+            position: fixed;
+
+            right: 24px;
+
+            bottom: 24px;
+
+            z-index: 999;
+
+            width: 46px;
+            height: 46px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border: 1px solid var(--gold);
+
+            border-radius: 50%;
+
+            background: #fff;
+
+            color: var(--gold-dark);
+
+            cursor: pointer;
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            transform: translateY(15px);
+
+            transition: .35s ease;
+
+        }
+
+
+        .back-to-top.show {
+
+            opacity: 1;
+
+            visibility: visible;
+
+            transform: translateY(0);
+
+        }
+
+
+        .back-to-top:hover {
+
+            background: var(--gold);
+
+            color: #fff;
+
+            transform: translateY(-3px);
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ====================================================== */
+
+        @media (max-width: 950px) {
+
+            .contact-container {
+
+                grid-template-columns: 1fr;
+
+                gap: 60px;
+
+            }
+
+
+            .footer-container {
+
+                grid-template-columns: 1fr 1fr;
+
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .contact-header {
+
+                padding: 18px 5%;
+
+            }
+
+
+            .contact-logo img {
+
+                width: 60px;
+
+            }
+
+
+            .contact-menu {
+
+                width: 45px;
+                height: 45px;
+
+            }
+
+
+            .side-menu {
+
+                width: min(350px, 88%);
+
+                padding: 85px 35px 35px;
+
+            }
+
+
+            .side-menu ul li a {
+
+                font-size: 20px;
+
+            }
+
+
+            .contact-hero {
+
+                min-height: 70vh;
+
+            }
+
+
+            .contact-hero-content {
+
+                padding: 130px 7% 80px;
+
+            }
+
+
+            .contact-hero h1 {
+
+                font-size: 48px;
+
+            }
+
+
+            .contact-hero p {
+
+                font-size: 13px;
+
+            }
+
+
+            .contact-main {
+
+                padding: 80px 7%;
+
+            }
+
+
+            .contact-form-card {
+
+                padding: 30px 22px;
+
+            }
+
+
+            .map-section {
+
+                padding: 0 7% 80px;
+
+            }
+
+
+            .map-container iframe {
+
+                height: 350px;
+
+            }
+
+
+            .map-heading {
+
+                top: 15px;
+
+                left: 15px;
+
+                padding: 13px 16px;
+
+            }
+
+
+            .map-heading strong {
+
+                font-size: 17px;
+
+            }
+
+
+            .contact-cta {
+
+                padding: 80px 7%;
+
+            }
+
+
+            .contact-cta .gold-button {
+
+                width: 100%;
+
+            }
+
+
+            .contact-footer {
+
+                padding: 60px 7% 25px;
+
+            }
+
+
+            .footer-container {
+
+                grid-template-columns: 1fr;
+
+                gap: 35px;
+
+            }
+
+
+            .footer-bottom {
+
+                flex-direction: column;
+
+            }
+
+
+            .back-to-top {
+
+                right: 18px;
+
+                bottom: 18px;
+
+                width: 42px;
+
+                height: 42px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="contact-header">
+
+    <a href="index.html"
+       class="contact-logo">
+
+        <img src="assets/logo/logo-icon.png"
+             alt="Vistara Solutions">
+
+    </a>
+
+
+    <button class="contact-menu"
+            id="menuBtn"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false">
+
+        <i class="fa-solid fa-bars"></i>
+
+    </button>
+
+</header>
+
+
+
+<!-- =========================================================
+     MENU OVERLAY
+========================================================= -->
+
+<div class="menu-overlay"
+     id="menuOverlay"></div>
+
+
+
+<!-- =========================================================
+     SIDE MENU
+========================================================= -->
+
+<nav class="side-menu"
+     id="sideMenu"
+     aria-label="Main navigation">
+
+
+    <button class="close-btn"
+            id="closeBtn"
+            type="button"
+            aria-label="Close menu">
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+
+    <div class="menu-label">
+
+        Vistara Solutions
+
+    </div>
+
+
+    <ul>
+
+        <li>
+            <a href="index.html">
+                Home
+            </a>
+        </li>
+
+
+        <li>
+            <a href="about.html">
+                About
+            </a>
+        </li>
+
+
+        <li>
+            <a href="founder.html">
+                Founder
+            </a>
+        </li>
+
+
+        <li>
+            <a href="services.html">
+                Services
+            </a>
+        </li>
+
+
+        <li>
+            <a href="projects.html">
+                Projects
+            </a>
+        </li>
+
+
+        <li>
+            <a href="gallery.html">
+                Gallery
+            </a>
+        </li>
+
+
+        <li>
+            <a href="testimonials.html">
+                Testimonials
+            </a>
+        </li>
+
+
+        <li>
+            <a href="contact.html">
+                Contact
+            </a>
+        </li>
+
+
+        <li class="menu-divider"></li>
+
+
+        <li>
+            <a href="privacy-policy.html">
+                Privacy Policy
+            </a>
+        </li>
+
+
+        <li>
+            <a href="terms.html">
+                Terms &amp; Conditions
+            </a>
+        </li>
+
+    </ul>
+
+
+    <div class="menu-contact">
+
+        <h4>
+            Get In Touch
+        </h4>
+
+
+        <p>
+
+            <i class="fa-solid fa-phone"></i>
+
+            +91 87671 73882
+
+        </p>
+
+
+        <p>
+
+            <i class="fa-solid fa-phone"></i>
+
+            +91 87882 46145
+
+        </p>
+
+
+        <p>
+
+            <i class="fa-solid fa-envelope"></i>
+
+            vistarasolutions99@gmail.com
+
+        </p>
+
+
+        <div class="menu-social">
+
+            <a href="#"
+               aria-label="Instagram">
+
+                <i class="fab fa-instagram"></i>
+
+            </a>
+
+
+            <a href="#"
+               aria-label="Facebook">
+
+                <i class="fab fa-facebook-f"></i>
+
+            </a>
+
+
+            <a href="#"
+               aria-label="LinkedIn">
+
+                <i class="fab fa-linkedin-in"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="contact-hero">
+
+
+    <div class="contact-hero-content"
+         data-aos="fade-up">
+
+
+        <div class="contact-label">
+
+            Get In Touch
+
+        </div>
+
+
+        <h1>
+
+            Let's Start Your
+
+            <span>
+                Property Journey.
+            </span>
+
+        </h1>
+
+
+        <p>
+
+            Whether you're looking for your dream home,
+            a premium investment or the right commercial
+            opportunity, our team is ready to help.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CONTACT INFORMATION + FORM
+========================================================= -->
+
+<section class="contact-main">
+
+
+    <div class="contact-container">
+
+
+        <!-- LEFT INFORMATION -->
+
+        <div class="contact-info"
+             data-aos="fade-right">
+
+
+            <span class="contact-info-label">
+
+                Contact Vistara
+
+            </span>
+
+
+            <h2>
+
+                Let's Talk
+
+                <br>
+
+                Real Estate.
+
+            </h2>
+
+
+            <p class="contact-info-intro">
+
+                Have a property requirement or want to explore
+                an investment opportunity? Tell us what you're
+                looking for and our team will get in touch with you.
+
+            </p>
+
+
+            <!-- OFFICE -->
+
+            <div class="contact-detail">
+
+
+                <div class="contact-icon">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                </div>
+
+
+                <div>
+
+                    <h4>
+                        Visit Our Office
+                    </h4>
+
+                    <p>
+                        Kharadi, Pune,
+                        Maharashtra
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- PHONE -->
+
+            <div class="contact-detail">
+
+
+                <div class="contact-icon">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                </div>
+
+
+                <div>
+
+                    <h4>
+                        Call Us
+                    </h4>
+
+
+                    <a href="tel:+918767173882">
+
+                        +91 87671 73882
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- EMAIL -->
+
+            <div class="contact-detail">
+
+
+                <div class="contact-icon">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </div>
+
+
+                <div>
+
+                    <h4>
+                        Email Us
+                    </h4>
+
+
+                    <a href="mailto:vistarasolutions99@gmail.com">
+
+                        vistarasolutions99@gmail.com
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- SUPPORT -->
+
+            <div class="contact-detail">
+
+
+                <div class="contact-icon">
+
+                    <i class="fa-regular fa-clock"></i>
+
+                </div>
+
+
+                <div>
+
+                    <h4>
+                        Support
+                    </h4>
+
+
+                    <p>
+                        Available 24×7 for property enquiries
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- SOCIAL -->
+
+            <div class="contact-social">
+
+
+                <a href="#"
+                   aria-label="Instagram">
+
+                    <i class="fa-brands fa-instagram"></i>
+
+                </a>
+
+
+                <a href="#"
+                   aria-label="Facebook">
+
+                    <i class="fa-brands fa-facebook-f"></i>
+
+                </a>
+
+
+                <a href="#"
+                   aria-label="LinkedIn">
+
+                    <i class="fa-brands fa-linkedin-in"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             FORM
+        ================================================== -->
+
+        <div class="contact-form-card"
+             data-aos="fade-left">
+
+
+            <h3 class="form-title">
+
+                Send An Enquiry
+
+            </h3>
+
+
+            <p class="form-subtitle">
+
+                Share your requirements and our property
+                consultant will contact you shortly.
+
+            </p>
+
+
+            <form id="contactForm">
+
+
+                <!-- NAME -->
+
+                <div class="form-group">
+
+                    <label for="fullName">
+
+                        Full Name
+
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="fullName"
+                        name="fullName"
+                        class="form-control"
+                        placeholder="Enter your full name"
+                        required>
+
+                </div>
+
+
+
+                <!-- EMAIL + PHONE -->
+
+                <div class="row">
+
+
+                    <div class="col-md-6">
+
+                        <div class="form-group">
+
+                            <label for="email">
+
+                                Email Address
+
+                            </label>
+
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                class="form-control"
+                                placeholder="Your email"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-6">
+
+                        <div class="form-group">
+
+                            <label for="phone">
+
+                                Phone Number
+
+                            </label>
+
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                class="form-control"
+                                placeholder="Your phone"
+                                required>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- REQUIREMENT -->
+
+                <div class="form-group">
+
+                    <label for="requirement">
+
+                        Your Requirement
+
+                    </label>
+
+
+                    <textarea
+                        id="requirement"
+                        name="requirement"
+                        class="form-control"
+                        placeholder="Tell us what type of property you're looking for..."
+                        required></textarea>
+
+                </div>
+
+
+
+                <!-- SUBMIT -->
+
+                <button type="submit"
+                        class="submit-button">
+
+                    Send Enquiry
+
+                    <i class="fa-solid fa-arrow-right ms-2"></i>
+
+                </button>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     GOOGLE MAP
+========================================================= -->
+
+<section class="map-section">
+
+
+    <div class="map-container"
+         data-aos="fade-up">
+
+
+        <div class="map-heading">
+
+            <span>
+                Find Us
+            </span>
+
+
+            <strong>
+                Kharadi, Pune
+            </strong>
+
+        </div>
+
+
+        <iframe
+            src="https://www.google.com/maps?q=Kharadi,Pune,Maharashtra&output=embed"
+            loading="lazy"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="contact-cta">
+
+
+    <div class="cta-content"
+         data-aos="fade-up">
+
+
+        <span class="cta-label">
+
+            Your Next Move
+
+        </span>
+
+
+        <h2>
+
+            Your Dream Property
+
+            <br>
+
+            Could Be One Conversation Away.
+
+        </h2>
+
+
+        <p>
+
+            Talk to our property experts and discover
+            opportunities that match your requirements,
+            lifestyle and investment goals.
+
+        </p>
+
+
+        <a href="tel:+918767173882"
+           class="gold-button">
+
+            <i class="fa-solid fa-phone me-2"></i>
+
+            Call Our Property Expert
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="contact-footer">
+
+
+    <div class="footer-container">
+
+
+        <!-- ABOUT -->
+
+        <div class="footer-about">
+
+
+            <a href="index.html"
+               class="footer-logo">
+
+                <img src="assets/logo/logo-gold.png"
+                     alt="Vistara Solutions">
+
+            </a>
+
+
+            <p>
+
+                Premium residential and commercial real estate
+                consultancy helping clients discover exceptional
+                property opportunities across Pune.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- COMPANY -->
+
+        <div class="footer-column">
+
+
+            <h4>
+                Company
+            </h4>
+
+
+            <ul class="footer-links">
+
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="about.html">
+                        About Us
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="founder.html">
+                        Founder
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="projects.html">
+                        Projects
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- SERVICES -->
+
+        <div class="footer-column">
+
+
+            <h4>
+                Services
+            </h4>
+
+
+            <ul class="footer-links">
+
+
+                <li>
+                    <a href="services.html">
+                        Residential Properties
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="services.html">
+                        Commercial Spaces
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="services.html">
+                        Investment Consulting
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="services.html">
+                        Property Consultation
+                    </a>
+                </li>
+
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- CONTACT -->
+
+        <div class="footer-column footer-contact">
+
+
+            <h4>
+                Contact
+            </h4>
+
+
+            <p>
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                Kharadi, Pune, Maharashtra
+
+            </p>
+
+
+            <p>
+
+                <i class="fa-solid fa-phone"></i>
+
+                +91 87671 73882
+
+            </p>
+
+
+            <p>
+
+                <i class="fa-solid fa-envelope"></i>
+
+                vistarasolutions99@gmail.com
+
+            </p>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- FOOTER BOTTOM -->
+
+    <div class="footer-bottom">
+
+
+        <span>
+
+            © 2026 Vistara Solutions.
+            All Rights Reserved.
+
+        </span>
+
+
+        <span>
+
+            Premium Real Estate Consultancy · Pune
+
+        </span>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     BACK TO TOP
+========================================================= -->
+
+<button class="back-to-top"
+        id="backToTop"
+        type="button"
+        aria-label="Back to top">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+
+
+<!-- =========================================================
+     AOS
+========================================================= -->
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+    /* =====================================================
+       AOS
+    ====================================================== */
+
+    AOS.init({
+
+        duration: 850,
+
+        easing: "ease-out-cubic",
+
+        once: true,
+
+        offset: 70
+
+    });
+
+
+
+    /* =====================================================
+       SIDE MENU
+    ====================================================== */
+
+    const menuBtn =
+        document.getElementById("menuBtn");
+
+    const sideMenu =
+        document.getElementById("sideMenu");
+
+    const closeBtn =
+        document.getElementById("closeBtn");
+
+    const menuOverlay =
+        document.getElementById("menuOverlay");
+
+
+    function openMenu() {
+
+        sideMenu.classList.add("active");
+
+        menuOverlay.classList.add("active");
+
+        menuBtn.setAttribute("aria-expanded", "true");
+
+        document.body.classList.add("menu-open");
+
+    }
+
+
+    function closeMenu() {
+
+        sideMenu.classList.remove("active");
+
+        menuOverlay.classList.remove("active");
+
+        menuBtn.setAttribute("aria-expanded", "false");
+
+        document.body.classList.remove("menu-open");
+
+    }
+
+
+    menuBtn.addEventListener("click", openMenu);
+
+
+    closeBtn.addEventListener("click", closeMenu);
+
+
+    menuOverlay.addEventListener("click", closeMenu);
+
+
+    sideMenu.querySelectorAll("a").forEach(function(link) {
+
+        link.addEventListener("click", closeMenu);
+
+    });
+
+
+    document.addEventListener("keydown", function(event) {
+
+        if (event.key === "Escape") {
+
+            closeMenu();
+
+        }
+
+    });
+
+
+
+    /* =====================================================
+       BACK TO TOP
+    ====================================================== */
+
+    const backToTop =
+        document.getElementById("backToTop");
+
+
+    window.addEventListener("scroll", function() {
+
+        if (window.scrollY > 500) {
+
+            backToTop.classList.add("show");
+
+        } else {
+
+            backToTop.classList.remove("show");
+
+        }
+
+    });
+
+
+    backToTop.addEventListener("click", function() {
+
+        window.scrollTo({
+
+            top: 0,
+
+            behavior: "smooth"
+
+        });
+
+    });
+
+
+
+    /* =====================================================
+       CONTACT FORM
+    ====================================================== */
+
+    const contactForm =
+        document.getElementById("contactForm");
+
+
+    contactForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+
+        const name =
+            document.getElementById("fullName")
+            .value
+            .trim();
+
+
+        const email =
+            document.getElementById("email")
+            .value
+            .trim();
+
+
+        const phone =
+            document.getElementById("phone")
+            .value
+            .trim();
+
+
+        const requirement =
+            document.getElementById("requirement")
+            .value
+            .trim();
+
+
+        if (!name || !email || !phone || !requirement) {
+
+            alert("Please fill in all required fields.");
+
+            return;
+
+        }
+
+
+        alert(
+            "Thank you, " +
+            name +
+            "! Your enquiry has been received."
+        );
+
+
+        contactForm.reset();
+
+    });
+
+
+</script>
+
+
+</body>
+
+</html>

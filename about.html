@@ -1,0 +1,2211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | Vistara Solutions</title>
+
+    <meta name="description"
+        content="Discover Vistara Solutions, a premium real estate consultancy helping clients find exceptional residential and commercial properties across Pune.">
+
+    <!-- Favicon -->
+
+    <link rel="icon" href="assets/logo/favicon.png">
+
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- AOS -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+    <style>
+
+
+        /* =========================================
+           GLOBAL
+        ========================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f8f6f1;
+            color: #252525;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        :root {
+            --gold: #c79a3b;
+            --gold-light: #e6c56d;
+            --gold-dark: #9d7422;
+            --cream: #f8f6f1;
+            --white: #ffffff;
+            --charcoal: #242321;
+            --text: #30302e;
+            --muted: #77736b;
+        }
+
+
+        /* =========================================
+           HEADER
+        ========================================= */
+
+        .about-header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+
+            padding: 24px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .about-logo img {
+            width: 72px;
+            height: auto;
+        }
+
+        .menu-button {
+            width: 52px;
+            height: 52px;
+
+            border: 1px solid rgba(255,255,255,.35);
+            border-radius: 50%;
+
+            background: rgba(255,255,255,.08);
+            backdrop-filter: blur(10px);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: #fff;
+            font-size: 20px;
+
+            cursor: pointer;
+            transition: .35s ease;
+        }
+
+        .menu-button:hover {
+            background: var(--gold);
+            border-color: var(--gold);
+            transform: rotate(90deg);
+        }
+
+ /* =====================================================
+           SIDE MENU
+           Same hamburger-menu pattern
+        ====================================================== */
+
+        .side-menu {
+
+            position: fixed;
+
+            top: 0;
+            right: -420px;
+
+            width: min(390px, 90%);
+
+            height: 100vh;
+
+            z-index: 2000;
+
+            padding: 90px 45px 40px;
+
+            overflow-y: auto;
+
+            background: #20201e;
+
+            border-left: 1px solid rgba(199,154,59,.25);
+
+            box-shadow: -20px 0 60px rgba(0,0,0,.25);
+
+            transition: right .45s cubic-bezier(.77,0,.18,1);
+
+        }
+
+
+        .side-menu.active {
+
+            right: 0;
+
+        }
+
+
+        .side-menu::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 3px;
+
+            height: 100%;
+
+            background:
+
+                linear-gradient(
+                    to bottom,
+                    transparent,
+                    var(--gold),
+                    var(--gold-light),
+                    transparent
+                );
+
+        }
+
+
+        .close-btn {
+
+            position: absolute;
+
+            top: 25px;
+            right: 25px;
+
+            width: 45px;
+            height: 45px;
+
+            border: 1px solid rgba(255,255,255,.18);
+
+            border-radius: 50%;
+
+            background: rgba(255,255,255,.05);
+
+            color: #fff;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            cursor: pointer;
+
+            font-size: 18px;
+
+            transition: .3s ease;
+
+        }
+
+
+        .close-btn:hover {
+
+            background: var(--gold);
+
+            border-color: var(--gold);
+
+            transform: rotate(90deg);
+
+        }
+
+
+        .menu-label {
+
+            margin-bottom: 35px;
+
+            color: var(--gold-light);
+
+            font-size: 11px;
+
+            font-weight: 600;
+
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .side-menu ul {
+
+            padding: 0;
+
+            margin: 0;
+
+            list-style: none;
+
+        }
+
+
+        .side-menu ul li {
+
+            margin-bottom: 4px;
+
+        }
+
+
+        .side-menu ul li a {
+
+            position: relative;
+
+            display: block;
+
+            padding: 10px 0;
+
+            color: rgba(255,255,255,.72);
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 22px;
+
+            transition: .3s ease;
+
+        }
+
+
+        .side-menu ul li a::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: -45px;
+
+            top: 50%;
+
+            width: 0;
+
+            height: 1px;
+
+            background: var(--gold-light);
+
+            transition: .3s ease;
+
+        }
+
+
+        .side-menu ul li a:hover {
+
+            color: var(--gold-light);
+
+            padding-left: 12px;
+
+        }
+
+
+        .side-menu ul li a:hover::before {
+
+            width: 32px;
+
+        }
+
+
+        .menu-divider {
+
+            height: 1px;
+
+            margin: 20px 0;
+
+            background: rgba(255,255,255,.10);
+
+        }
+
+
+        .menu-contact {
+
+            margin-top: 35px;
+
+            padding-top: 25px;
+
+            border-top: 1px solid rgba(255,255,255,.10);
+
+        }
+
+
+        .menu-contact h4 {
+
+            margin-bottom: 18px;
+
+            color: #fff;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 20px;
+
+            font-weight: 500;
+
+        }
+
+
+        .menu-contact p {
+
+            margin-bottom: 11px;
+
+            color: rgba(255,255,255,.55);
+
+            font-size: 12px;
+
+            line-height: 1.6;
+
+        }
+
+
+        .menu-contact p i {
+
+            width: 24px;
+
+            color: var(--gold-light);
+
+        }
+
+
+        .menu-social {
+
+            display: flex;
+
+            gap: 10px;
+
+            margin-top: 20px;
+
+        }
+
+
+        .menu-social a {
+
+            width: 38px;
+            height: 38px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border: 1px solid rgba(255,255,255,.15);
+
+            color: var(--gold-light);
+
+            transition: .3s ease;
+
+        }
+
+
+        .menu-social a:hover {
+
+            background: var(--gold);
+
+            border-color: var(--gold);
+
+            color: #fff;
+
+            transform: translateY(-3px);
+
+        }
+
+
+        /* =====================================================
+           MENU OVERLAY
+        ====================================================== */
+
+        .menu-overlay {
+
+            position: fixed;
+
+            inset: 0;
+
+            z-index: 1500;
+
+            background: rgba(0,0,0,.45);
+
+            backdrop-filter: blur(3px);
+
+            -webkit-backdrop-filter: blur(3px);
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            transition: .35s ease;
+
+        }
+
+
+        .menu-overlay.active {
+
+            opacity: 1;
+
+            visibility: visible;
+
+        }
+
+
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .about-hero {
+            min-height: 88vh;
+
+            position: relative;
+
+            display: flex;
+            align-items: center;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(30,29,27,.90) 0%,
+                    rgba(30,29,27,.70) 45%,
+                    rgba(30,29,27,.28) 100%
+                ),
+                url("assets/about.jpg");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .about-hero-content {
+            width: 100%;
+            max-width: 1250px;
+
+            margin: auto;
+            padding: 150px 6% 100px;
+        }
+
+        .hero-label {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+
+            color: var(--gold-light);
+
+            font-size: 12px;
+            font-weight: 600;
+
+            letter-spacing: 4px;
+            text-transform: uppercase;
+
+            margin-bottom: 25px;
+        }
+
+        .hero-label::before {
+            content: "";
+            width: 48px;
+            height: 1px;
+            background: var(--gold-light);
+        }
+
+        .about-hero h1 {
+            max-width: 850px;
+
+            color: #fff;
+
+            font-family: 'Playfair Display', serif;
+
+            font-size: clamp(48px, 7vw, 88px);
+
+            line-height: 1.03;
+
+            font-weight: 500;
+
+            margin-bottom: 28px;
+        }
+
+        .about-hero h1 span {
+            color: var(--gold-light);
+        }
+
+        .hero-description {
+            max-width: 650px;
+
+            color: rgba(255,255,255,.82);
+
+            font-size: 16px;
+            line-height: 1.9;
+
+            margin-bottom: 38px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .gold-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 15px 30px;
+
+            border-radius: 3px;
+
+            background: linear-gradient(
+                135deg,
+                #e6c56d,
+                #b8892f
+            );
+
+            color: #fff;
+
+            font-size: 13px;
+            font-weight: 600;
+
+            letter-spacing: .5px;
+
+            transition: .35s ease;
+
+            box-shadow: 0 12px 30px rgba(0,0,0,.18);
+        }
+
+        .gold-button:hover {
+            color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 16px 35px rgba(0,0,0,.25);
+        }
+
+        .outline-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+
+            padding: 14px 28px;
+
+            border: 1px solid rgba(255,255,255,.55);
+
+            color: #fff;
+
+            font-size: 13px;
+            font-weight: 500;
+
+            transition: .35s ease;
+        }
+
+        .outline-button:hover {
+            color: #fff;
+            background: rgba(255,255,255,.12);
+            border-color: var(--gold-light);
+        }
+
+
+        /* =========================================
+           GOLD DIVIDER
+        ========================================= */
+
+        .gold-line {
+            width: 70px;
+            height: 2px;
+            background: var(--gold);
+
+            margin: 20px 0 28px;
+        }
+
+
+        /* =========================================
+           INTRO SECTION
+        ========================================= */
+
+        .intro-section {
+            padding: 110px 6%;
+            background: #fff;
+        }
+
+        .intro-container {
+            max-width: 1250px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            gap: 90px;
+
+            align-items: center;
+        }
+
+        .section-label {
+            color: var(--gold-dark);
+
+            font-size: 12px;
+            font-weight: 600;
+
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+
+            font-size: clamp(38px, 4vw, 58px);
+
+            line-height: 1.15;
+
+            color: var(--charcoal);
+
+            font-weight: 500;
+        }
+
+        .intro-text p {
+            color: var(--muted);
+
+            font-size: 15px;
+            line-height: 1.9;
+
+            margin-bottom: 20px;
+        }
+
+        .intro-image {
+            position: relative;
+        }
+
+        .intro-image img {
+            width: 100%;
+            height: 500px;
+
+            object-fit: cover;
+
+            border-radius: 2px;
+        }
+
+        .image-frame {
+            position: absolute;
+
+            width: 90%;
+            height: 90%;
+
+            right: -20px;
+            bottom: -20px;
+
+            border: 1px solid var(--gold);
+
+            z-index: 0;
+        }
+
+        .intro-image img {
+            position: relative;
+            z-index: 1;
+        }
+
+
+        /* =========================================
+           STATS
+        ========================================= */
+
+        .stats-section {
+            padding: 70px 6%;
+
+            background:
+                linear-gradient(
+                    120deg,
+                    #272622,
+                    #36332d
+                );
+
+            color: #fff;
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .stat-box {
+            text-align: center;
+
+            padding: 20px;
+
+            border-right: 1px solid rgba(255,255,255,.12);
+        }
+
+        .stat-box:last-child {
+            border-right: none;
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+
+            font-size: 48px;
+
+            color: var(--gold-light);
+
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            color: rgba(255,255,255,.70);
+
+            font-size: 12px;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+        }
+
+
+        /* =========================================
+           MISSION / VISION
+        ========================================= */
+
+        .values-section {
+            padding: 120px 6%;
+
+            background: #f7f4ed;
+        }
+
+        .values-heading {
+            max-width: 700px;
+            margin: auto;
+
+            text-align: center;
+
+            margin-bottom: 65px;
+        }
+
+        .values-heading p {
+            color: var(--muted);
+
+            font-size: 15px;
+            line-height: 1.8;
+
+            margin-top: 18px;
+        }
+
+        .values-grid {
+            max-width: 1150px;
+
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 30px;
+        }
+
+        .value-card {
+            background: #fff;
+
+            padding: 48px;
+
+            border: 1px solid #e8e1d3;
+
+            position: relative;
+
+            transition: .4s ease;
+        }
+
+        .value-card::before {
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            top: 0;
+
+            width: 4px;
+            height: 0;
+
+            background: var(--gold);
+
+            transition: .4s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-8px);
+
+            box-shadow: 0 20px 50px rgba(40,35,25,.10);
+        }
+
+        .value-card:hover::before {
+            height: 100%;
+        }
+
+        .value-icon {
+            width: 58px;
+            height: 58px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #faf4df;
+
+            color: var(--gold-dark);
+
+            font-size: 22px;
+
+            margin-bottom: 25px;
+        }
+
+        .value-card h3 {
+            font-family: 'Playfair Display', serif;
+
+            font-size: 30px;
+
+            color: var(--charcoal);
+
+            margin-bottom: 15px;
+        }
+
+        .value-card p {
+            color: var(--muted);
+
+            font-size: 14px;
+
+            line-height: 1.9;
+        }
+
+
+        /* =========================================
+           WHY VISTARA
+        ========================================= */
+
+        .why-section {
+            padding: 120px 6%;
+
+            background: #fff;
+        }
+
+        .why-container {
+            max-width: 1200px;
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: .9fr 1.1fr;
+
+            gap: 90px;
+
+            align-items: center;
+        }
+
+        .why-content p {
+            color: var(--muted);
+
+            font-size: 15px;
+            line-height: 1.9;
+
+            margin-bottom: 25px;
+        }
+
+        .why-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            gap: 20px;
+        }
+
+        .why-item {
+            padding: 25px;
+
+            background: #faf8f3;
+
+            border: 1px solid #eee8dc;
+
+            transition: .3s ease;
+        }
+
+        .why-item:hover {
+            border-color: var(--gold);
+            transform: translateY(-4px);
+        }
+
+        .why-item i {
+            color: var(--gold-dark);
+
+            font-size: 20px;
+
+            margin-bottom: 15px;
+        }
+
+        .why-item h4 {
+            font-family: 'Playfair Display', serif;
+
+            font-size: 21px;
+
+            margin-bottom: 8px;
+        }
+
+        .why-item p {
+            font-size: 13px;
+
+            margin: 0;
+        }
+
+
+        /* =========================================
+           CTA
+        ========================================= */
+
+        .about-cta {
+            position: relative;
+
+            padding: 110px 6%;
+
+            background:
+                linear-gradient(
+                    rgba(35,34,31,.82),
+                    rgba(35,34,31,.82)
+                ),
+                url("assets/premium-gold-bg.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            text-align: center;
+
+            overflow: hidden;
+        }
+
+        .about-cta::before {
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(230,197,109,.12),
+                    transparent 55%
+                );
+        }
+
+        .cta-content {
+            position: relative;
+
+            max-width: 800px;
+
+            margin: auto;
+        }
+
+        .cta-content .section-label {
+            color: var(--gold-light);
+        }
+
+        .cta-content h2 {
+            font-family: 'Playfair Display', serif;
+
+            color: #fff;
+
+            font-size: clamp(40px, 5vw, 64px);
+
+            font-weight: 500;
+
+            line-height: 1.15;
+
+            margin: 18px 0 20px;
+        }
+
+        .cta-content p {
+            color: rgba(255,255,255,.75);
+
+            line-height: 1.8;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        .footer {
+            background: #20201e;
+
+            color: #fff;
+
+            padding: 70px 6% 25px;
+
+             border-top: 5px solid
+     var(--gold);
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+
+            gap: 50px;
+
+            padding-bottom: 55px;
+
+            border-bottom: 1px solid rgba(255,255,255,.10);
+        }
+
+        .footer-logo img {
+            width: 75px;
+
+            margin-bottom: 20px;
+        }
+
+        .footer-about p {
+            color: rgba(255,255,255,.60);
+
+            font-size: 13px;
+
+            line-height: 1.8;
+
+            max-width: 320px;
+        }
+
+        .footer h4 {
+            font-family: 'Playfair Display', serif;
+
+            color: #fff;
+
+            font-size: 20px;
+
+            margin-bottom: 22px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,.58);
+
+            font-size: 13px;
+
+            transition: .3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold-light);
+            padding-left: 5px;
+        }
+
+        .footer-contact p {
+            color: rgba(255,255,255,.60);
+
+            font-size: 13px;
+
+            line-height: 1.8;
+
+            margin-bottom: 12px;
+        }
+
+        .footer-contact i {
+            color: var(--gold-light);
+
+            width: 22px;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+
+            margin: auto;
+
+            padding-top: 22px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            color: rgba(255,255,255,.40);
+
+            font-size: 11px;
+        }
+
+
+        /* =========================================
+           BACK TO TOP
+        ========================================= */
+
+        .back-to-top {
+            position: fixed;
+
+            right: 25px;
+            bottom: 25px;
+
+            width: 48px;
+            height: 48px;
+
+            border-radius: 50%;
+
+            border: 1px solid var(--gold);
+
+            background: #fff;
+
+            color: var(--gold-dark);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            cursor: pointer;
+
+            opacity: 0;
+            visibility: hidden;
+
+            transform: translateY(15px);
+
+            transition: .35s ease;
+
+            z-index: 999;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            background: var(--gold);
+            color: #fff;
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 900px) {
+
+            .intro-container,
+            .why-container {
+                grid-template-columns: 1fr;
+
+                gap: 55px;
+            }
+
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stat-box:nth-child(2) {
+                border-right: none;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .about-header {
+                padding: 18px 5%;
+            }
+
+            .about-logo img {
+                width: 60px;
+            }
+
+            .menu-button {
+                width: 45px;
+                height: 45px;
+            }
+
+            .about-hero {
+                min-height: 90vh;
+
+                background:
+                    linear-gradient(
+                        90deg,
+                        rgba(30,29,27,.88),
+                        rgba(30,29,27,.68)
+                    ),
+                    url("assets/about.jpg");
+
+                background-size: cover;
+                background-position: center;
+            }
+
+            .about-hero-content {
+                padding: 130px 7% 70px;
+            }
+
+            .about-hero h1 {
+                font-size: 48px;
+            }
+
+            .hero-description {
+                font-size: 14px;
+            }
+
+            .intro-section,
+            .values-section,
+            .why-section {
+                padding: 80px 7%;
+            }
+
+            .intro-image img {
+                height: 380px;
+            }
+
+            .stats-container {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .stat-box {
+                border-right: none;
+                border-bottom: 1px solid rgba(255,255,255,.10);
+            }
+
+            .stat-number {
+                font-size: 38px;
+            }
+
+            .why-list {
+                grid-template-columns: 1fr;
+            }
+
+            .value-card {
+                padding: 35px;
+            }
+
+            .about-cta {
+                padding: 85px 7%;
+            }
+
+            .footer {
+                padding: 60px 7% 25px;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header class="about-header">
+
+    <a href="index.html" class="about-logo">
+        <img src="assets/logo/logo-icon.png" alt="Vistara Solutions">
+    </a>
+
+    <button class="menu-button" id="menuBtn" aria-label="Open menu">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+</header>
+
+<!-- =========================================
+     SIDE MENU
+========================================= -->
+
+<nav class="side-menu" id="sideMenu">
+
+    <button class="close-btn" id="closeBtn" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+
+<div class="menu-label">
+        Vistara Solutions
+    </div>
+
+    <ul>
+
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+
+        <li>
+            <a href="about.html">About</a>
+        </li>
+
+        <li>
+            <a href="founder.html">Founder</a>
+        </li>
+
+        <li>
+            <a href="services.html">Services</a>
+        </li>
+
+        <li>
+            <a href="projects.html">Projects</a>
+        </li>
+
+        <li>
+            <a href="gallery.html">Gallery</a>
+        </li>
+
+        <li>
+            <a href="testimonials.html">Testimonials</a>
+        </li>
+
+        <li>
+            <a href="contact.html">Contact</a>
+        </li>
+
+        <li class="menu-divider"></li>
+
+        <li>
+            <a href="privacy-policy.html">
+                Privacy Policy
+            </a>
+        </li>
+
+        <li>
+            <a href="terms.html">
+                Terms &amp; Conditions
+            </a>
+        </li>
+
+    </ul>
+
+    <div class="menu-contact">
+
+        <h4>Get In Touch</h4>
+
+        <p>
+            <i class="fa-solid fa-phone"></i>
+            +91 87671 73882
+        </p>
+
+        <p>
+            <i class="fa-solid fa-phone"></i>
+            +91 87882 46145
+        </p>
+
+        <p>
+            <i class="fa-solid fa-envelope"></i>
+            vistarasolutions99@gmail.com
+        </p>
+
+        <div class="menu-social">
+
+            <a href="#">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="about-hero">
+
+    <div class="about-hero-content" data-aos="fade-up">
+
+        <div class="hero-label">
+            About Our Company
+        </div>
+
+        <h1>
+            Shaping The Way
+            <br>
+            <span>People Find Home.</span>
+        </h1>
+
+        <p class="hero-description">
+            Vistara Solutions is a premium real estate consultancy
+            built around trust, expertise and carefully selected
+            property opportunities across Pune.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#our-story" class="gold-button">
+                Discover Our Story
+                <i class="fa-solid fa-arrow-down"></i>
+            </a>
+
+            <a href="contact.html" class="outline-button">
+                Speak With An Expert
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     INTRO / OUR STORY
+========================================= -->
+
+<section class="intro-section" id="our-story">
+
+    <div class="intro-container">
+
+        <div class="intro-text" data-aos="fade-right">
+
+            <span class="section-label">
+                Our Story
+            </span>
+
+            <div class="gold-line"></div>
+
+            <h2 class="section-title">
+                Real Estate,
+                <br>
+                With A Difference.
+            </h2>
+
+            <br>
+
+            <p>
+                At Vistara Solutions, we believe that finding the
+                right property should be more than a transaction.
+                It should be a confident and rewarding experience.
+            </p>
+
+            <p>
+                Our approach combines market knowledge, carefully
+                selected developments and personalised guidance to
+                help our clients make informed property decisions.
+            </p>
+
+            <p>
+                From premium residences to high-potential
+                investments, we connect our clients with
+                opportunities that match their goals.
+            </p>
+
+        </div>
+
+
+        <div class="intro-image" data-aos="fade-left">
+
+            <div class="image-frame"></div>
+
+            <img src="assets/about/about-vistara-solutions.png"
+                 alt="Vistara Solutions Real Estate">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     STATS
+========================================= -->
+
+<section class="stats-section">
+
+    <div class="stats-container">
+
+        <div class="stat-box" data-aos="fade-up">
+
+            <div class="stat-number">
+                500+
+            </div>
+
+            <div class="stat-label">
+                Properties
+            </div>
+
+        </div>
+
+
+        <div class="stat-box" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="stat-number">
+                100+
+            </div>
+
+            <div class="stat-label">
+                Happy Clients
+            </div>
+
+        </div>
+
+
+        <div class="stat-box" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="stat-number">
+                24×7
+            </div>
+
+            <div class="stat-label">
+                Client Support
+            </div>
+
+        </div>
+
+
+        <div class="stat-box" data-aos="fade-up" data-aos-delay="300">
+
+            <div class="stat-number">
+                Pune
+            </div>
+
+            <div class="stat-label">
+                Our Market
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     MISSION & VISION
+========================================= -->
+
+<section class="values-section">
+
+    <div class="values-heading" data-aos="fade-up">
+
+        <span class="section-label">
+            What Drives Us
+        </span>
+
+        <div class="gold-line" style="margin:20px auto;"></div>
+
+        <h2 class="section-title">
+            Built On Trust.
+            <br>
+            Driven By Excellence.
+        </h2>
+
+        <p>
+            Every relationship we build and every property we
+            recommend is guided by transparency, quality and
+            long-term value.
+        </p>
+
+    </div>
+
+
+    <div class="values-grid">
+
+        <div class="value-card" data-aos="fade-up">
+
+            <div class="value-icon">
+                <i class="fa-solid fa-bullseye"></i>
+            </div>
+
+            <h3>
+                Our Mission
+            </h3>
+
+            <p>
+                To simplify the real estate journey by providing
+                reliable advice, carefully selected opportunities
+                and personalised support to every client.
+            </p>
+
+        </div>
+
+
+        <div class="value-card" data-aos="fade-up" data-aos-delay="150">
+
+            <div class="value-icon">
+                <i class="fa-solid fa-eye"></i>
+            </div>
+
+            <h3>
+                Our Vision
+            </h3>
+
+            <p>
+                To become one of Pune's most trusted real estate
+                consultancy brands by consistently delivering
+                exceptional service and meaningful property
+                opportunities.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     WHY VISTARA
+========================================= -->
+
+<section class="why-section">
+
+    <div class="why-container">
+
+        <div class="why-content" data-aos="fade-right">
+
+            <span class="section-label">
+                Why Vistara
+            </span>
+
+            <div class="gold-line"></div>
+
+            <h2 class="section-title">
+                More Than
+                <br>
+                A Property Search.
+            </h2>
+
+            <br>
+
+            <p>
+                We don't simply show properties. We understand
+                what our clients are looking for and help them
+                navigate the market with clarity and confidence.
+            </p>
+
+            <a href="projects.html" class="gold-button">
+                Explore Our Projects
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+
+        <div class="why-list" data-aos="fade-left">
+
+            <div class="why-item">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <h4>
+                    Trusted Guidance
+                </h4>
+
+                <p>
+                    Transparent and reliable property advice.
+                </p>
+
+            </div>
+
+
+            <div class="why-item">
+
+                <i class="fa-solid fa-building"></i>
+
+                <h4>
+                    Premium Projects
+                </h4>
+
+                <p>
+                    Carefully selected residential and commercial
+                    developments.
+                </p>
+
+            </div>
+
+
+            <div class="why-item">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <h4>
+                    Market Expertise
+                </h4>
+
+                <p>
+                    Strong understanding of Pune's evolving
+                    real estate market.
+                </p>
+
+            </div>
+
+
+            <div class="why-item">
+
+                <i class="fa-solid fa-handshake"></i>
+
+                <h4>
+                    Personalised Service
+                </h4>
+
+                <p>
+                    Every client receives dedicated attention
+                    throughout their journey.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     OUR BRAND IDENTITY
+========================================================= -->
+
+<section class="brand-identity-section">
+
+    <div class="container">
+
+        <!-- Section Heading -->
+
+        <div class="brand-identity-heading"
+             data-aos="fade-up">
+
+            <span class="section-eyebrow">
+                OUR BRAND IDENTITY
+            </span>
+
+            <h2 class="section-title">
+                A Brand Built
+                <span>With Purpose</span>
+            </h2>
+
+            <p class="section-description">
+                Every detail of Vistara Solutions reflects our commitment
+                to professionalism, trust and a premium client experience.
+                From our communication to our corporate identity, consistency
+                matters.
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+             BRANDING SHOWCASE
+        ================================================== -->
+
+        <div class="branding-grid">
+
+
+            <!-- Business Card Front -->
+
+            <div class="branding-card branding-card-large"
+                 data-aos="fade-up">
+
+                <div class="branding-image">
+
+                    <img src="assets/branding/business-card-front.png"
+                         alt="Vistara Solutions Business Card Front"
+                         loading="lazy">
+
+                </div>
+
+                <div class="branding-caption">
+
+                    <span>
+                        CORPORATE IDENTITY
+                    </span>
+
+                    <h3>
+                        Business Card
+                        <strong>Front</strong>
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Business Card Back -->
+
+            <div class="branding-card branding-card-large"
+                 data-aos="fade-up"
+                 data-aos-delay="100">
+
+                <div class="branding-image">
+
+                    <img src="assets/branding/business-card-back.png"
+                         alt="Vistara Solutions Business Card Back"
+                         loading="lazy">
+
+                </div>
+
+                <div class="branding-caption">
+
+                    <span>
+                        CORPORATE IDENTITY
+                    </span>
+
+                    <h3>
+                        Business Card
+                        <strong>Back</strong>
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Email Signature -->
+
+            <div class="branding-card branding-email-card"
+                 data-aos="fade-up"
+                 data-aos-delay="200">
+
+                <div class="branding-image">
+
+                    <img src="assets/branding/email-signature.png"
+                         alt="Vistara Solutions Email Signature"
+                         loading="lazy">
+
+                </div>
+
+                <div class="branding-caption">
+
+                    <span>
+                        DIGITAL IDENTITY
+                    </span>
+
+                    <h3>
+                        Email
+                        <strong>Signature</strong>
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================
+     CTA
+========================================= -->
+
+<section class="about-cta">
+
+    <div class="cta-content" data-aos="fade-up">
+
+        <span class="section-label">
+            Your Next Move
+        </span>
+
+        <h2>
+            Let's Find Your
+            <br>
+            Perfect Property.
+        </h2>
+
+        <p>
+            Whether you're searching for your dream home,
+            an investment opportunity or a commercial space,
+            our team is ready to help.
+        </p>
+
+        <a href="contact.html" class="gold-button">
+            Book A Consultation
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+
+        <div class="footer-about">
+
+            <a href="index.html" class="footer-logo">
+
+                <img src="assets/logo/logo-gold.png"
+                     alt="Vistara Solutions">
+
+            </a>
+
+            <p>
+                Premium residential and commercial real estate
+                consultancy helping clients discover exceptional
+                property opportunities across Pune.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Company
+            </h4>
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About Us
+                    </a>
+                </li>
+
+                <li>
+                    <a href="projects.html">
+                        Projects
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Services
+            </h4>
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="projects.html">
+                        Residential Properties
+                    </a>
+                </li>
+
+                <li>
+                    <a href="projects.html">
+                        Commercial Spaces
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Investment Consulting
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Property Consultation
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="footer-contact">
+
+            <h4>
+                Contact
+            </h4>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Kharadi, Pune, Maharashtra
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                +91 8767173882
+            </p>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                vistarasolutions99@gmail.com
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 Vistara Solutions. All Rights Reserved.
+        </span>
+
+        <span>
+            Premium Real Estate Consultancy · Pune
+        </span>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================
+     BACK TO TOP
+========================================= -->
+
+<button class="back-to-top"
+        id="backToTop"
+        aria-label="Back to top">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+
+
+<!-- =========================================
+     AOS
+========================================= -->
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+
+<script>
+
+    /* =========================================
+       AOS INITIALIZATION
+    ========================================= */
+
+    AOS.init({
+        duration: 900,
+        easing: 'ease-out-cubic',
+        once: true,
+        offset: 80
+    });
+
+
+    /* =========================================
+       BACK TO TOP
+    ========================================= */
+
+    const backToTop =
+        document.getElementById("backToTop");
+
+
+    window.addEventListener("scroll", function () {
+
+        if (window.scrollY > 500) {
+
+            backToTop.classList.add("show");
+
+        } else {
+
+            backToTop.classList.remove("show");
+
+        }
+
+    });
+
+
+    backToTop.addEventListener("click", function () {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+
+    /* =========================================
+   HAMBURGER MENU
+========================================= */
+
+const menuBtn = document.getElementById("menuBtn");
+const sideMenu = document.getElementById("sideMenu");
+const closeBtn = document.getElementById("closeBtn");
+
+menuBtn.addEventListener("click", function () {
+
+    sideMenu.classList.add("active")
+
+});
+
+closeBtn.addEventListener("click", function () {
+
+    sideMenu.classList.remove("active");
+
+});
+sideMenu.querySelectorAll("a").forEach(function (link) {
+
+    link.addEventListener("click", function () {
+        sideMenu.classList.remove("active");
+    });
+
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,3184 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Services | Vistara Solutions</title>
+
+    <meta name="description"
+          content="Explore premium residential, commercial, investment and property consulting services by Vistara Solutions in Pune.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+          rel="stylesheet">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+          rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <!-- =====================================================
+         HAMBURGER / SIDE MENU CSS
+         ===================================================== -->
+
+    <style>
+
+        /* =========================================================
+   ROOT VARIABLES
+========================================================= */
+
+:root {
+
+    --gold: #c79a3b;
+    --gold-light: #e4c56d;
+    --gold-dark: #9b7424;
+
+    --ivory: #f8f6f0;
+    --white: #ffffff;
+
+    --charcoal: #252421;
+    --dark: #20201e;
+
+    --text: #30302e;
+    --muted: #77736b;
+
+    --border: #e8e1d4;
+
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+
+    background: var(--ivory);
+
+    color: var(--text);
+
+    overflow-x: hidden;
+
+}
+
+
+/* =========================================================
+   FLOATING HEADER
+========================================================= */
+
+.floating-header {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    padding: 20px 0;
+
+    pointer-events: none;
+
+}
+
+
+.header-wrapper {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.logo {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    pointer-events: auto;
+
+    text-decoration: none;
+
+}
+
+
+.logo img {
+
+    width: 58px;
+
+    height: auto;
+
+    display: block;
+
+}
+
+
+/* =========================================================
+   HAMBURGER BUTTON
+========================================================= */
+
+.menu-btn {
+
+    width: 54px;
+
+    height: 54px;
+
+    border: 1px solid rgba(199, 154, 59, 0.45);
+
+    border-radius: 50%;
+
+    background: rgba(32, 32, 30, 0.92);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    cursor: pointer;
+
+    pointer-events: auto;
+
+    transition:
+        background 0.35s ease,
+        border-color 0.35s ease,
+        transform 0.35s ease;
+
+}
+
+
+.menu-btn span {
+
+    display: block;
+
+    width: 21px;
+
+    height: 1.5px;
+
+    background: var(--gold-light);
+
+    transition: all 0.35s ease;
+
+}
+
+
+.menu-btn:hover {
+
+    background: var(--gold);
+
+    border-color: var(--gold);
+
+    transform: rotate(5deg);
+
+}
+
+
+.menu-btn:hover span {
+
+    background: var(--white);
+
+}
+
+/* =========================================================
+   HAMBURGER SIDE MENU
+   FIXED / CLEAN VERSION
+========================================================= */
+
+.side-menu {
+
+    position: fixed !important;
+
+    top: 0 !important;
+
+    right: -420px !important;
+
+    width: 400px !important;
+
+    max-width: 90% !important;
+
+    height: 100vh !important;
+
+    background: #20201e !important;
+
+    color: #ffffff !important;
+
+    z-index: 99999 !important;
+
+    padding: 90px 45px 40px !important;
+
+    overflow-y: auto !important;
+
+    box-sizing: border-box !important;
+
+    box-shadow: -20px 0 60px rgba(0, 0, 0, 0.35) !important;
+
+    transition:
+        right 0.55s cubic-bezier(0.77, 0, 0.175, 1) !important;
+
+}
+
+
+/* OPEN */
+
+.side-menu.active {
+
+    right: 0 !important;
+
+}
+
+
+/* MENU BACKGROUND */
+
+.side-menu::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(199, 154, 59, 0.12),
+            transparent 35%
+        );
+
+    pointer-events: none;
+
+}
+
+
+/* KEEP MENU CONTENT ABOVE BACKGROUND */
+
+.side-menu > * {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+/* CLOSE BUTTON */
+
+.side-menu .close-btn {
+
+    position: absolute !important;
+
+    top: 25px !important;
+
+    right: 25px !important;
+
+    width: 46px !important;
+
+    height: 46px !important;
+
+    border: 1px solid rgba(199, 154, 59, 0.45) !important;
+
+    border-radius: 50% !important;
+
+    background: transparent !important;
+
+    color: #e4c56d !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    cursor: pointer !important;
+
+    z-index: 10 !important;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease !important;
+
+}
+
+
+.side-menu .close-btn:hover {
+
+    background: #c79a3b !important;
+
+    color: #ffffff !important;
+
+    transform: rotate(90deg) !important;
+
+}
+
+
+/* MENU LABEL */
+
+.side-menu .menu-label {
+
+    color: #e4c56d !important;
+
+    font-family: 'Playfair Display', serif !important;
+
+    font-size: 14px !important;
+
+    letter-spacing: 3px !important;
+
+    text-transform: uppercase !important;
+
+    margin-bottom: 30px !important;
+
+}
+
+
+
+
+
+
+
+/* MENU LIST */
+
+.side-menu ul {
+
+    list-style: none !important;
+
+    padding: 0 !important;
+
+    margin: 0 !important;
+
+}
+
+
+.side-menu ul li {
+
+    margin: 0 !important;
+
+}
+
+
+.side-menu ul li a {
+
+    display: inline-block !important;
+
+    position: relative !important;
+
+    color: #ffffff !important;
+
+    font-family: 'Playfair Display', serif !important;
+
+    font-size: 22px !important;
+
+    line-height: 1.5 !important;
+
+    text-decoration: none !important;
+
+    padding: 8px 0 !important;
+
+    background: transparent !important;
+
+    transition:
+        color 0.3s ease,
+        padding-left 0.3s ease !important;
+
+}
+
+
+.side-menu ul li a:hover {
+
+    color: #e4c56d !important;
+
+    padding-left: 8px !important;
+
+}
+
+
+
+/* GOLD VERTICAL LINE - SIDE MENU */
+.side-menu ul {
+    position: relative !important;
+    margin: 0 !important;
+    padding: 0 0 0 55px !important;
+    list-style: none !important;
+}
+
+.side-menu ul::before {
+    content: "" !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 3px !important;
+    height: 100% !important;
+    background: var(--gold) !important;
+    display: block !important;
+}
+
+
+
+/* DIVIDER */
+
+.side-menu .menu-divider {
+
+    height: 1px !important;
+
+    width: 100% !important;
+
+    background: rgba(255, 255, 255, 0.12) !important;
+
+    margin: 22px 0 !important;
+
+}
+
+
+/* CONTACT AREA */
+
+.side-menu .menu-contact {
+
+    margin-top: 35px !important;
+
+    padding-top: 25px !important;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+
+}
+
+
+.side-menu .menu-contact h4 {
+
+    color: #e4c56d !important;
+
+    font-family: 'Playfair Display', serif !important;
+
+    font-size: 20px !important;
+
+    margin-bottom: 18px !important;
+
+}
+
+
+.side-menu .menu-contact p {
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    gap: 12px !important;
+
+    color: rgba(255, 255, 255, 0.72) !important;
+
+    font-family: 'Poppins', sans-serif !important;
+
+    font-size: 13px !important;
+
+    margin-bottom: 12px !important;
+
+}
+
+
+.side-menu .menu-contact p i {
+
+    width: 18px !important;
+
+    color: #c79a3b !important;
+
+}
+
+
+/* SOCIAL ICONS */
+
+.side-menu .menu-social {
+
+    display: flex !important;
+
+    gap: 10px !important;
+
+    margin-top: 22px !important;
+
+}
+
+
+.side-menu .menu-social a {
+
+    width: 38px !important;
+
+    height: 38px !important;
+
+    padding: 0 !important;
+
+    border: 1px solid rgba(199, 154, 59, 0.35) !important;
+
+    border-radius: 50% !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    color: #e4c56d !important;
+
+    font-family: 'Poppins', sans-serif !important;
+
+    font-size: 14px !important;
+
+}
+
+
+.side-menu .menu-social a:hover {
+
+    background: #c79a3b !important;
+
+    color: #ffffff !important;
+
+    padding-left: 0 !important;
+
+}
+
+
+
+/* =========================================================
+   PRIVACY HERO
+========================================================= */
+
+.legal-hero {
+
+    position: relative;
+
+    min-height: 520px;
+
+    display: flex;
+
+    align-items: center;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(32, 32, 30, 0.98),
+            rgba(37, 36, 33, 0.96)
+        );
+
+    overflow: hidden;
+
+}
+
+
+.legal-hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    right: -180px;
+
+    top: -180px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(199, 154, 59, 0.18),
+        transparent 70%
+    );
+
+}
+
+
+.legal-hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+
+    height: 400px;
+
+    left: -200px;
+
+    bottom: -200px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle,
+        rgba(199, 154, 59, 0.10),
+        transparent 70%
+    );
+
+}
+
+
+.legal-hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 800px;
+
+    padding: 150px 0 80px;
+
+}
+
+
+.section-eyebrow {
+
+    display: inline-block;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    font-weight: 500;
+
+    color: var(--gold-light);
+
+    margin-bottom: 18px;
+
+}
+
+
+.legal-hero h1 {
+
+    font-family: 'Playfair Display', serif;
+
+    color: var(--white);
+
+    font-size: clamp(48px, 7vw, 82px);
+
+    font-weight: 500;
+
+    line-height: 1.05;
+
+    margin: 0;
+
+}
+
+
+.legal-hero h1 span {
+
+    color: var(--gold-light);
+
+}
+
+
+.legal-hero p {
+
+    max-width: 680px;
+
+    margin: 25px 0 0;
+
+    color: rgba(255, 255, 255, 0.72);
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+}
+
+
+.legal-divider {
+
+    width: 70px;
+
+    height: 1px;
+
+    background: var(--gold);
+
+    margin: 30px 0 18px;
+
+}
+
+
+.legal-updated {
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =========================================================
+   PRIVACY CONTENT SECTION
+========================================================= */
+
+.legal-content-section {
+
+    padding: 100px 0;
+
+    background: var(--ivory);
+
+}
+
+
+.legal-layout {
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) 320px;
+
+    gap: 80px;
+
+    align-items: start;
+
+}
+
+
+.legal-content {
+
+    min-width: 0;
+
+}
+
+
+.legal-section {
+
+    position: relative;
+
+    padding: 0 0 55px;
+
+    margin-bottom: 55px;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+
+.legal-section:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.legal-number {
+
+    display: block;
+
+    font-family: 'Playfair Display', serif;
+
+    color: var(--gold);
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.legal-section h2 {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: clamp(27px, 3vw, 38px);
+
+    font-weight: 600;
+
+    color: var(--charcoal);
+
+    margin-bottom: 20px;
+
+}
+
+
+.legal-section p {
+
+    color: var(--muted);
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    margin-bottom: 18px;
+
+}
+
+
+.legal-section p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+/* =========================================================
+   LEGAL LIST
+========================================================= */
+
+.legal-section ul {
+
+    padding-left: 22px;
+
+    margin: 18px 0 0;
+
+}
+
+
+.legal-section ul li {
+
+    color: var(--muted);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    margin-bottom: 10px;
+
+    padding-left: 5px;
+
+}
+
+
+.legal-section ul li::marker {
+
+    color: var(--gold);
+
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.legal-sidebar {
+
+    position: sticky;
+
+    top: 120px;
+
+}
+
+
+.legal-sidebar-card {
+
+    position: relative;
+
+    padding: 38px 30px;
+
+    background: var(--dark);
+
+    overflow: hidden;
+
+}
+
+
+.legal-sidebar-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+
+    height: 180px;
+
+    right: -80px;
+
+    bottom: -80px;
+
+    border-radius: 50%;
+
+    background: rgba(199, 154, 59, 0.12);
+
+}
+
+
+.legal-sidebar-card > span {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: block;
+
+    color: var(--gold-light);
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.legal-sidebar-card > i {
+
+    position: relative;
+
+    z-index: 2;
+
+    color: var(--gold);
+
+    font-size: 30px;
+
+    margin-bottom: 22px;
+
+}
+
+
+.legal-sidebar-card h3 {
+
+    position: relative;
+
+    z-index: 2;
+
+    font-family: 'Playfair Display', serif;
+
+    color: var(--white);
+
+    font-size: 28px;
+
+    line-height: 1.25;
+
+    margin-bottom: 18px;
+
+}
+
+
+.legal-sidebar-card h3 strong {
+
+    display: block;
+
+    color: var(--gold-light);
+
+    font-weight: 500;
+
+}
+
+
+.legal-sidebar-card p {
+
+    position: relative;
+
+    z-index: 2;
+
+    color: rgba(255, 255, 255, 0.62);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    margin: 0;
+
+}
+
+
+/* =========================================================
+   LEGAL CONTACT CARD
+========================================================= */
+
+.legal-contact-card {
+
+    margin-top: 20px;
+
+    padding: 30px;
+
+    border: 1px solid var(--border);
+
+    background: var(--white);
+
+}
+
+
+.legal-contact-card span {
+
+    display: block;
+
+    color: var(--gold-dark);
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.legal-contact-card h4 {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 25px;
+
+    color: var(--charcoal);
+
+    margin-bottom: 18px;
+
+}
+
+
+.legal-contact-card a {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    color: var(--text);
+
+    font-size: 12px;
+
+    text-decoration: none;
+
+    word-break: break-word;
+
+    transition: color 0.3s ease;
+
+}
+
+
+.legal-contact-card a i {
+
+    flex-shrink: 0;
+
+    color: var(--gold);
+
+    transition: transform 0.3s ease;
+
+}
+
+
+.legal-contact-card a:hover {
+
+    color: var(--gold-dark);
+
+}
+
+
+.legal-contact-card a:hover i {
+
+    transform: translateX(5px);
+
+}
+
+
+/* =========================================================
+   CONTACT DETAILS
+========================================================= */
+
+.legal-contact-section {
+
+    padding-bottom: 0;
+
+}
+
+
+.legal-contact-details {
+
+    display: grid;
+
+    gap: 16px;
+
+    margin-top: 28px;
+
+}
+
+
+.legal-contact-details > div {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    padding: 16px 18px;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    border: 1px solid var(--border);
+
+}
+
+
+.legal-contact-details i {
+
+    width: 20px;
+
+    color: var(--gold);
+
+    margin-top: 4px;
+
+}
+
+
+.legal-contact-details span,
+.legal-contact-details a {
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    text-decoration: none;
+
+}
+
+
+.legal-contact-details a:hover {
+
+    color: var(--gold-dark);
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+
+    background: #20201e !important;
+
+    color: var(--white);
+
+    padding: 80px 0 0;
+
+     border-top: 5px solid
+     var(--gold);
+
+}
+
+
+.footer-logo {
+
+    display: inline-block;
+
+    margin-bottom: 22px;
+
+}
+
+
+.footer-logo img {
+
+    max-width: 170px;
+
+    height: auto;
+
+    display: block;
+
+}
+
+
+.footer-description {
+
+    max-width: 360px;
+
+    color: rgba(255, 255, 255, 0.58);
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    margin-bottom: 25px;
+
+}
+
+
+.footer-title {
+
+    font-family: 'Playfair Display', serif;
+
+    color: var(--white);
+
+    font-size: 20px;
+
+    margin-bottom: 24px;
+
+}
+
+
+.footer-links {
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+
+}
+
+
+.footer-links li {
+
+    margin-bottom: 12px;
+
+}
+
+
+.footer-links a {
+
+    color: rgba(255, 255, 255, 0.58);
+
+    font-size: 13px;
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+
+}
+
+
+.footer-links a:hover {
+
+    color: var(--gold-light);
+
+}
+
+
+.footer-contact {
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+
+}
+
+
+.footer-contact li {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 14px;
+
+    margin-bottom: 18px;
+
+    color: rgba(255, 255, 255, 0.58);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+}
+
+
+.footer-contact i {
+
+    width: 18px;
+
+    color: var(--gold);
+
+    margin-top: 3px;
+
+    flex-shrink: 0;
+
+}
+
+
+.footer-contact a {
+
+    color: rgba(255, 255, 255, 0.58);
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+
+}
+
+
+.footer-contact a:hover {
+
+    color: var(--gold-light);
+
+}
+
+
+/* =========================================================
+   FOOTER SOCIALS
+========================================================= */
+
+.footer-socials {
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+
+.footer-socials a {
+
+    width: 40px;
+
+    height: 40px;
+
+    border: 1px solid rgba(199, 154, 59, 0.35);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--gold-light);
+
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+
+.footer-socials a:hover {
+
+    background: var(--gold);
+
+    color: var(--white);
+
+    transform: translateY(-3px);
+
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+========================================================= */
+
+.footer-bottom {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-top: 60px;
+
+    padding: 22px 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+
+}
+
+
+.footer-bottom p {
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.42);
+
+    font-size: 11px;
+
+    letter-spacing: 0.5px;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .legal-layout {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+    }
+
+
+    .legal-sidebar {
+
+        position: static;
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 20px;
+
+    }
+
+
+    .legal-contact-card {
+
+        margin-top: 0;
+
+    }
+
+
+    .legal-hero {
+
+        min-height: 470px;
+
+    }
+
+
+    .legal-hero-content {
+
+        padding-top: 140px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .floating-header {
+
+        padding: 15px 0;
+
+    }
+
+
+    .logo img {
+
+        width: 50px;
+
+    }
+
+
+    .menu-btn {
+
+        width: 48px;
+
+        height: 48px;
+
+    }
+
+
+    .side-menu {
+
+        width: 350px !important;
+
+        max-width: 88% !important;
+
+        padding: 85px 30px 35px !important;
+
+    }
+
+
+    .side-menu ul li a {
+
+        font-size: 20px !important;
+
+    }
+
+
+    .menu-contact {
+
+        margin-top: 28px;
+
+    }
+
+
+    .legal-hero {
+
+        min-height: 430px;
+
+    }
+
+
+    .legal-hero-content {
+
+        padding: 125px 15px 65px;
+
+    }
+
+
+    .legal-hero h1 {
+
+        font-size: 48px;
+
+    }
+
+
+    .legal-hero p {
+
+        font-size: 14px;
+
+        line-height: 1.8;
+
+    }
+
+
+    .legal-content-section {
+
+        padding: 65px 0;
+
+    }
+
+
+    .legal-layout {
+
+        gap: 45px;
+
+    }
+
+
+    .legal-section {
+
+        padding-bottom: 40px;
+
+        margin-bottom: 40px;
+
+    }
+
+
+    .legal-section h2 {
+
+        font-size: 28px;
+
+    }
+
+
+    .legal-section p,
+    .legal-section ul li {
+
+        font-size: 14px;
+
+        line-height: 1.85;
+
+    }
+
+
+    .legal-sidebar {
+
+        display: block;
+
+    }
+
+
+    .legal-contact-card {
+
+        margin-top: 20px;
+
+    }
+
+
+    .site-footer {
+
+        padding-top: 60px;
+
+    }
+
+
+    .footer-bottom {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        margin-top: 40px;
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .side-menu {
+
+        width: 320px !important;
+
+        max-width: 92% !important;
+
+        padding-left: 25px !important;
+
+        padding-right: 25px !important;
+
+    }
+
+
+    .legal-hero-content {
+
+        padding-left: 10px;
+
+        padding-right: 10px;
+
+    }
+
+
+    .legal-hero h1 {
+
+        font-size: 42px;
+
+    }
+
+
+    .legal-content-section {
+
+        padding-top: 50px;
+
+        padding-bottom: 50px;
+
+    }
+
+
+    .legal-section h2 {
+
+        font-size: 25px;
+
+    }
+
+
+    .legal-sidebar-card,
+    .legal-contact-card {
+
+        padding: 28px 22px;
+
+    }
+
+
+    .legal-contact-details > div {
+
+        padding: 14px;
+
+    }
+
+
+    .footer-description {
+
+        font-size: 12px;
+
+    }
+
+}
+   
+/* =========================
+   BACK TO TOP BUTTON
+========================= */
+
+.back-to-top {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    background: var(--charcoal);
+    color: var(--gold-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    cursor: pointer;
+    z-index: 9999;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+
+    transition: all 0.35s ease;
+}
+
+.back-to-top:hover {
+    background: var(--gold);
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(199, 154, 59, 0.3);
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .back-to-top {
+        width: 42px;
+        height: 42px;
+        right: 18px;
+        bottom: 18px;
+        font-size: 15px;
+    }
+}
+
+
+
+</style>
+
+</html>
+
+<body>
+
+<!-- =========================================================
+     SERVICES PAGE
+========================================================= -->
+
+
+<!-- =========================================================
+     PREMIUM HEADER
+========================================================= -->
+
+<header class="site-header">
+
+    <div class="container-fluid px-4 px-lg-5">
+
+        <div class="header-inner">
+
+            <!-- Logo -->
+            <a href="index.html" class="site-logo">
+                <img src="assets/logo/logo-icon.png"
+                     alt="Vistara Solutions">
+            </a>
+
+
+            <!-- Menu Button -->
+            <button class="menu-btn"
+                    id="menuBtn"
+                    type="button"
+                    aria-label="Open Navigation Menu"
+                    aria-expanded="false"
+                    aria-controls="sideMenu">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     SIDE MENU
+========================================================= -->
+
+<nav class="side-menu"
+     id="sideMenu"
+     aria-hidden="true">
+
+    <button class="close-btn"
+            id="closeBtn"
+            type="button"
+            aria-label="Close menu">
+
+        <i class="fa-solid fa-xmark"></i>
+
+    </button>
+
+    <div class="menu-label">
+        Vistara Solutions
+    </div>
+    
+    <ul>
+
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+
+        <li>
+            <a href="about.html">About</a>
+        </li>
+
+        <li>
+            <a href="founder.html">Founder</a>
+        </li>
+
+        <li>
+            <a href="services.html">Services</a>
+        </li>
+
+        <li>
+            <a href="projects.html">Projects</a>
+        </li>
+
+        <li>
+            <a href="gallery.html">Gallery</a>
+        </li>
+
+        <li>
+            <a href="testimonials.html">Testimonials</a>
+        </li>
+
+        <li>
+            <a href="contact.html">Contact</a>
+        </li>
+
+        <li class="menu-divider"></li>
+
+        <li>
+            <a href="privacy-policy.html">
+                Privacy Policy
+            </a>
+        </li>
+
+        <li>
+            <a href="terms.html">
+                Terms &amp; Conditions
+            </a>
+        </li>
+
+    </ul>
+
+    <div class="menu-contact">
+
+        <h4>Get In Touch</h4>
+
+        <p>
+            <i class="fa-solid fa-phone"></i>
+            +91 87671 73882
+        </p>
+
+        <p>
+            <i class="fa-solid fa-phone"></i>
+            +91 87882 46145
+        </p>
+
+        <p>
+            <i class="fa-solid fa-envelope"></i>
+            vistarasolutions99@gmail.com
+        </p>
+
+        <div class="menu-social">
+
+            <a href="#">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- =========================================================
+     SERVICES HERO
+========================================================= -->
+
+<section class="page-hero services-hero">
+
+    <div class="services-hero-overlay"></div>
+
+    <div class="container">
+
+        <div class="services-hero-content"
+             data-aos="fade-up"
+             data-aos-duration="1000">
+
+            <span class="hero-eyebrow">
+                OUR EXPERTISE
+            </span>
+
+            <h1>
+                SERVICES THAT
+                <span>MOVE YOU FORWARD</span>
+            </h1>
+
+            <p>
+                From finding the right property to making confident
+                investment decisions, Vistara Solutions provides
+                personalized real estate guidance built around your goals.
+            </p>
+
+            <div class="hero-divider"></div>
+
+            <a href="#services-overview"
+               class="gold-btn">
+
+                Explore Our Services
+
+                <i class="fa-solid fa-arrow-down"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="page-scroll-indicator">
+
+        <span>SCROLL TO EXPLORE</span>
+
+        <div class="scroll-line"></div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SERVICES INTRO
+========================================================= -->
+
+<section class="services-intro"
+         id="services-overview">
+
+    <div class="container">
+
+        <div class="row align-items-end">
+
+            <div class="col-lg-7"
+                 data-aos="fade-up">
+
+                <span class="section-eyebrow">
+                    WHAT WE DO
+                </span>
+
+                <h2 class="section-title">
+                    Real Estate
+                    <span>Expertise With Purpose</span>
+                </h2>
+
+            </div>
+
+            <div class="col-lg-5"
+                 data-aos="fade-up"
+                 data-aos-delay="150">
+
+                <p class="section-description">
+                    Every property decision is different. Our role is to
+                    understand your requirements, simplify the process and
+                    help you discover opportunities that align with your
+                    vision.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SERVICES GRID
+========================================================= -->
+
+<section class="services-grid-section">
+
+    <div class="container">
+
+        <div class="services-heading"
+             data-aos="fade-up">
+
+            <span class="section-eyebrow">
+                OUR SERVICES
+            </span>
+
+            <h2 class="section-title">
+                Solutions Designed Around
+                <span>Your Real Estate Goals</span>
+            </h2>
+
+            <p class="section-description">
+                Whether you're looking for a home, expanding your business,
+                exploring an investment opportunity, or managing a property,
+                our services are designed to make every step more informed
+                and seamless.
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+             SERVICE 01 — RESIDENTIAL
+        ================================================== -->
+
+        <div class="service-feature"
+             data-aos="fade-up">
+
+            <div class="row g-0 align-items-stretch">
+
+                <div class="col-lg-6">
+
+                    <div class="service-image">
+
+                        <img src="assets/services/service-residential.png"
+                             alt="Residential Real Estate"
+                             loading="lazy">
+
+                        <div class="service-image-overlay"></div>
+
+                        <span class="service-number">
+                            01
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-6">
+
+                    <div class="service-content">
+
+                        <div class="service-icon">
+                            <i class="fa-solid fa-house"></i>
+                        </div>
+
+                        <span class="service-category">
+                            RESIDENTIAL REAL ESTATE
+                        </span>
+
+                        <h3>
+                            Find a Place
+                            <span>That Feels Like Home</span>
+                        </h3>
+
+                        <p>
+                            Discover thoughtfully selected residential
+                            properties that match your lifestyle, location
+                            preferences and long-term aspirations. From
+                            first homes to premium residences, we help you
+                            navigate the market with clarity.
+                        </p>
+
+                        <ul class="service-points">
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Requirement-based property selection
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Premium residential opportunities
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                End-to-end buying guidance
+                            </li>
+
+                        </ul>
+
+                        <a href="contact.html"
+                           class="service-link">
+
+                            Explore Residential Properties
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             SERVICE 02 — COMMERCIAL
+        ================================================== -->
+
+        <div class="service-feature service-reverse"
+             data-aos="fade-up">
+
+            <div class="row g-0 align-items-stretch">
+
+                <div class="col-lg-6 order-lg-2">
+
+                    <div class="service-image">
+
+                        <img src="assets/services/service-commercial.png"
+                             alt="Commercial Real Estate"
+                             loading="lazy">
+
+                        <div class="service-image-overlay"></div>
+
+                        <span class="service-number">
+                            02
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-6 order-lg-1">
+
+                    <div class="service-content">
+
+                        <div class="service-icon">
+                            <i class="fa-solid fa-building"></i>
+                        </div>
+
+                        <span class="service-category">
+                            COMMERCIAL REAL ESTATE
+                        </span>
+
+                        <h3>
+                            Spaces Built
+                            <span>For Business Growth</span>
+                        </h3>
+
+                        <p>
+                            Explore commercial properties selected with
+                            business requirements, accessibility and future
+                            potential in mind. We help businesses and
+                            investors identify spaces that support their
+                            evolving objectives.
+                        </p>
+
+                        <ul class="service-points">
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Office and commercial spaces
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Location-focused property guidance
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Assistance throughout the transaction
+                            </li>
+
+                        </ul>
+
+                        <a href="contact.html"
+                           class="service-link">
+
+                            Explore Commercial Properties
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             SERVICE 03 — INVESTMENT
+        ================================================== -->
+
+        <div class="service-feature"
+             data-aos="fade-up">
+
+            <div class="row g-0 align-items-stretch">
+
+                <div class="col-lg-6">
+
+                    <div class="service-image">
+
+                        <img src="assets/services/service-investment.png"
+                             alt="Real Estate Investment Consulting"
+                             loading="lazy">
+
+                        <div class="service-image-overlay"></div>
+
+                        <span class="service-number">
+                            03
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-6">
+
+                    <div class="service-content">
+
+                        <div class="service-icon">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+
+                        <span class="service-category">
+                            INVESTMENT CONSULTING
+                        </span>
+
+                        <h3>
+                            Make Decisions
+                            <span>With Greater Clarity</span>
+                        </h3>
+
+                        <p>
+                            Real estate investment requires more than finding
+                            a property. We help you evaluate opportunities,
+                            understand market conditions and consider
+                            properties according to your investment goals.
+                        </p>
+
+                        <ul class="service-points">
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Market and property analysis
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Opportunity evaluation
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Personalized investment guidance
+                            </li>
+
+                        </ul>
+
+                        <a href="contact.html"
+                           class="service-link">
+
+                            Discuss an Investment
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             SERVICE 04 — PROPERTY MANAGEMENT
+        ================================================== -->
+
+        <div class="service-feature service-reverse"
+             data-aos="fade-up">
+
+            <div class="row g-0 align-items-stretch">
+
+                <div class="col-lg-6 order-lg-2">
+
+                    <div class="service-image">
+
+                        <img src="assets/services/service-management.png"
+                             alt="Property Management Services"
+                             loading="lazy">
+
+                        <div class="service-image-overlay"></div>
+
+                        <span class="service-number">
+                            04
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-6 order-lg-1">
+
+                    <div class="service-content">
+
+                        <div class="service-icon">
+                            <i class="fa-solid fa-key"></i>
+                        </div>
+
+                        <span class="service-category">
+                            PROPERTY MANAGEMENT
+                        </span>
+
+                        <h3>
+                            Protecting the Value
+                            <span>Of Your Property</span>
+                        </h3>
+
+                        <p>
+                            Managing a property from a distance or simply
+                            keeping up with its requirements can be demanding.
+                            Our property management support is designed to
+                            provide greater convenience and peace of mind.
+                        </p>
+
+                        <ul class="service-points">
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Property coordination and support
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Tenant-related assistance
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Ongoing property support
+                            </li>
+
+                        </ul>
+
+                        <a href="contact.html"
+                           class="service-link">
+
+                            Enquire About Management
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SERVICE APPROACH INTRO
+========================================================= -->
+
+<section class="service-approach">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-6"
+                 data-aos="fade-right">
+
+                <span class="section-eyebrow">
+                    OUR APPROACH
+                </span>
+
+                <h2 class="section-title">
+                    More Than
+                    <span>Property Consulting</span>
+                </h2>
+
+            </div>
+
+
+            <div class="col-lg-6"
+                 data-aos="fade-left">
+
+                <p class="section-description">
+                    At Vistara Solutions, we believe that great real estate
+                    decisions begin with understanding. We take the time to
+                    understand your priorities, provide relevant options,
+                    and guide you through the process with a personalized
+                    approach.
+                </p>
+
+                <p class="section-description">
+                    Our goal is simple — to make your real estate journey
+                    clearer, more transparent and more confident.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     WHY VISTARA / SERVICE EXPERIENCE
+========================================================= -->
+
+<section class="why-services-section">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-5"
+                 data-aos="fade-right">
+
+                <span class="section-eyebrow">
+                    WHY VISTARA
+                </span>
+
+                <h2 class="section-title">
+                    A More
+                    <span>Personal Approach</span>
+                </h2>
+
+                <p class="section-description">
+                    Real estate is not simply about buying or selling a
+                    property. It is about understanding people, priorities,
+                    locations and long-term goals.
+                </p>
+
+                <p class="section-description">
+                    At Vistara Solutions, we combine market understanding
+                    with personalized guidance to make every property
+                    journey more meaningful.
+                </p>
+
+                <a href="about.html"
+                   class="gold-btn">
+
+                    Discover Vistara
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+
+            <div class="col-lg-7">
+
+                <div class="service-benefits-grid">
+
+                    <div class="service-benefit"
+                         data-aos="fade-up">
+
+                        <span class="benefit-number">
+                            01
+                        </span>
+
+                        <div class="benefit-icon">
+                            <i class="fa-solid fa-user-check"></i>
+                        </div>
+
+                        <h3>
+                            Personalized Guidance
+                        </h3>
+
+                        <p>
+                            We begin by understanding your requirements
+                            before recommending relevant opportunities.
+                        </p>
+
+                    </div>
+
+
+                    <div class="service-benefit"
+                         data-aos="fade-up"
+                         data-aos-delay="100">
+
+                        <span class="benefit-number">
+                            02
+                        </span>
+
+                        <div class="benefit-icon">
+                            <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        </div>
+
+                        <h3>
+                            Market Understanding
+                        </h3>
+
+                        <p>
+                            We help you evaluate properties with greater
+                            awareness of location, market conditions and
+                            opportunity.
+                        </p>
+
+                    </div>
+
+
+                    <div class="service-benefit"
+                         data-aos="fade-up"
+                         data-aos-delay="200">
+
+                        <span class="benefit-number">
+                            03
+                        </span>
+
+                        <div class="benefit-icon">
+                            <i class="fa-solid fa-handshake"></i>
+                        </div>
+
+                        <h3>
+                            Trusted Support
+                        </h3>
+
+                        <p>
+                            From the first conversation to the next step,
+                            we aim to make the process clear and comfortable.
+                        </p>
+
+                    </div>
+
+
+                    <div class="service-benefit"
+                         data-aos="fade-up"
+                         data-aos-delay="300">
+
+                        <span class="benefit-number">
+                            04
+                        </span>
+
+                        <div class="benefit-icon">
+                            <i class="fa-solid fa-compass"></i>
+                        </div>
+
+                        <h3>
+                            Clear Direction
+                        </h3>
+
+                        <p>
+                            Our approach is focused on helping clients move
+                            forward with confidence and better information.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     OUR PROCESS
+========================================================= -->
+
+<section class="service-process-section">
+
+    <div class="container">
+
+        <div class="process-heading text-center"
+             data-aos="fade-up">
+
+            <span class="section-eyebrow">
+                OUR PROCESS
+            </span>
+
+            <h2 class="section-title">
+                From Requirement
+                <span>To Right Opportunity</span>
+            </h2>
+
+            <p class="section-description mx-auto">
+                A straightforward approach designed to keep your real
+                estate journey focused, transparent and easy to navigate.
+            </p>
+
+        </div>
+
+
+        <div class="process-timeline">
+
+            <div class="process-step"
+                 data-aos="fade-up">
+
+                <div class="process-number">
+                    01
+                </div>
+
+                <div class="process-line"></div>
+
+                <div class="process-content">
+
+                    <i class="fa-solid fa-comments"></i>
+
+                    <h3>
+                        Understand
+                    </h3>
+
+                    <p>
+                        We begin with a conversation to understand your
+                        requirements, priorities and objectives.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="process-step"
+                 data-aos="fade-up"
+                 data-aos-delay="100">
+
+                <div class="process-number">
+                    02
+                </div>
+
+                <div class="process-line"></div>
+
+                <div class="process-content">
+
+                    <i class="fa-solid fa-building-circle-check"></i>
+
+                    <h3>
+                        Curate
+                    </h3>
+
+                    <p>
+                        We identify property opportunities that are
+                        relevant to your specific requirements.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="process-step"
+                 data-aos="fade-up"
+                 data-aos-delay="200">
+
+                <div class="process-number">
+                    03
+                </div>
+
+                <div class="process-line"></div>
+
+                <div class="process-content">
+
+                    <i class="fa-solid fa-scale-balanced"></i>
+
+                    <h3>
+                        Evaluate
+                    </h3>
+
+                    <p>
+                        We help you understand the available options and
+                        consider the factors that matter to your decision.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="process-step"
+                 data-aos="fade-up"
+                 data-aos-delay="300">
+
+                <div class="process-number">
+                    04
+                </div>
+
+                <div class="process-line"></div>
+
+                <div class="process-content">
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                    <h3>
+                        Move Forward
+                    </h3>
+
+                    <p>
+                        With the right information and guidance, you can
+                        take the next step with greater confidence.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PREMIUM CONSULTATION CTA
+========================================================= -->
+
+<section class="services-cta-section">
+
+    <div class="services-cta-overlay"></div>
+
+    <div class="container">
+
+        <div class="services-cta-content"
+             data-aos="fade-up">
+
+            <span class="section-eyebrow">
+                YOUR NEXT MOVE STARTS HERE
+            </span>
+
+            <h2>
+                Let's Find the
+                <span>Right Property for You.</span>
+            </h2>
+
+            <p>
+                Tell us what you're looking for and let our team help you
+                explore the possibilities.
+            </p>
+
+            <div class="cta-buttons">
+
+                <a href="contact.html"
+                   class="gold-btn">
+
+                    Book a Consultation
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+                <a href="projects.html"
+                   class="white-btn">
+
+                    Explore Projects
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="site-footer">
+
+    <div class="container">
+
+        <div class="row g-5">
+
+            <!-- Brand -->
+
+            <div class="col-lg-4">
+
+                <a href="index.html"
+                   class="footer-logo">
+
+                    <img src="assets/logo/logo-gold.png"
+                         alt="Vistara Solutions">
+
+                </a>
+
+                <p class="footer-description">
+                    Premium residential and commercial real estate
+                    consultancy in Pune, helping clients make informed
+                    property decisions with confidence.
+                </p>
+
+
+                <div class="footer-socials">
+
+                    <a href="#"
+                       aria-label="Instagram">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </a>
+
+                    <a href="#"
+                       aria-label="Facebook">
+
+                        <i class="fa-brands fa-facebook-f"></i>
+
+                    </a>
+
+                    <a href="#"
+                       aria-label="LinkedIn">
+
+                        <i class="fa-brands fa-linkedin-in"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Quick Links -->
+
+            <div class="col-6 col-lg-2">
+
+                <h4 class="footer-title">
+                    Explore
+                </h4>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="founder.html">
+                            Founder
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="services.html">
+                            Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="projects.html">
+                            Projects
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- More -->
+
+            <div class="col-6 col-lg-2">
+
+                <h4 class="footer-title">
+                    Discover
+                </h4>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="gallery.html">
+                            Gallery
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="testimonials.html">
+                            Testimonials
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="privacy-policy.html">
+                            Privacy Policy
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="terms.html">
+                            Terms &amp; Conditions
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- Contact -->
+
+            <div class="col-lg-4">
+
+                <h4 class="footer-title">
+                    Get In Touch
+                </h4>
+
+                <ul class="footer-contact">
+
+                    <li>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <span>
+                            Kharadi, Pune,<br>
+                            Maharashtra, India
+                        </span>
+
+                    </li>
+
+
+                    <li>
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        <a href="tel:+918767173882">
+                            +91 8767173882
+                        </a>
+
+                    </li>
+
+
+                    <li>
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <a href="mailto:vistarasolutions99@gmail.com">
+                            vistarasolutions99@gmail.com
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <!-- Footer Bottom -->
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Vistara Solutions. All Rights Reserved.
+            </p>
+
+            <p>
+                Luxury Real Estate Consultants
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     SCRIPTS
+========================================================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+
+<script>
+
+    /* ================================================
+       AOS INITIALIZATION
+    ================================================ */
+
+    AOS.init({
+        duration: 900,
+        easing: 'ease-out-cubic',
+        once: true,
+        offset: 80
+    });
+
+
+
+    /* ================================================
+       SIDE MENU / HAMBURGER
+    ================================================ */
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const menuBtn = document.getElementById("menuBtn");
+        const sideMenu = document.getElementById("sideMenu");
+        const closeBtn = document.getElementById("closeBtn");
+
+        if (!menuBtn || !sideMenu || !closeBtn) {
+            return;
+        }
+
+
+        /* OPEN MENU */
+
+        menuBtn.addEventListener("click", function () {
+
+            sideMenu.classList.add("active");
+
+            document.body.classList.add("menu-open");
+
+            menuBtn.setAttribute("aria-expanded", "true");
+
+            sideMenu.setAttribute("aria-hidden", "false");
+
+        });
+
+
+        /* CLOSE MENU */
+
+        closeBtn.addEventListener("click", function () {
+
+            sideMenu.classList.remove("active");
+
+            document.body.classList.remove("menu-open");
+
+            menuBtn.setAttribute("aria-expanded", "false");
+
+            sideMenu.setAttribute("aria-hidden", "true");
+
+        });
+
+
+        /* CLOSE WHEN CLICKING MENU LINK */
+
+        sideMenu.querySelectorAll("a").forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                sideMenu.classList.remove("active");
+
+                document.body.classList.remove("menu-open");
+
+                menuBtn.setAttribute("aria-expanded", "false");
+
+                sideMenu.setAttribute("aria-hidden", "true");
+
+            });
+
+        });
+
+
+        /* CLOSE WITH ESC KEY */
+
+        document.addEventListener("keydown", function (event) {
+
+            if (event.key === "Escape") {
+
+                sideMenu.classList.remove("active");
+
+                document.body.classList.remove("menu-open");
+
+                menuBtn.setAttribute("aria-expanded", "false");
+
+                sideMenu.setAttribute("aria-hidden", "true");
+
+            }
+
+        });
+
+    });
+
+
+    const backToTop = document.getElementById("backToTop");
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 400) {
+            backToTop.classList.add("show");
+        } else {
+            backToTop.classList.remove("show");
+        }
+    });
+
+    backToTop.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+
+
+
+
+</script>
+
+</body>
+</html>

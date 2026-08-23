@@ -1,0 +1,2774 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Founders | Vistara Solutions</title>
+
+    <meta name="description"
+        content="Meet the founders of Vistara Solutions, premium real estate consultants in Pune.">
+
+    <link rel="icon" type="image/png" href="assets/logo/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- AOS -->
+    <link
+        href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+        rel="stylesheet">
+
+    <!-- Main Website CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Animation CSS -->
+    <link rel="stylesheet" href="css/animations.css">
+
+
+<style>
+
+/* =========================================================
+   FOUNDER PAGE — BASE
+========================================================= */
+
+:root {
+    
+    --gold: #c9a227;
+    --gold-light: #e4c56d;
+    --gold-dark: #9b7424;
+
+    --dark: #111111;
+    --white: #ffffff;
+    --cream: #f8f7f3;
+    --text: #666666;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   FLOATING HEADER / LOGO
+========================================================= */
+
+/* =========================================================
+   FOUNDER HEADER — SAME AS CONTACT PAGE
+========================================================= */
+
+.founder-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    height: auto;
+
+    padding: 22px 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 1000;
+
+    pointer-events: auto;
+}
+
+.founder-header-logo {
+    display: inline-flex;
+    align-items: center;
+
+    z-index: 1002;
+
+    pointer-events: auto;
+}
+
+.founder-header-logo img {
+    width: 72px;
+    height: auto;
+}
+
+
+/* SAME HAMBURGER AS CONTACT PAGE */
+
+.contact-menu {
+    width: 52px;
+    height: 52px;
+
+    padding: 0;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,.40);
+
+    background: rgba(255,255,255,.08);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+
+    font-size: 19px;
+
+    cursor: pointer;
+
+    transition: .35s ease;
+
+    z-index: 1002;
+}
+
+.contact-menu:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+}
+
+.contact-menu i {
+    transition: .35s ease;
+}
+
+.contact-menu:hover i {
+    transform: rotate(90deg);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .founder-header {
+        padding: 18px 5%;
+    }
+
+    .founder-header-logo img {
+        width: 60px;
+    }
+
+    .contact-menu {
+        width: 45px;
+        height: 45px;
+        font-size: 17px;
+    }
+
+}
+
+/* =====================================================
+           SIDE MENU
+           Same hamburger-menu pattern
+        ====================================================== */
+
+        .side-menu {
+
+            position: fixed;
+
+            top: 0;
+            right: -420px;
+
+            width: min(390px, 90%);
+
+            height: 100vh;
+
+            z-index: 2000;
+
+            padding: 90px 45px 40px;
+
+            overflow-y: auto;
+
+            background: #20201e;
+
+            border-left: 1px solid rgba(199,154,59,.25);
+
+            box-shadow: -20px 0 60px rgba(0,0,0,.25);
+
+            transition: right .45s cubic-bezier(.77,0,.18,1);
+
+        }
+
+
+        .side-menu.active {
+
+            right: 0;
+
+        }
+
+
+        .side-menu::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 3px;
+
+            height: 100%;
+
+            background:
+
+                linear-gradient(
+                    to bottom,
+                    transparent,
+                    var(--gold),
+                    var(--gold-light),
+                    transparent
+                );
+
+        }
+
+
+        .close-btn {
+
+            position: absolute;
+
+            top: 25px;
+            right: 25px;
+
+            width: 45px;
+            height: 45px;
+
+            border: 1px solid rgba(255,255,255,.18);
+
+            border-radius: 50%;
+
+            background: rgba(255,255,255,.05);
+
+            color: #fff;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            cursor: pointer;
+
+            font-size: 18px;
+
+            transition: .3s ease;
+
+        }
+
+
+        .close-btn:hover {
+
+            background: var(--gold);
+
+            border-color: var(--gold);
+
+            transform: rotate(90deg);
+
+        }
+
+
+        .menu-label {
+
+            margin-bottom: 35px;
+
+            color: var(--gold-light);
+
+            font-size: 11px;
+
+            font-weight: 600;
+
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .side-menu ul {
+
+            padding: 0;
+
+            margin: 0;
+
+            list-style: none;
+
+        }
+
+
+        .side-menu ul li {
+
+            margin-bottom: 4px;
+
+        }
+
+
+        .side-menu ul li a {
+
+            position: relative;
+
+            display: block;
+
+            padding: 10px 0;
+
+            color: rgba(255,255,255,.72);
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 22px;
+
+            transition: .3s ease;
+
+        }
+
+
+        .side-menu ul li a::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: -45px;
+
+            top: 50%;
+
+            width: 0;
+
+            height: 1px;
+
+            background: var(--gold-light);
+
+            transition: .3s ease;
+
+        }
+
+
+        .side-menu ul li a:hover {
+
+            color: var(--gold-light);
+
+            padding-left: 12px;
+
+        }
+
+
+        .side-menu ul li a:hover::before {
+
+            width: 32px;
+
+        }
+
+
+/* GOLD VERTICAL LINE - SIDE MENU */
+.side-menu ul {
+    position: relative !important;
+    margin: 0 !important;
+    padding: 0 0 0 55px !important;
+    list-style: none !important;
+}
+
+.side-menu ul::before {
+    content: "" !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 3px !important;
+    height: 100% !important;
+    background: var(--gold) !important;
+    display: block !important;
+}
+
+
+
+
+
+
+        .menu-divider {
+
+            height: 1px;
+
+            margin: 20px 0;
+
+            background: rgba(255,255,255,.10);
+
+        }
+
+
+        .menu-contact {
+
+            margin-top: 35px;
+
+            padding-top: 25px;
+
+            border-top: 1px solid rgba(255,255,255,.10);
+
+        }
+
+
+        .menu-contact h4 {
+
+            margin-bottom: 18px;
+
+            color: #fff;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 20px;
+
+            font-weight: 500;
+
+        }
+
+
+        .menu-contact p {
+
+            margin-bottom: 11px;
+
+            color: rgba(255,255,255,.55);
+
+            font-size: 12px;
+
+            line-height: 1.6;
+
+        }
+
+
+        .menu-contact p i {
+
+            width: 24px;
+
+            color: var(--gold-light);
+
+        }
+
+
+        .menu-social {
+
+            display: flex;
+
+            gap: 10px;
+
+            margin-top: 20px;
+
+        }
+
+
+        .menu-social a {
+
+            width: 38px;
+            height: 38px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border: 1px solid rgba(255,255,255,.15);
+
+            color: var(--gold-light);
+
+            transition: .3s ease;
+
+        }
+
+
+        .menu-social a:hover {
+
+            background: var(--gold);
+
+            border-color: var(--gold);
+
+            color: #fff;
+
+            transform: translateY(-3px);
+
+        }
+
+
+        /* =====================================================
+           MENU OVERLAY
+        ====================================================== */
+
+        .menu-overlay {
+
+            position: fixed;
+
+            inset: 0;
+
+            z-index: 1500;
+
+            background: rgba(0,0,0,.45);
+
+            backdrop-filter: blur(3px);
+
+            -webkit-backdrop-filter: blur(3px);
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            transition: .35s ease;
+
+        }
+
+
+        .menu-overlay.active {
+
+            opacity: 1;
+
+            visibility: visible;
+
+        }
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.founder-hero {
+    position: relative;
+
+    min-height: 72vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(10,10,10,0.58),
+            rgba(10,10,10,0.72)
+        ),
+        url("assets/about/about-vistara-solutions.png");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.founder-hero::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.6),
+            rgba(0,0,0,0.12),
+            rgba(0,0,0,0.6)
+        );
+}
+
+.founder-hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 900px;
+
+    padding: 130px 20px 80px;
+
+    text-align: center;
+
+    color: #ffffff;
+}
+
+.founder-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 22px;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: var(--gold);
+}
+
+.founder-eyebrow::before,
+.founder-eyebrow::after {
+    content: "";
+
+    width: 35px;
+    height: 1px;
+
+    background: var(--gold);
+}
+
+.founder-hero h1 {
+    margin: 0 0 22px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(48px,7vw,82px);
+
+    line-height: 1.05;
+    font-weight: 500;
+
+    color: #ffffff !important;
+
+    text-shadow:
+        0 3px 12px rgba(0,0,0,0.75),
+        0 1px 3px rgba(0,0,0,0.9);
+}
+
+.founder-hero h1 span {
+    color: var(--gold) !important;
+}
+
+.founder-hero-description {
+    max-width: 680px;
+
+    margin: 0 auto;
+
+    font-size: 16px;
+    line-height: 1.9;
+    font-weight: 300;
+
+    color: rgba(255,255,255,0.88);
+}
+
+.founder-hero-line {
+    width: 70px;
+    height: 2px;
+
+    margin: 32px auto 0;
+
+    background: var(--gold);
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.founder-intro {
+    padding: 100px 0 90px;
+
+    background: #ffffff;
+}
+
+.founder-intro-content {
+    max-width: 850px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+.section-label {
+    display: block;
+
+    margin-bottom: 15px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: var(--gold);
+}
+
+.founder-intro h2 {
+    margin-bottom: 24px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(34px,5vw,52px);
+
+    line-height: 1.2;
+    font-weight: 500;
+
+    color: var(--dark);
+}
+
+.founder-intro h2 span {
+    color: var(--gold);
+}
+
+.founder-intro p {
+    margin: 0;
+
+    font-size: 15px;
+    line-height: 1.9;
+
+    color: var(--text);
+}
+
+
+/* =========================================================
+   FOUNDER PROFILE
+========================================================= */
+
+.founder-profile {
+    position: relative;
+
+    padding: 110px 0;
+
+    overflow: hidden;
+}
+
+.founder-profile-light {
+    background: var(--cream);
+}
+
+.founder-profile-dark {
+    background: #111111;
+}
+
+
+/* image */
+
+.founder-image-wrap {
+    position: relative;
+
+    max-width: 510px;
+
+    margin: 0 auto;
+
+    padding: 0 20px 20px 0;
+}
+
+.founder-image {
+    position: relative;
+
+    z-index: 2;
+
+    overflow: hidden;
+
+    aspect-ratio: 4/5;
+
+    background: #eeeeee;
+}
+
+.founder-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center top;
+
+    transition: transform 0.8s ease;
+}
+
+.founder-image:hover img {
+    transform: scale(1.035);
+}
+
+.founder-image-frame {
+    position: absolute;
+
+    z-index: 1;
+
+    top: 22px;
+    left: 22px;
+    right: 0;
+    bottom: 0;
+
+    border: 1px solid var(--gold);
+}
+
+.founder-number {
+    position: absolute;
+
+    z-index: 3;
+
+    right: 0;
+    bottom: 0;
+
+    width: 76px;
+    height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #111111;
+
+    color: var(--gold);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 25px;
+}
+
+
+/* content */
+
+.founder-profile-content {
+    max-width: 610px;
+
+    padding-left: 20px;
+}
+
+.founder-content-dark {
+    padding-left: 0;
+}
+
+.founder-role-label {
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: var(--gold);
+}
+
+.founder-profile-content h2 {
+    margin: 0;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(42px,5vw,62px);
+
+    line-height: 1.1;
+    font-weight: 500;
+
+    color: #111111;
+}
+
+.founder-profile-content h2 span {
+    color: var(--gold);
+}
+
+.founder-profile-content h4 {
+    margin: 12px 0 20px;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    color: #555555;
+}
+
+.founder-content-dark h2 {
+    color: #ffffff;
+}
+
+.founder-content-dark h4 {
+    color: rgba(255,255,255,0.65);
+}
+
+.founder-gold-line {
+    width: 65px;
+    height: 2px;
+
+    margin-bottom: 28px;
+
+    background: var(--gold);
+}
+
+.founder-profile-content p {
+    margin-bottom: 18px;
+
+    font-size: 14px;
+    line-height: 1.9;
+
+    color: #666666;
+}
+
+.founder-content-dark p {
+    color: rgba(255,255,255,0.68);
+}
+
+
+/* expertise */
+
+.founder-expertise {
+    display: grid;
+
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+.expertise-item {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px 16px;
+
+    border: 1px solid rgba(201,162,39,0.28);
+
+    background: #ffffff;
+
+    transition: 0.3s ease;
+}
+
+.expertise-item i {
+    width: 20px;
+
+    font-size: 14px;
+
+    color: var(--gold);
+}
+
+.expertise-item span {
+    font-size: 12px;
+    font-weight: 500;
+
+    color: #333333;
+}
+
+.expertise-item:hover {
+    transform: translateY(-3px);
+
+    background: #fffdf7;
+}
+
+.expertise-item-dark {
+    background: #181818;
+
+    border-color: rgba(201,162,39,0.3);
+}
+
+.expertise-item-dark span {
+    color: rgba(255,255,255,0.82);
+}
+
+.expertise-item-dark:hover {
+    background: #202020;
+}
+
+
+/* quote */
+
+.founder-quote {
+    margin-top: 35px;
+
+    padding: 20px 24px;
+
+    border-left: 2px solid var(--gold);
+
+    background: rgba(255,255,255,0.035);
+}
+
+.founder-quote i {
+    margin-bottom: 8px;
+
+    font-size: 18px;
+
+    color: var(--gold);
+}
+
+.founder-quote p {
+    margin: 0;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 18px;
+
+    font-style: italic;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   LEADERSHIP PHILOSOPHY
+========================================================= */
+
+.leadership-philosophy {
+    padding: 110px 0;
+
+    background: #ffffff;
+
+    overflow: hidden;
+}
+
+.philosophy-label {
+    display: block;
+
+    margin-bottom: 15px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: var(--gold);
+}
+
+.leadership-philosophy h2 {
+    margin: 0 auto 25px;
+
+    max-width: 850px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(36px,5vw,56px);
+
+    line-height: 1.2;
+    font-weight: 500;
+
+    color: #111111;
+}
+
+.leadership-philosophy h2 span {
+    color: var(--gold);
+}
+
+.philosophy-intro {
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    font-size: 14px;
+    line-height: 1.9;
+
+    color: #666666;
+}
+
+
+/* cards */
+
+.leadership-value {
+    position: relative;
+
+    height: 100%;
+
+    padding: 38px 28px 32px;
+
+    background: var(--cream);
+
+    border: 1px solid rgba(201,162,39,0.16);
+
+    transition: 0.35s ease;
+}
+
+.leadership-value:hover {
+    transform: translateY(-7px);
+
+    border-color: rgba(201,162,39,0.45);
+
+    box-shadow: 0 18px 45px rgba(0,0,0,0.08);
+}
+
+.value-number {
+    position: absolute;
+
+    top: 18px;
+    right: 20px;
+
+    font-family: "Playfair Display", serif;
+
+    color: rgba(201,162,39,0.55);
+}
+
+.value-icon {
+    width: 54px;
+    height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 24px;
+
+    border: 1px solid var(--gold);
+
+    color: var(--gold);
+}
+
+.leadership-value h3 {
+    margin-bottom: 13px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 25px;
+
+    color: #111111;
+}
+
+.leadership-value p {
+    margin: 0;
+
+    font-size: 12.5px;
+
+    line-height: 1.8;
+
+    color: #6b6b6b;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.founder-cta {
+    position: relative;
+
+    min-height: 520px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(10,10,10,0.72),
+            rgba(10,10,10,0.78)
+        ),
+        url("assets/about/about-vistara-solutions.png");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.founder-cta-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(201,162,39,0.12),
+            transparent 55%
+        );
+}
+
+.founder-cta-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 800px;
+
+    margin: auto;
+
+    padding: 100px 20px;
+
+    text-align: center;
+}
+
+.cta-label {
+    display: block;
+
+    margin-bottom: 18px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: var(--gold);
+}
+
+.founder-cta h2 {
+    margin: 0 0 22px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(40px,6vw,65px);
+
+    line-height: 1.15;
+    font-weight: 500;
+
+    color: #ffffff;
+}
+
+.founder-cta h2 span {
+    color: var(--gold);
+}
+
+.founder-cta-content > p {
+    max-width: 680px;
+
+    margin: 0 auto 35px;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    color: rgba(255,255,255,0.78);
+}
+
+.cta-buttons {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 28px;
+
+    flex-wrap: wrap;
+}
+
+.founder-cta-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 14px;
+
+    min-width: 205px;
+
+    padding: 15px 25px;
+
+    border: 1px solid var(--gold);
+
+    background: var(--gold);
+
+    color: #111111;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: .5px;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    transition: .3s ease;
+}
+
+.founder-cta-btn:hover {
+    background: transparent;
+
+    color: var(--gold);
+
+    transform: translateY(-3px);
+}
+
+.founder-cta-btn i {
+    transition: .3s ease;
+}
+
+.founder-cta-btn:hover i {
+    transform: translateX(5px);
+}
+
+.founder-cta-link {
+    position: relative;
+
+    padding-bottom: 5px;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    color: #ffffff;
+
+    text-decoration: none;
+}
+
+.founder-cta-link::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background: var(--gold);
+
+    transform: scaleX(0);
+
+    transform-origin: right;
+
+    transition: .3s ease;
+}
+
+.founder-cta-link:hover {
+    color: var(--gold);
+}
+
+.founder-cta-link:hover::after {
+    transform: scaleX(1);
+
+    transform-origin: left;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.contact-footer {
+    position: relative;
+
+    width: 100%;
+
+    background: #20201e;
+
+    color: #ffffff;
+
+    padding: 75px 0 0;
+
+    overflow: hidden;
+
+     border-top: 5px solid
+     var(--gold);
+}
+
+.contact-footer::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background: var(--gold);
+}
+
+.footer-container {
+    width: min(1200px,90%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr 1fr 1.25fr;
+
+    gap: 55px;
+
+    padding-bottom: 60px;
+}
+
+.footer-about {
+    max-width: 340px;
+}
+
+.footer-logo {
+    display: inline-block;
+
+    margin-bottom: 22px;
+}
+
+.footer-logo img {
+    width: 155px;
+
+    height: auto;
+
+    display: block;
+}
+
+.footer-about p {
+    margin: 0;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    font-weight: 300;
+
+    color: rgba(255,255,255,0.65);
+}
+
+.footer-column h4 {
+    margin: 0 0 25px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 21px;
+
+    color: #ffffff;
+}
+
+.footer-column h4::after {
+    content: "";
+
+    display: block;
+
+    width: 35px;
+    height: 2px;
+
+    margin-top: 10px;
+
+    background: var(--gold);
+}
+
+.footer-links {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 13px;
+}
+
+.footer-links a {
+    font-size: 12.5px;
+
+    color: rgba(255,255,255,0.62);
+
+    text-decoration: none;
+
+    transition: .3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+
+    padding-left: 7px;
+}
+
+.footer-contact p {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 13px;
+
+    margin: 0 0 18px;
+
+    font-size: 12.5px;
+
+    line-height: 1.7;
+
+    color: rgba(255,255,255,0.65);
+}
+
+.footer-contact p i {
+    width: 18px;
+
+    margin-top: 4px;
+
+    color: var(--gold);
+}
+
+.footer-bottom {
+    width: min(1200px,90%);
+
+    min-height: 70px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-top: 1px solid rgba(255,255,255,0.10);
+
+    font-size: 10.5px;
+
+    color: rgba(255,255,255,0.45);
+}
+
+
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+.back-to-top {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--gold);
+
+    background: #111111;
+
+    color: var(--gold);
+
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(15px);
+
+    z-index: 9997;
+
+    transition: .3s ease;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: var(--gold);
+
+    color: #111111;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .founder-header {
+        height: 78px;
+
+        padding: 0 25px;
+    }
+
+    .founder-header-logo img {
+        width: 125px;
+    }
+
+    .founder-profile {
+        padding: 80px 0;
+    }
+
+    .founder-profile-content {
+        max-width: 100%;
+
+        padding-left: 0;
+    }
+
+    .founder-image-wrap {
+        max-width: 560px;
+    }
+
+    .founder-image-wrap-right {
+        margin: 0 auto;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2,1fr);
+
+        gap: 45px 35px;
+    }
+
+    .footer-about {
+        max-width: 100%;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
+
+    .founder-header {
+        padding: 0 18px;
+    }
+
+    .founder-header-logo img {
+        width: 115px;
+    }
+
+
+    .side-menu {
+        width: 88vw;
+
+        padding: 100px 30px 35px;
+    }
+
+    .side-menu a {
+        font-size: 22px;
+    }
+
+    .close-btn {
+        top: 25px;
+        right: 25px;
+    }
+
+    .founder-hero {
+        min-height: 65vh;
+    }
+
+    .founder-hero-content {
+        padding: 120px 20px 70px;
+    }
+
+    .founder-eyebrow {
+        font-size: 10px;
+
+        letter-spacing: 2px;
+    }
+
+    .founder-eyebrow::before,
+    .founder-eyebrow::after {
+        width: 20px;
+    }
+
+    .founder-hero h1 {
+        font-size: 39px;
+    }
+
+    .founder-hero-description {
+        font-size: 13px;
+    }
+
+    .founder-intro {
+        padding: 75px 20px;
+    }
+
+    .founder-intro h2 {
+        font-size: 31px;
+    }
+
+    .founder-intro p {
+        font-size: 13px;
+    }
+
+    .founder-profile {
+        padding: 65px 20px;
+    }
+
+    .founder-image-wrap {
+        padding: 0 12px 12px 0;
+    }
+
+    .founder-image-frame {
+        top: 14px;
+        left: 14px;
+    }
+
+    .founder-number {
+        width: 60px;
+        height: 60px;
+
+        font-size: 20px;
+    }
+
+    .founder-profile-content h2 {
+        font-size: 42px;
+    }
+
+    .founder-profile-content h4 {
+        font-size: 13px;
+    }
+
+    .founder-profile-content p {
+        font-size: 13px;
+
+        line-height: 1.8;
+    }
+
+    .founder-expertise {
+        grid-template-columns: 1fr;
+    }
+
+    .founder-quote {
+        padding: 17px 18px;
+    }
+
+    .founder-quote p {
+        font-size: 16px;
+    }
+
+    .leadership-philosophy {
+        padding: 70px 20px;
+    }
+
+    .leadership-philosophy h2 {
+        font-size: 34px;
+    }
+
+    .philosophy-intro {
+        font-size: 13px;
+    }
+
+    .leadership-value {
+        padding: 32px 24px 28px;
+    }
+
+    .founder-cta {
+        min-height: 480px;
+
+        background-attachment: scroll;
+    }
+
+    .founder-cta-content {
+        padding: 80px 20px;
+    }
+
+    .founder-cta h2 {
+        font-size: 34px;
+    }
+
+    .founder-cta-content > p {
+        font-size: 13px;
+    }
+
+    .cta-buttons {
+        gap: 20px;
+    }
+
+    .founder-cta-btn {
+        width: 100%;
+    }
+
+    .contact-footer {
+        padding-top: 55px;
+    }
+
+    .footer-container {
+        width: 88%;
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding-bottom: 40px;
+    }
+
+    .footer-about {
+        max-width: 100%;
+    }
+
+    .footer-logo img {
+        width: 145px;
+    }
+
+    .footer-bottom {
+        width: 88%;
+
+        padding: 20px 0;
+
+        min-height: auto;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 8px;
+
+        line-height: 1.6;
+    }
+
+    .back-to-top {
+        right: 18px;
+        bottom: 18px;
+
+        width: 42px;
+        height: 42px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="founder-header">
+
+    <a href="index.html" class="founder-header-logo">
+        </a>
+
+    <button
+        class="contact-menu"
+        id="menuBtn"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false">
+
+<i class="fa-solid fa-bars"></i>
+
+
+    </button>
+
+</header>
+
+
+<!-- =========================================================
+     MENU OVERLAY
+========================================================= -->
+
+<div class="menu-overlay" id="menuOverlay"></div>
+
+
+<!-- =========================================================
+     SIDE MENU
+========================================================= -->
+
+<nav class="side-menu" id="sideMenu">
+
+    <button class="close-btn" id="closeBtn" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <div class="menu-label">
+        Vistara Solutions
+    </div>
+    
+    <ul>
+
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+
+        <li>
+            <a href="about.html">About</a>
+        </li>
+
+        <li>
+            <a href="founder.html">Founder</a>
+        </li>
+
+        <li>
+            <a href="services.html">Services</a>
+        </li>
+
+        <li>
+            <a href="projects.html">Projects</a>
+        </li>
+
+        <li>
+            <a href="gallery.html">Gallery</a>
+        </li>
+
+        <li>
+            <a href="testimonials.html">Testimonials</a>
+        </li>
+
+        <li>
+            <a href="contact.html">Contact</a>
+        </li>
+
+        <li class="menu-divider"></li>
+
+        <li>
+            <a href="privacy-policy.html">
+                Privacy Policy
+            </a>
+        </li>
+
+        <li>
+            <a href="terms.html">
+                Terms &amp; Conditions
+            </a>
+        </li>
+
+    </ul>
+
+    <div class="menu-contact">
+
+        <h4>Get In Touch</h4>
+
+        <p>
+            <i class="fa-solid fa-phone"></i>
+            +91 87671 73882
+        </p>
+
+        <p>
+            <i class="fa-solid fa-phone"></i>
+            +91 87882 46145
+        </p>
+
+        <p>
+            <i class="fa-solid fa-envelope"></i>
+            vistarasolutions99@gmail.com
+        </p>
+
+        <div class="menu-social">
+
+            <a href="#">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="founder-hero">
+
+    <div class="founder-hero-content">
+
+        <div class="founder-eyebrow">
+            Our Leadership
+        </div>
+
+        <h1>
+            Meet the <span>Founders</span>
+        </h1>
+
+        <p class="founder-hero-description">
+            The people behind Vistara Solutions, committed to
+            bringing clarity, trust and personalized guidance
+            to every real estate journey.
+        </p>
+
+        <div class="founder-hero-line"></div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     INTRO
+========================================================= -->
+
+<section class="founder-intro">
+
+    <div class="container">
+
+        <div
+            class="founder-intro-content"
+            data-aos="fade-up">
+
+            <span class="section-label">
+                Leadership at Vistara Solutions
+            </span>
+
+            <h2>
+                Driven by <span>Trust.</span>
+                Guided by Experience.
+            </h2>
+
+            <p>
+                At Vistara Solutions, our approach to real estate
+                is built around understanding people, not simply
+                properties. Our founders bring a client-first
+                mindset, market understanding and personalized
+                guidance to help clients make confident and
+                informed property decisions.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ANIKET PAWAR
+========================================================= -->
+
+<section class="founder-profile founder-profile-light">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div
+                class="col-lg-6"
+                data-aos="fade-right">
+
+                <div class="founder-image-wrap">
+
+                    <div class="founder-image-frame"></div>
+
+                    <div class="founder-image">
+
+                        <img
+                            src="assets/branding/aniket-pawar.jpg"
+                            alt="Aniket Pawar - Founder of Vistara Solutions"
+                            loading="lazy">
+
+                    </div>
+
+                    <div class="founder-number">
+                        01
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="col-lg-6"
+                data-aos="fade-left">
+
+                <div class="founder-profile-content">
+
+                    <span class="founder-role-label">
+                        Founder
+                    </span>
+
+                    <h2>
+                        Aniket <span>Pawar</span>
+                    </h2>
+
+                    <h4>
+                        Founder & Real Estate Consultant
+                    </h4>
+
+                    <div class="founder-gold-line"></div>
+
+                    <p>
+                        With 4 years of experience in the real estate
+                        industry, Aniket Pawar brings a client-focused
+                        and practical approach to property consulting.
+                        He specializes in understanding individual
+                        client requirements, identifying suitable
+                        property opportunities, and providing guidance
+                        throughout the buying and investment journey.
+                    </p>
+
+                    <p>
+                        His expertise includes client relationship
+                        management, property sales, negotiation, and
+                        market analysis. At Vistara Solutions, Aniket
+                        is committed to building lasting relationships
+                        through transparency, personalized guidance,
+                        and a clear understanding of each client's
+                        objectives.
+                    </p>
+
+                    <p>
+                        His approach is centered on helping clients
+                        navigate the real estate market with greater
+                        clarity and confidence, while making
+                        well-informed property decisions aligned with
+                        their needs and goals.
+                    </p>
+
+
+                    <div class="founder-expertise">
+
+                        <div class="expertise-item">
+                            <i class="fa-solid fa-handshake"></i>
+                            <span>Client Relations</span>
+                        </div>
+
+                        <div class="expertise-item">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <span>Market Analysis</span>
+                        </div>
+
+                        <div class="expertise-item">
+                            <i class="fa-solid fa-building"></i>
+                            <span>Property Sales</span>
+                        </div>
+
+                        <div class="expertise-item">
+                            <i class="fa-solid fa-comments-dollar"></i>
+                            <span>Negotiation</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     KUNAL KATYAR
+========================================================= -->
+
+<section class="founder-profile founder-profile-dark">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+
+            <div
+                class="col-lg-6 order-2 order-lg-1"
+                data-aos="fade-right">
+
+                <div class="founder-profile-content founder-content-dark">
+
+                    <span class="founder-role-label">
+                        Founder
+                    </span>
+
+                    <h2>
+                        Kunal <span>Katyar</span>
+                    </h2>
+
+                    <h4>
+                        Founder & Real Estate Consultant
+                    </h4>
+
+                    <div class="founder-gold-line"></div>
+
+                    <p>
+                        Kunal Katyar is a dedicated Real Estate
+                        Consultant with 2 years of experience in
+                        helping clients identify the right property
+                        based on their individual needs, preferences,
+                        and budget.
+                    </p>
+
+                    <p>
+                        Specializing in residential and investment
+                        properties, he provides personalized guidance
+                        throughout the buying and selling journey.
+                        With a strong understanding of the local real
+                        estate market, Kunal focuses on transparency,
+                        trust, and delivering a smooth and hassle-free
+                        experience for every client.
+                    </p>
+
+                    <p>
+                        His approach is centered on understanding each
+                        client's goals and providing clear, informed
+                        guidance to help them make confident real estate
+                        decisions. He believes in building lasting
+                        relationships through professional service,
+                        genuine commitment, and continued support.
+                    </p>
+
+
+                    <div class="founder-expertise">
+
+                        <div class="expertise-item expertise-item-dark">
+                            <i class="fa-solid fa-house"></i>
+                            <span>Residential Properties</span>
+                        </div>
+
+                        <div class="expertise-item expertise-item-dark">
+                            <i class="fa-solid fa-chart-pie"></i>
+                            <span>Investment Properties</span>
+                        </div>
+
+                        <div class="expertise-item expertise-item-dark">
+                            <i class="fa-solid fa-user-check"></i>
+                            <span>Personalized Guidance</span>
+                        </div>
+
+                        <div class="expertise-item expertise-item-dark">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <span>Transparent Service</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="founder-quote">
+
+                        <i class="fa-solid fa-quote-left"></i>
+
+                        <p>
+                            “Let's find the right property for you.”
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="col-lg-6 order-1 order-lg-2"
+                data-aos="fade-left">
+
+                <div class="founder-image-wrap">
+
+                    <div class="founder-image-frame"></div>
+
+                    <div class="founder-image">
+
+                        <img
+                            src="assets/branding/kunal-katyar.JPG"
+                            alt="Kunal Katyar - Founder of Vistara Solutions"
+                            loading="lazy">
+
+                    </div>
+
+                    <div class="founder-number">
+                        02
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     LEADERSHIP PHILOSOPHY
+========================================================= -->
+
+<section class="leadership-philosophy">
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div
+                class="col-lg-9 text-center"
+                data-aos="fade-up">
+
+                <span class="philosophy-label">
+                    Our Philosophy
+                </span>
+
+                <h2>
+                    Real Estate Built on
+                    <span>Trust & Transparency</span>
+                </h2>
+
+                <p class="philosophy-intro">
+                    At Vistara Solutions, we believe that successful
+                    real estate decisions begin with understanding.
+                    Our founders are committed to creating meaningful
+                    client relationships through honest communication,
+                    personalized guidance, and a clear understanding
+                    of every client's goals.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="row g-4 mt-4">
+
+            <div
+                class="col-lg-3 col-md-6"
+                data-aos="fade-up"
+                data-aos-delay="100">
+
+                <div class="leadership-value">
+
+                    <div class="value-number">01</div>
+
+                    <div class="value-icon">
+                        <i class="fa-solid fa-handshake"></i>
+                    </div>
+
+                    <h3>Trust</h3>
+
+                    <p>
+                        Building genuine relationships through
+                        reliability, honesty, and professional
+                        commitment.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="col-lg-3 col-md-6"
+                data-aos="fade-up"
+                data-aos-delay="200">
+
+                <div class="leadership-value">
+
+                    <div class="value-number">02</div>
+
+                    <div class="value-icon">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+
+                    <h3>Transparency</h3>
+
+                    <p>
+                        Providing clear information and straightforward
+                        guidance throughout every stage of the
+                        property journey.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="col-lg-3 col-md-6"
+                data-aos="fade-up"
+                data-aos-delay="300">
+
+                <div class="leadership-value">
+
+                    <div class="value-number">03</div>
+
+                    <div class="value-icon">
+                        <i class="fa-solid fa-compass"></i>
+                    </div>
+
+                    <h3>Guidance</h3>
+
+                    <p>
+                        Understanding individual requirements and
+                        helping clients navigate their options with
+                        clarity and confidence.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="col-lg-3 col-md-6"
+                data-aos="fade-up"
+                data-aos-delay="400">
+
+                <div class="leadership-value">
+
+                    <div class="value-number">04</div>
+
+                    <div class="value-icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <h3>Relationships</h3>
+
+                    <p>
+                        Focusing on long-term relationships and
+                        continued support beyond the property
+                        transaction.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="founder-cta">
+
+    <div class="founder-cta-overlay"></div>
+
+    <div class="container">
+
+        <div
+            class="founder-cta-content"
+            data-aos="fade-up">
+
+            <span class="cta-label">
+                Start Your Property Journey
+            </span>
+
+            <h2>
+                Let's Find the
+                <span>Right Property</span> for You
+            </h2>
+
+            <p>
+                Whether you're looking for your next home,
+                an investment opportunity, or the right property
+                for your future, our team is here to guide you
+                with clarity and confidence.
+            </p>
+
+            <div class="cta-buttons">
+
+                <a
+                    href="contact.html"
+                    class="founder-cta-btn">
+
+                    Book a Consultation
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+                <a
+                    href="projects.html"
+                    class="founder-cta-link">
+
+                    Explore Projects
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="contact-footer">
+
+    <div class="footer-container">
+
+
+        <div class="footer-about">
+
+            <a
+                href="index.html"
+                class="footer-logo">
+
+                <img
+                    src="assets/logo/logo-gold.png"
+                    alt="Vistara Solutions">
+
+            </a>
+
+            <p>
+                Premium residential and commercial real estate
+                consultancy helping clients discover exceptional
+                property opportunities across Pune.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Company</h4>
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About Us</a>
+                </li>
+
+                <li>
+                    <a href="projects.html">Projects</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Services</h4>
+
+            <ul class="footer-links">
+
+                <li>
+                    <a href="projects.html">
+                        Residential Properties
+                    </a>
+                </li>
+
+                <li>
+                    <a href="projects.html">
+                        Commercial Spaces
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Investment Consulting
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Property Consultation
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="footer-column footer-contact">
+
+            <h4>Contact</h4>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Kharadi, Pune, Maharashtra
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                +91 8767173882
+            </p>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                vistarasolutions99@gmail.com
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 Vistara Solutions. All Rights Reserved.
+        </span>
+
+        <span>
+            Premium Real Estate Consultancy · Pune
+        </span>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     BACK TO TOP
+========================================================= -->
+
+<button
+    class="back-to-top"
+    id="backToTop"
+    aria-label="Back to top">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+<script
+    src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+</script>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    /* =====================================================
+       AOS
+    ===================================================== */
+
+    if (typeof AOS !== "undefined") {
+
+        AOS.init({
+            duration: 900,
+            once: true,
+            offset: 80
+        });
+
+    }
+
+ /* =====================================================
+       SIDE MENU
+    ====================================================== */
+
+    const menuBtn =
+        document.getElementById("menuBtn");
+
+    const sideMenu =
+        document.getElementById("sideMenu");
+
+    const closeBtn =
+        document.getElementById("closeBtn");
+
+    const menuOverlay =
+        document.getElementById("menuOverlay");
+
+
+    function openMenu() {
+
+        sideMenu.classList.add("active");
+
+        menuOverlay.classList.add("active");
+
+        menuBtn.setAttribute("aria-expanded", "true");
+
+        document.body.classList.add("menu-open");
+
+    }
+
+
+    function closeMenu() {
+
+        sideMenu.classList.remove("active");
+
+        menuOverlay.classList.remove("active");
+
+        menuBtn.setAttribute("aria-expanded", "false");
+
+        document.body.classList.remove("menu-open");
+
+    }
+
+
+    menuBtn.addEventListener("click", openMenu);
+
+
+    closeBtn.addEventListener("click", closeMenu);
+
+
+    menuOverlay.addEventListener("click", closeMenu);
+
+
+    sideMenu.querySelectorAll("a").forEach(function(link) {
+
+        link.addEventListener("click", closeMenu);
+
+    });
+
+
+    document.addEventListener("keydown", function(event) {
+
+        if (event.key === "Escape") {
+
+            closeMenu();
+
+        }
+
+    });
+
+
+   
+
+    /* =====================================================
+       BACK TO TOP
+    ===================================================== */
+
+    const backToTop = document.getElementById("backToTop");
+
+
+    window.addEventListener("scroll", function () {
+
+        if (window.scrollY > 400) {
+
+            backToTop.classList.add("show");
+
+        } else {
+
+            backToTop.classList.remove("show");
+
+        }
+
+    });
+
+
+    backToTop.addEventListener("click", function () {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+
+});
+
+</script>
+
+</body>
+
+</html>
